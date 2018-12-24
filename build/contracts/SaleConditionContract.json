@@ -88,8 +88,8 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x60806040526000600660006101000a81548160ff02191690831515021790555034801561002b57600080fd5b506000600260000181905550600060026001018190555060006002800160006101000a81548160ff0219169083151502179055506102e18061006e6000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636095204a146100675780637c123627146100ae578063d674666a146100f3578063f4bd0bcf14610136575b600080fd5b34801561007357600080fd5b506100ac600480360381019080803515159060200190929190803515159060200190929190803515159060200190929190505050610165565b005b3480156100ba57600080fd5b506100c36101c1565b60405180841515151581526020018315151515815260200182151515158152602001935050505060405180910390f35b3480156100ff57600080fd5b50610134600480360381019080803590602001909291908035906020019092919080351515906020019092919050505061020a565b005b34801561014257600080fd5b5061014b61023f565b604051808215151515815260200191505060405180910390f35b82600560000160006101000a81548160ff02191690831515021790555081600560000160016101000a81548160ff02191690831515021790555080600560000160026101000a81548160ff021916908315150217905550505050565b6000806000600560000160009054906101000a900460ff16600560000160019054906101000a900460ff16600560000160029054906101000a900460ff16925092509250909192565b8260026000018190555081600260010181905550806002800160006101000a81548160ff021916908315150217905550505050565b600060011515600560000160009054906101000a900460ff16151514801561027d575060011515600560000160019054906101000a900460ff161515145b801561029f575060011515600560000160029054906101000a900460ff161515145b156102ad57600190506102b2565b600090505b905600a165627a7a72305820d483ace53186e95588967ebae9a276f6c63a4d888d7334c1725fe470432dc6c80029",
-  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636095204a146100675780637c123627146100ae578063d674666a146100f3578063f4bd0bcf14610136575b600080fd5b34801561007357600080fd5b506100ac600480360381019080803515159060200190929190803515159060200190929190803515159060200190929190505050610165565b005b3480156100ba57600080fd5b506100c36101c1565b60405180841515151581526020018315151515815260200182151515158152602001935050505060405180910390f35b3480156100ff57600080fd5b50610134600480360381019080803590602001909291908035906020019092919080351515906020019092919050505061020a565b005b34801561014257600080fd5b5061014b61023f565b604051808215151515815260200191505060405180910390f35b82600560000160006101000a81548160ff02191690831515021790555081600560000160016101000a81548160ff02191690831515021790555080600560000160026101000a81548160ff021916908315150217905550505050565b6000806000600560000160009054906101000a900460ff16600560000160019054906101000a900460ff16600560000160029054906101000a900460ff16925092509250909192565b8260026000018190555081600260010181905550806002800160006101000a81548160ff021916908315150217905550505050565b600060011515600560000160009054906101000a900460ff16151514801561027d575060011515600560000160019054906101000a900460ff161515145b801561029f575060011515600560000160029054906101000a900460ff161515145b156102ad57600190506102b2565b600090505b905600a165627a7a72305820d483ace53186e95588967ebae9a276f6c63a4d888d7334c1725fe470432dc6c80029",
+  "bytecode": "0x60806040526000600660006101000a81548160ff02191690831515021790555034801561002b57600080fd5b506000600260000181905550600060026001018190555060006002800160006101000a81548160ff0219169083151502179055506102e18061006e6000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636095204a146100675780637c123627146100ae578063d674666a146100f3578063f4bd0bcf14610136575b600080fd5b34801561007357600080fd5b506100ac600480360381019080803515159060200190929190803515159060200190929190803515159060200190929190505050610165565b005b3480156100ba57600080fd5b506100c36101c1565b60405180841515151581526020018315151515815260200182151515158152602001935050505060405180910390f35b3480156100ff57600080fd5b50610134600480360381019080803590602001909291908035906020019092919080351515906020019092919050505061020a565b005b34801561014257600080fd5b5061014b61023f565b604051808215151515815260200191505060405180910390f35b82600560000160006101000a81548160ff02191690831515021790555081600560000160016101000a81548160ff02191690831515021790555080600560000160026101000a81548160ff021916908315150217905550505050565b6000806000600560000160009054906101000a900460ff16600560000160019054906101000a900460ff16600560000160029054906101000a900460ff16925092509250909192565b8260026000018190555081600260010181905550806002800160006101000a81548160ff021916908315150217905550505050565b600060011515600560000160009054906101000a900460ff16151514801561027d575060011515600560000160019054906101000a900460ff161515145b801561029f575060011515600560000160029054906101000a900460ff161515145b156102ad57600190506102b2565b600090505b905600a165627a7a72305820c357d7ffcb6890b72143c112832ed0f27b79491783517a012099c9969cb2f9020029",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636095204a146100675780637c123627146100ae578063d674666a146100f3578063f4bd0bcf14610136575b600080fd5b34801561007357600080fd5b506100ac600480360381019080803515159060200190929190803515159060200190929190803515159060200190929190505050610165565b005b3480156100ba57600080fd5b506100c36101c1565b60405180841515151581526020018315151515815260200182151515158152602001935050505060405180910390f35b3480156100ff57600080fd5b50610134600480360381019080803590602001909291908035906020019092919080351515906020019092919050505061020a565b005b34801561014257600080fd5b5061014b61023f565b604051808215151515815260200191505060405180910390f35b82600560000160006101000a81548160ff02191690831515021790555081600560000160016101000a81548160ff02191690831515021790555080600560000160026101000a81548160ff021916908315150217905550505050565b6000806000600560000160009054906101000a900460ff16600560000160019054906101000a900460ff16600560000160029054906101000a900460ff16925092509250909192565b8260026000018190555081600260010181905550806002800160006101000a81548160ff021916908315150217905550505050565b600060011515600560000160009054906101000a900460ff16151514801561027d575060011515600560000160019054906101000a900460ff161515145b801561029f575060011515600560000160029054906101000a900460ff161515145b156102ad57600190506102b2565b600090505b905600a165627a7a72305820c357d7ffcb6890b72143c112832ed0f27b79491783517a012099c9969cb2f9020029",
   "sourceMap": "256:2863:4:-;;;950:5;916:39;;;;;;;;;;;;;;;;;;;;1645:180;8:9:-1;5:2;;;30:1;27;20:12;5:2;1645:180:4;1714:1;1676:19;:35;;:39;;;;1767:1;1725:19;:39;;:43;;;;1813:5;1778:19;:32;;;:40;;;;;;;;;;;;;;;;;;256:2863;;;;;;",
   "deployedSourceMap": "256:2863:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2589:261;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2589:261:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2856:260;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2856:260:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2282:301;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2282:301:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1831:285;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1831:285:4;;;;;;;;;;;;;;;;;;;;;;;;;;;2589:261;2722:13;2693;:26;;;:42;;;;;;;;;;;;;;;;;;2775:14;2745:13;:27;;;:44;;;;;;;;;;;;;;;;;;2829:14;2799:13;:27;;;:44;;;;;;;;;;;;;;;;;;2589:261;;;:::o;2856:260::-;2896:18;2916:19;2936;3024:13;:26;;;;;;;;;;;;3052:13;:27;;;;;;;;;;;;3081:13;:27;;;;;;;;;;;;3016:93;;;;;;2856:260;;;:::o;2282:301::-;2430:16;2392:19;:35;;:54;;;;2498:20;2456:19;:39;;:62;;;;2563:13;2528:19;:32;;;:48;;;;;;;;;;;;;;;;;;2282:301;;;:::o;1831:285::-;1872:11;1928:4;1898:34;;:13;:26;;;;;;;;;;;;:34;;;:73;;;;;1967:4;1936:35;;:13;:27;;;;;;;;;;;;:35;;;1898:73;:112;;;;;2006:4;1975:35;;:13;:27;;;;;;;;;;;;:35;;;1898:112;1895:204;;;2033:4;2026:11;;;;1895:204;2083:5;2076:12;;1831:285;;:::o",
   "source": "pragma solidity ^0.4.24;\n\nimport \"./OfferContract.sol\";\n\n/*\n*   Once the OfferContract is accepted, this contract is next to be set the\n* condition before it goes into escrow.  Cannot have a sale condition contract without an\n* accepted OfferContract.\n*/\n\ncontract SaleConditionContract {\n\n    struct Condition {\n        uint dateOfCondition;\n        uint conditionExpiryDate;\n        bool conditionMet;\n    }\n\n    struct ConditionsList {\n        /*\n        * For simplicity sake there will only be a few conditions\n        * when a condition is set to true, then it is a condition \n        * that needs to be met\n        */\n        bool WallsPainted;\n        bool CarpetCleaned;\n        bool WindowsWashed;\n    }\n\n    //List of valid OfferContracts\n    mapping(address => OfferContract) listOfOfferContracts;\n    OfferContract offerContract;\n    Condition conditionHeaderData;\n    ConditionsList conditionList;\n    bool private offerContractValid = false;\n\n    modifier isOfferContractValid(address _offerContractAddress) {\n        offerContract = OfferContract(_offerContractAddress);\n        require(offerContract.isOfferAccepted() == true);\n        _;\n    }\n\n    /* This contract is instantiated and created from OfferContract \n    * The modifier is in place to prevent an outside source from creating an instance of this contract\n    * without a valid OfferContract.\n    */\n    /*constructor(address _offerContractAddress) public isOfferContractValid(_offerContractAddress) {\n        conditionHeaderData.dateOfCondition = 0;\n        conditionHeaderData.conditionExpiryDate = 0;\n        conditionHeaderData.conditionMet = false;\n    }*/\n    constructor() public {\n        conditionHeaderData.dateOfCondition = 0;\n        conditionHeaderData.conditionExpiryDate = 0;\n        conditionHeaderData.conditionMet = false;\n    }\n\n    function isConditionMet() public returns(bool _value) {\n        if(conditionList.WallsPainted == true && conditionList.CarpetCleaned == true && conditionList.WindowsWashed == true) {\n            return true;\n        }\n        else {\n            return false;\n        }           \n    }\n    \n    /*\n    * This will set which condition in the ConditionsList\n    * must be met before the conditionExpireDate in Condition\n    * structs expires\n    */\n    function setConditions(uint _dateOfCondition, uint _conditionExpiryDate, bool _conditionMet) public {\n        conditionHeaderData.dateOfCondition = _dateOfCondition;\n        conditionHeaderData.conditionExpiryDate = _conditionExpiryDate;\n        conditionHeaderData.conditionMet = _conditionMet;\n    }\n\n    function setConditionList(bool _WallsPainted, bool _CarpetCleaned,bool _WindowsWashed) public {\n        conditionList.WallsPainted = _WallsPainted;\n        conditionList.CarpetCleaned = _CarpetCleaned;\n        conditionList.WindowsWashed = _WindowsWashed;\n    }\n\n    function getConditions() public returns(bool _WallsPainted, bool _CarpetCleaned,bool _WindowsWashed) {\n        //must return the struct as array for UI\n        return (conditionList.WallsPainted, conditionList.CarpetCleaned, conditionList.WindowsWashed);\n    }\n\n}",
@@ -98,14 +98,14 @@
     "absolutePath": "/Users/jaypersanchez/comfree/contracts/SaleConditionContract.sol",
     "exportedSymbols": {
       "SaleConditionContract": [
-        515
+        512
       ]
     },
-    "id": 516,
+    "id": 513,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 343,
+        "id": 340,
         "literals": [
           "solidity",
           "^",
@@ -118,10 +118,10 @@
       {
         "absolutePath": "/Users/jaypersanchez/comfree/contracts/OfferContract.sol",
         "file": "./OfferContract.sol",
-        "id": 344,
+        "id": 341,
         "nodeType": "ImportDirective",
-        "scope": 516,
-        "sourceUnit": 342,
+        "scope": 513,
+        "sourceUnit": 339,
         "src": "26:29:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -132,23 +132,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 515,
+        "id": 512,
         "linearizedBaseContracts": [
-          515
+          512
         ],
         "name": "SaleConditionContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "SaleConditionContract.Condition",
-            "id": 351,
+            "id": 348,
             "members": [
               {
                 "constant": false,
-                "id": 346,
+                "id": 343,
                 "name": "dateOfCondition",
                 "nodeType": "VariableDeclaration",
-                "scope": 351,
+                "scope": 348,
                 "src": "321:20:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -157,7 +157,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 345,
+                  "id": 342,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "321:4:4",
@@ -171,10 +171,10 @@
               },
               {
                 "constant": false,
-                "id": 348,
+                "id": 345,
                 "name": "conditionExpiryDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 351,
+                "scope": 348,
                 "src": "351:24:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -183,7 +183,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 347,
+                  "id": 344,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "351:4:4",
@@ -197,10 +197,10 @@
               },
               {
                 "constant": false,
-                "id": 350,
+                "id": 347,
                 "name": "conditionMet",
                 "nodeType": "VariableDeclaration",
-                "scope": 351,
+                "scope": 348,
                 "src": "385:17:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -209,7 +209,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 349,
+                  "id": 346,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "385:4:4",
@@ -224,20 +224,20 @@
             ],
             "name": "Condition",
             "nodeType": "StructDefinition",
-            "scope": 515,
+            "scope": 512,
             "src": "294:115:4",
             "visibility": "public"
           },
           {
             "canonicalName": "SaleConditionContract.ConditionsList",
-            "id": 358,
+            "id": 355,
             "members": [
               {
                 "constant": false,
-                "id": 353,
+                "id": 350,
                 "name": "WallsPainted",
                 "nodeType": "VariableDeclaration",
-                "scope": 358,
+                "scope": 355,
                 "src": "633:17:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -246,7 +246,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 352,
+                  "id": 349,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "633:4:4",
@@ -260,10 +260,10 @@
               },
               {
                 "constant": false,
-                "id": 355,
+                "id": 352,
                 "name": "CarpetCleaned",
                 "nodeType": "VariableDeclaration",
-                "scope": 358,
+                "scope": 355,
                 "src": "660:18:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -272,7 +272,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 354,
+                  "id": 351,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "660:4:4",
@@ -286,10 +286,10 @@
               },
               {
                 "constant": false,
-                "id": 357,
+                "id": 354,
                 "name": "WindowsWashed",
                 "nodeType": "VariableDeclaration",
-                "scope": 358,
+                "scope": 355,
                 "src": "688:18:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -298,7 +298,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 356,
+                  "id": 353,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "688:4:4",
@@ -313,27 +313,27 @@
             ],
             "name": "ConditionsList",
             "nodeType": "StructDefinition",
-            "scope": 515,
+            "scope": 512,
             "src": "415:298:4",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 362,
+            "id": 359,
             "name": "listOfOfferContracts",
             "nodeType": "VariableDeclaration",
-            "scope": 515,
+            "scope": 512,
             "src": "754:54:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OfferContract_$341_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OfferContract_$338_$",
               "typeString": "mapping(address => contract OfferContract)"
             },
             "typeName": {
-              "id": 361,
+              "id": 358,
               "keyType": {
-                "id": 359,
+                "id": 356,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "762:7:4",
@@ -345,18 +345,18 @@
               "nodeType": "Mapping",
               "src": "754:33:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OfferContract_$341_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OfferContract_$338_$",
                 "typeString": "mapping(address => contract OfferContract)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 360,
+                "id": 357,
                 "name": "OfferContract",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 341,
+                "referencedDeclaration": 338,
                 "src": "773:13:4",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_OfferContract_$341",
+                  "typeIdentifier": "t_contract$_OfferContract_$338",
                   "typeString": "contract OfferContract"
                 }
               }
@@ -366,26 +366,26 @@
           },
           {
             "constant": false,
-            "id": 364,
+            "id": 361,
             "name": "offerContract",
             "nodeType": "VariableDeclaration",
-            "scope": 515,
+            "scope": 512,
             "src": "814:27:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_OfferContract_$341",
+              "typeIdentifier": "t_contract$_OfferContract_$338",
               "typeString": "contract OfferContract"
             },
             "typeName": {
               "contractScope": null,
-              "id": 363,
+              "id": 360,
               "name": "OfferContract",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 341,
+              "referencedDeclaration": 338,
               "src": "814:13:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_OfferContract_$341",
+                "typeIdentifier": "t_contract$_OfferContract_$338",
                 "typeString": "contract OfferContract"
               }
             },
@@ -394,26 +394,26 @@
           },
           {
             "constant": false,
-            "id": 366,
+            "id": 363,
             "name": "conditionHeaderData",
             "nodeType": "VariableDeclaration",
-            "scope": 515,
+            "scope": 512,
             "src": "847:29:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Condition_$351_storage",
+              "typeIdentifier": "t_struct$_Condition_$348_storage",
               "typeString": "struct SaleConditionContract.Condition"
             },
             "typeName": {
               "contractScope": null,
-              "id": 365,
+              "id": 362,
               "name": "Condition",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 351,
+              "referencedDeclaration": 348,
               "src": "847:9:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Condition_$351_storage_ptr",
+                "typeIdentifier": "t_struct$_Condition_$348_storage_ptr",
                 "typeString": "struct SaleConditionContract.Condition"
               }
             },
@@ -422,26 +422,26 @@
           },
           {
             "constant": false,
-            "id": 368,
+            "id": 365,
             "name": "conditionList",
             "nodeType": "VariableDeclaration",
-            "scope": 515,
+            "scope": 512,
             "src": "882:28:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+              "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
               "typeString": "struct SaleConditionContract.ConditionsList"
             },
             "typeName": {
               "contractScope": null,
-              "id": 367,
+              "id": 364,
               "name": "ConditionsList",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 358,
+              "referencedDeclaration": 355,
               "src": "882:14:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_ConditionsList_$358_storage_ptr",
+                "typeIdentifier": "t_struct$_ConditionsList_$355_storage_ptr",
                 "typeString": "struct SaleConditionContract.ConditionsList"
               }
             },
@@ -450,10 +450,10 @@
           },
           {
             "constant": false,
-            "id": 371,
+            "id": 368,
             "name": "offerContractValid",
             "nodeType": "VariableDeclaration",
-            "scope": 515,
+            "scope": 512,
             "src": "916:39:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -462,7 +462,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 369,
+              "id": 366,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "916:4:4",
@@ -474,7 +474,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "66616c7365",
-              "id": 370,
+              "id": 367,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -493,28 +493,28 @@
           },
           {
             "body": {
-              "id": 390,
+              "id": 387,
               "nodeType": "Block",
               "src": "1023:138:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 379,
+                    "id": 376,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 375,
+                      "id": 372,
                       "name": "offerContract",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 364,
+                      "referencedDeclaration": 361,
                       "src": "1033:13:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_OfferContract_$341",
+                        "typeIdentifier": "t_contract$_OfferContract_$338",
                         "typeString": "contract OfferContract"
                       }
                     },
@@ -525,11 +525,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 377,
+                          "id": 374,
                           "name": "_offerContractAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 373,
+                          "referencedDeclaration": 370,
                           "src": "1063:21:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -544,18 +544,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 376,
+                        "id": 373,
                         "name": "OfferContract",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 341,
+                        "referencedDeclaration": 338,
                         "src": "1049:13:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_OfferContract_$341_$",
+                          "typeIdentifier": "t_type$_t_contract$_OfferContract_$338_$",
                           "typeString": "type(contract OfferContract)"
                         }
                       },
-                      "id": 378,
+                      "id": 375,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -565,17 +565,17 @@
                       "nodeType": "FunctionCall",
                       "src": "1049:36:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_OfferContract_$341",
+                        "typeIdentifier": "t_contract$_OfferContract_$338",
                         "typeString": "contract OfferContract"
                       }
                     },
                     "src": "1033:52:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OfferContract_$341",
+                      "typeIdentifier": "t_contract$_OfferContract_$338",
                       "typeString": "contract OfferContract"
                     }
                   },
-                  "id": 380,
+                  "id": 377,
                   "nodeType": "ExpressionStatement",
                   "src": "1033:52:4"
                 },
@@ -589,7 +589,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 386,
+                        "id": 383,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -601,32 +601,32 @@
                             "argumentTypes": [],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 382,
+                              "id": 379,
                               "name": "offerContract",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 364,
+                              "referencedDeclaration": 361,
                               "src": "1103:13:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_OfferContract_$341",
+                                "typeIdentifier": "t_contract$_OfferContract_$338",
                                 "typeString": "contract OfferContract"
                               }
                             },
-                            "id": 383,
+                            "id": 380,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "isOfferAccepted",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 312,
+                            "referencedDeclaration": 309,
                             "src": "1103:29:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_bool_$",
                               "typeString": "function () external returns (bool)"
                             }
                           },
-                          "id": 384,
+                          "id": 381,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -645,7 +645,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 385,
+                          "id": 382,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -674,21 +674,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 381,
+                      "id": 378,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        533,
-                        534
+                        530,
+                        531
                       ],
-                      "referencedDeclaration": 533,
+                      "referencedDeclaration": 530,
                       "src": "1095:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 387,
+                    "id": 384,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -702,31 +702,31 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 388,
+                  "id": 385,
                   "nodeType": "ExpressionStatement",
                   "src": "1095:48:4"
                 },
                 {
-                  "id": 389,
+                  "id": 386,
                   "nodeType": "PlaceholderStatement",
                   "src": "1153:1:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 391,
+            "id": 388,
             "name": "isOfferContractValid",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 374,
+              "id": 371,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 373,
+                  "id": 370,
                   "name": "_offerContractAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 391,
+                  "scope": 388,
                   "src": "992:29:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -735,7 +735,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 372,
+                    "id": 369,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "992:7:4",
@@ -755,14 +755,14 @@
           },
           {
             "body": {
-              "id": 412,
+              "id": 409,
               "nodeType": "Block",
               "src": "1666:159:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 398,
+                    "id": 395,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -771,25 +771,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 394,
+                        "id": 391,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "1676:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 396,
+                      "id": 393,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "dateOfCondition",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 346,
+                      "referencedDeclaration": 343,
                       "src": "1676:35:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -801,7 +801,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 397,
+                      "id": 394,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -822,14 +822,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 399,
+                  "id": 396,
                   "nodeType": "ExpressionStatement",
                   "src": "1676:39:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 404,
+                    "id": 401,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -838,25 +838,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 400,
+                        "id": 397,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "1725:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 402,
+                      "id": 399,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "conditionExpiryDate",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 348,
+                      "referencedDeclaration": 345,
                       "src": "1725:39:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -868,7 +868,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 403,
+                      "id": 400,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -889,14 +889,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 405,
+                  "id": 402,
                   "nodeType": "ExpressionStatement",
                   "src": "1725:43:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 410,
+                    "id": 407,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -905,25 +905,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 406,
+                        "id": 403,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "1778:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 408,
+                      "id": 405,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "conditionMet",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 350,
+                      "referencedDeclaration": 347,
                       "src": "1778:32:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -935,7 +935,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 409,
+                      "id": 406,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -956,14 +956,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 411,
+                  "id": 408,
                   "nodeType": "ExpressionStatement",
                   "src": "1778:40:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 413,
+            "id": 410,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -971,19 +971,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 392,
+              "id": 389,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1656:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 393,
+              "id": 390,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1666:0:4"
             },
-            "scope": 515,
+            "scope": 512,
             "src": "1645:180:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -991,7 +991,7 @@
           },
           {
             "body": {
-              "id": 439,
+              "id": 436,
               "nodeType": "Block",
               "src": "1885:231:4",
               "statements": [
@@ -1002,7 +1002,7 @@
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 431,
+                    "id": 428,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1013,7 +1013,7 @@
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       },
-                      "id": 426,
+                      "id": 423,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1024,7 +1024,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 421,
+                        "id": 418,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1033,25 +1033,25 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 418,
+                            "id": 415,
                             "name": "conditionList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 368,
+                            "referencedDeclaration": 365,
                             "src": "1898:13:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                              "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                               "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                             }
                           },
-                          "id": 419,
+                          "id": 416,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "WallsPainted",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 353,
+                          "referencedDeclaration": 350,
                           "src": "1898:26:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -1063,7 +1063,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 420,
+                          "id": 417,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1092,7 +1092,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 425,
+                        "id": 422,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1101,25 +1101,25 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 422,
+                            "id": 419,
                             "name": "conditionList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 368,
+                            "referencedDeclaration": 365,
                             "src": "1936:13:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                              "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                               "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                             }
                           },
-                          "id": 423,
+                          "id": 420,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "CarpetCleaned",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 355,
+                          "referencedDeclaration": 352,
                           "src": "1936:27:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -1131,7 +1131,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 424,
+                          "id": 421,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1166,7 +1166,7 @@
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       },
-                      "id": 430,
+                      "id": 427,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1175,25 +1175,25 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 427,
+                          "id": 424,
                           "name": "conditionList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 368,
+                          "referencedDeclaration": 365,
                           "src": "1975:13:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                            "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                             "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                           }
                         },
-                        "id": 428,
+                        "id": 425,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "WindowsWashed",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 357,
+                        "referencedDeclaration": 354,
                         "src": "1975:27:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -1205,7 +1205,7 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "hexValue": "74727565",
-                        "id": 429,
+                        "id": 426,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1233,7 +1233,7 @@
                     }
                   },
                   "falseBody": {
-                    "id": 437,
+                    "id": 434,
                     "nodeType": "Block",
                     "src": "2062:37:4",
                     "statements": [
@@ -1241,7 +1241,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 435,
+                          "id": 432,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1256,18 +1256,18 @@
                           },
                           "value": "false"
                         },
-                        "functionReturnParameters": 417,
-                        "id": 436,
+                        "functionReturnParameters": 414,
+                        "id": 433,
                         "nodeType": "Return",
                         "src": "2076:12:4"
                       }
                     ]
                   },
-                  "id": 438,
+                  "id": 435,
                   "nodeType": "IfStatement",
                   "src": "1895:204:4",
                   "trueBody": {
-                    "id": 434,
+                    "id": 431,
                     "nodeType": "Block",
                     "src": "2012:36:4",
                     "statements": [
@@ -1275,7 +1275,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 432,
+                          "id": 429,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1290,8 +1290,8 @@
                           },
                           "value": "true"
                         },
-                        "functionReturnParameters": 417,
-                        "id": 433,
+                        "functionReturnParameters": 414,
+                        "id": 430,
                         "nodeType": "Return",
                         "src": "2026:11:4"
                       }
@@ -1301,7 +1301,7 @@
               ]
             },
             "documentation": null,
-            "id": 440,
+            "id": 437,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1309,22 +1309,22 @@
             "name": "isConditionMet",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 414,
+              "id": 411,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1854:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 417,
+              "id": 414,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 416,
+                  "id": 413,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 440,
+                  "scope": 437,
                   "src": "1872:11:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1333,7 +1333,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 415,
+                    "id": 412,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1872:4:4",
@@ -1348,7 +1348,7 @@
               ],
               "src": "1871:13:4"
             },
-            "scope": 515,
+            "scope": 512,
             "src": "1831:285:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1356,14 +1356,14 @@
           },
           {
             "body": {
-              "id": 467,
+              "id": 464,
               "nodeType": "Block",
               "src": "2382:201:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 453,
+                    "id": 450,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1372,25 +1372,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 449,
+                        "id": 446,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "2392:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 451,
+                      "id": 448,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "dateOfCondition",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 346,
+                      "referencedDeclaration": 343,
                       "src": "2392:35:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1401,11 +1401,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 452,
+                      "id": 449,
                       "name": "_dateOfCondition",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 442,
+                      "referencedDeclaration": 439,
                       "src": "2430:16:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1418,14 +1418,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 454,
+                  "id": 451,
                   "nodeType": "ExpressionStatement",
                   "src": "2392:54:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 459,
+                    "id": 456,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1434,25 +1434,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 455,
+                        "id": 452,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "2456:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 457,
+                      "id": 454,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "conditionExpiryDate",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 348,
+                      "referencedDeclaration": 345,
                       "src": "2456:39:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1463,11 +1463,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 458,
+                      "id": 455,
                       "name": "_conditionExpiryDate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 444,
+                      "referencedDeclaration": 441,
                       "src": "2498:20:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1480,14 +1480,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 460,
+                  "id": 457,
                   "nodeType": "ExpressionStatement",
                   "src": "2456:62:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 465,
+                    "id": 462,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1496,25 +1496,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 461,
+                        "id": 458,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "2528:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 463,
+                      "id": 460,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "conditionMet",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 350,
+                      "referencedDeclaration": 347,
                       "src": "2528:32:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1525,11 +1525,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 464,
+                      "id": 461,
                       "name": "_conditionMet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 446,
+                      "referencedDeclaration": 443,
                       "src": "2563:13:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1542,14 +1542,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 466,
+                  "id": 463,
                   "nodeType": "ExpressionStatement",
                   "src": "2528:48:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 468,
+            "id": 465,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1557,15 +1557,15 @@
             "name": "setConditions",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 447,
+              "id": 444,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 442,
+                  "id": 439,
                   "name": "_dateOfCondition",
                   "nodeType": "VariableDeclaration",
-                  "scope": 468,
+                  "scope": 465,
                   "src": "2305:21:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1574,7 +1574,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 441,
+                    "id": 438,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2305:4:4",
@@ -1588,10 +1588,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 444,
+                  "id": 441,
                   "name": "_conditionExpiryDate",
                   "nodeType": "VariableDeclaration",
-                  "scope": 468,
+                  "scope": 465,
                   "src": "2328:25:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1600,7 +1600,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 443,
+                    "id": 440,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2328:4:4",
@@ -1614,10 +1614,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 446,
+                  "id": 443,
                   "name": "_conditionMet",
                   "nodeType": "VariableDeclaration",
-                  "scope": 468,
+                  "scope": 465,
                   "src": "2355:18:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1626,7 +1626,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 445,
+                    "id": 442,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2355:4:4",
@@ -1643,12 +1643,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 448,
+              "id": 445,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2382:0:4"
             },
-            "scope": 515,
+            "scope": 512,
             "src": "2282:301:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1656,14 +1656,14 @@
           },
           {
             "body": {
-              "id": 495,
+              "id": 492,
               "nodeType": "Block",
               "src": "2683:167:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 481,
+                    "id": 478,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1672,25 +1672,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 477,
+                        "id": 474,
                         "name": "conditionList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 368,
+                        "referencedDeclaration": 365,
                         "src": "2693:13:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                          "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                           "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                         }
                       },
-                      "id": 479,
+                      "id": 476,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "WallsPainted",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 353,
+                      "referencedDeclaration": 350,
                       "src": "2693:26:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1701,11 +1701,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 480,
+                      "id": 477,
                       "name": "_WallsPainted",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 470,
+                      "referencedDeclaration": 467,
                       "src": "2722:13:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1718,14 +1718,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 482,
+                  "id": 479,
                   "nodeType": "ExpressionStatement",
                   "src": "2693:42:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 487,
+                    "id": 484,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1734,25 +1734,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 483,
+                        "id": 480,
                         "name": "conditionList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 368,
+                        "referencedDeclaration": 365,
                         "src": "2745:13:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                          "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                           "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                         }
                       },
-                      "id": 485,
+                      "id": 482,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "CarpetCleaned",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 355,
+                      "referencedDeclaration": 352,
                       "src": "2745:27:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1763,11 +1763,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 486,
+                      "id": 483,
                       "name": "_CarpetCleaned",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 472,
+                      "referencedDeclaration": 469,
                       "src": "2775:14:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1780,14 +1780,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 488,
+                  "id": 485,
                   "nodeType": "ExpressionStatement",
                   "src": "2745:44:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 493,
+                    "id": 490,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1796,25 +1796,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 489,
+                        "id": 486,
                         "name": "conditionList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 368,
+                        "referencedDeclaration": 365,
                         "src": "2799:13:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                          "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                           "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                         }
                       },
-                      "id": 491,
+                      "id": 488,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "WindowsWashed",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 357,
+                      "referencedDeclaration": 354,
                       "src": "2799:27:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1825,11 +1825,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 492,
+                      "id": 489,
                       "name": "_WindowsWashed",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 474,
+                      "referencedDeclaration": 471,
                       "src": "2829:14:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1842,14 +1842,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 494,
+                  "id": 491,
                   "nodeType": "ExpressionStatement",
                   "src": "2799:44:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 496,
+            "id": 493,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1857,15 +1857,15 @@
             "name": "setConditionList",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 475,
+              "id": 472,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 470,
+                  "id": 467,
                   "name": "_WallsPainted",
                   "nodeType": "VariableDeclaration",
-                  "scope": 496,
+                  "scope": 493,
                   "src": "2615:18:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1874,7 +1874,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 469,
+                    "id": 466,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2615:4:4",
@@ -1888,10 +1888,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 472,
+                  "id": 469,
                   "name": "_CarpetCleaned",
                   "nodeType": "VariableDeclaration",
-                  "scope": 496,
+                  "scope": 493,
                   "src": "2635:19:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1900,7 +1900,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 471,
+                    "id": 468,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2635:4:4",
@@ -1914,10 +1914,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 474,
+                  "id": 471,
                   "name": "_WindowsWashed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 496,
+                  "scope": 493,
                   "src": "2655:19:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1926,7 +1926,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 473,
+                    "id": 470,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2655:4:4",
@@ -1943,12 +1943,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 476,
+              "id": 473,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2683:0:4"
             },
-            "scope": 515,
+            "scope": 512,
             "src": "2589:261:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1956,7 +1956,7 @@
           },
           {
             "body": {
-              "id": 513,
+              "id": 510,
               "nodeType": "Block",
               "src": "2957:159:4",
               "statements": [
@@ -1968,25 +1968,25 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 505,
+                          "id": 502,
                           "name": "conditionList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 368,
+                          "referencedDeclaration": 365,
                           "src": "3024:13:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                            "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                             "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                           }
                         },
-                        "id": 506,
+                        "id": 503,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "WallsPainted",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 353,
+                        "referencedDeclaration": 350,
                         "src": "3024:26:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -1997,25 +1997,25 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 507,
+                          "id": 504,
                           "name": "conditionList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 368,
+                          "referencedDeclaration": 365,
                           "src": "3052:13:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                            "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                             "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                           }
                         },
-                        "id": 508,
+                        "id": 505,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "CarpetCleaned",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 355,
+                        "referencedDeclaration": 352,
                         "src": "3052:27:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -2026,25 +2026,25 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 509,
+                          "id": 506,
                           "name": "conditionList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 368,
+                          "referencedDeclaration": 365,
                           "src": "3081:13:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                            "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                             "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                           }
                         },
-                        "id": 510,
+                        "id": 507,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "WindowsWashed",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 357,
+                        "referencedDeclaration": 354,
                         "src": "3081:27:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -2052,7 +2052,7 @@
                         }
                       }
                     ],
-                    "id": 511,
+                    "id": 508,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -2065,15 +2065,15 @@
                       "typeString": "tuple(bool,bool,bool)"
                     }
                   },
-                  "functionReturnParameters": 504,
-                  "id": 512,
+                  "functionReturnParameters": 501,
+                  "id": 509,
                   "nodeType": "Return",
                   "src": "3016:93:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 514,
+            "id": 511,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -2081,22 +2081,22 @@
             "name": "getConditions",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 497,
+              "id": 494,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2878:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 504,
+              "id": 501,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 499,
+                  "id": 496,
                   "name": "_WallsPainted",
                   "nodeType": "VariableDeclaration",
-                  "scope": 514,
+                  "scope": 511,
                   "src": "2896:18:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2105,7 +2105,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 498,
+                    "id": 495,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2896:4:4",
@@ -2119,10 +2119,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 501,
+                  "id": 498,
                   "name": "_CarpetCleaned",
                   "nodeType": "VariableDeclaration",
-                  "scope": 514,
+                  "scope": 511,
                   "src": "2916:19:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2131,7 +2131,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 500,
+                    "id": 497,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2916:4:4",
@@ -2145,10 +2145,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 503,
+                  "id": 500,
                   "name": "_WindowsWashed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 514,
+                  "scope": 511,
                   "src": "2936:19:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2157,7 +2157,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 502,
+                    "id": 499,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2936:4:4",
@@ -2172,14 +2172,14 @@
               ],
               "src": "2895:61:4"
             },
-            "scope": 515,
+            "scope": 512,
             "src": "2856:260:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 516,
+        "scope": 513,
         "src": "256:2863:4"
       }
     ],
@@ -2189,14 +2189,14 @@
     "absolutePath": "/Users/jaypersanchez/comfree/contracts/SaleConditionContract.sol",
     "exportedSymbols": {
       "SaleConditionContract": [
-        515
+        512
       ]
     },
-    "id": 516,
+    "id": 513,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 343,
+        "id": 340,
         "literals": [
           "solidity",
           "^",
@@ -2209,10 +2209,10 @@
       {
         "absolutePath": "/Users/jaypersanchez/comfree/contracts/OfferContract.sol",
         "file": "./OfferContract.sol",
-        "id": 344,
+        "id": 341,
         "nodeType": "ImportDirective",
-        "scope": 516,
-        "sourceUnit": 342,
+        "scope": 513,
+        "sourceUnit": 339,
         "src": "26:29:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2223,23 +2223,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 515,
+        "id": 512,
         "linearizedBaseContracts": [
-          515
+          512
         ],
         "name": "SaleConditionContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "SaleConditionContract.Condition",
-            "id": 351,
+            "id": 348,
             "members": [
               {
                 "constant": false,
-                "id": 346,
+                "id": 343,
                 "name": "dateOfCondition",
                 "nodeType": "VariableDeclaration",
-                "scope": 351,
+                "scope": 348,
                 "src": "321:20:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2248,7 +2248,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 345,
+                  "id": 342,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "321:4:4",
@@ -2262,10 +2262,10 @@
               },
               {
                 "constant": false,
-                "id": 348,
+                "id": 345,
                 "name": "conditionExpiryDate",
                 "nodeType": "VariableDeclaration",
-                "scope": 351,
+                "scope": 348,
                 "src": "351:24:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2274,7 +2274,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 347,
+                  "id": 344,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "351:4:4",
@@ -2288,10 +2288,10 @@
               },
               {
                 "constant": false,
-                "id": 350,
+                "id": 347,
                 "name": "conditionMet",
                 "nodeType": "VariableDeclaration",
-                "scope": 351,
+                "scope": 348,
                 "src": "385:17:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2300,7 +2300,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 349,
+                  "id": 346,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "385:4:4",
@@ -2315,20 +2315,20 @@
             ],
             "name": "Condition",
             "nodeType": "StructDefinition",
-            "scope": 515,
+            "scope": 512,
             "src": "294:115:4",
             "visibility": "public"
           },
           {
             "canonicalName": "SaleConditionContract.ConditionsList",
-            "id": 358,
+            "id": 355,
             "members": [
               {
                 "constant": false,
-                "id": 353,
+                "id": 350,
                 "name": "WallsPainted",
                 "nodeType": "VariableDeclaration",
-                "scope": 358,
+                "scope": 355,
                 "src": "633:17:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2337,7 +2337,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 352,
+                  "id": 349,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "633:4:4",
@@ -2351,10 +2351,10 @@
               },
               {
                 "constant": false,
-                "id": 355,
+                "id": 352,
                 "name": "CarpetCleaned",
                 "nodeType": "VariableDeclaration",
-                "scope": 358,
+                "scope": 355,
                 "src": "660:18:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2363,7 +2363,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 354,
+                  "id": 351,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "660:4:4",
@@ -2377,10 +2377,10 @@
               },
               {
                 "constant": false,
-                "id": 357,
+                "id": 354,
                 "name": "WindowsWashed",
                 "nodeType": "VariableDeclaration",
-                "scope": 358,
+                "scope": 355,
                 "src": "688:18:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2389,7 +2389,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 356,
+                  "id": 353,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "688:4:4",
@@ -2404,27 +2404,27 @@
             ],
             "name": "ConditionsList",
             "nodeType": "StructDefinition",
-            "scope": 515,
+            "scope": 512,
             "src": "415:298:4",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 362,
+            "id": 359,
             "name": "listOfOfferContracts",
             "nodeType": "VariableDeclaration",
-            "scope": 515,
+            "scope": 512,
             "src": "754:54:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OfferContract_$341_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OfferContract_$338_$",
               "typeString": "mapping(address => contract OfferContract)"
             },
             "typeName": {
-              "id": 361,
+              "id": 358,
               "keyType": {
-                "id": 359,
+                "id": 356,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "762:7:4",
@@ -2436,18 +2436,18 @@
               "nodeType": "Mapping",
               "src": "754:33:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OfferContract_$341_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_contract$_OfferContract_$338_$",
                 "typeString": "mapping(address => contract OfferContract)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 360,
+                "id": 357,
                 "name": "OfferContract",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 341,
+                "referencedDeclaration": 338,
                 "src": "773:13:4",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_contract$_OfferContract_$341",
+                  "typeIdentifier": "t_contract$_OfferContract_$338",
                   "typeString": "contract OfferContract"
                 }
               }
@@ -2457,26 +2457,26 @@
           },
           {
             "constant": false,
-            "id": 364,
+            "id": 361,
             "name": "offerContract",
             "nodeType": "VariableDeclaration",
-            "scope": 515,
+            "scope": 512,
             "src": "814:27:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_OfferContract_$341",
+              "typeIdentifier": "t_contract$_OfferContract_$338",
               "typeString": "contract OfferContract"
             },
             "typeName": {
               "contractScope": null,
-              "id": 363,
+              "id": 360,
               "name": "OfferContract",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 341,
+              "referencedDeclaration": 338,
               "src": "814:13:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_OfferContract_$341",
+                "typeIdentifier": "t_contract$_OfferContract_$338",
                 "typeString": "contract OfferContract"
               }
             },
@@ -2485,26 +2485,26 @@
           },
           {
             "constant": false,
-            "id": 366,
+            "id": 363,
             "name": "conditionHeaderData",
             "nodeType": "VariableDeclaration",
-            "scope": 515,
+            "scope": 512,
             "src": "847:29:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Condition_$351_storage",
+              "typeIdentifier": "t_struct$_Condition_$348_storage",
               "typeString": "struct SaleConditionContract.Condition"
             },
             "typeName": {
               "contractScope": null,
-              "id": 365,
+              "id": 362,
               "name": "Condition",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 351,
+              "referencedDeclaration": 348,
               "src": "847:9:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Condition_$351_storage_ptr",
+                "typeIdentifier": "t_struct$_Condition_$348_storage_ptr",
                 "typeString": "struct SaleConditionContract.Condition"
               }
             },
@@ -2513,26 +2513,26 @@
           },
           {
             "constant": false,
-            "id": 368,
+            "id": 365,
             "name": "conditionList",
             "nodeType": "VariableDeclaration",
-            "scope": 515,
+            "scope": 512,
             "src": "882:28:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+              "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
               "typeString": "struct SaleConditionContract.ConditionsList"
             },
             "typeName": {
               "contractScope": null,
-              "id": 367,
+              "id": 364,
               "name": "ConditionsList",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 358,
+              "referencedDeclaration": 355,
               "src": "882:14:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_ConditionsList_$358_storage_ptr",
+                "typeIdentifier": "t_struct$_ConditionsList_$355_storage_ptr",
                 "typeString": "struct SaleConditionContract.ConditionsList"
               }
             },
@@ -2541,10 +2541,10 @@
           },
           {
             "constant": false,
-            "id": 371,
+            "id": 368,
             "name": "offerContractValid",
             "nodeType": "VariableDeclaration",
-            "scope": 515,
+            "scope": 512,
             "src": "916:39:4",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2553,7 +2553,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 369,
+              "id": 366,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "916:4:4",
@@ -2565,7 +2565,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "66616c7365",
-              "id": 370,
+              "id": 367,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -2584,28 +2584,28 @@
           },
           {
             "body": {
-              "id": 390,
+              "id": 387,
               "nodeType": "Block",
               "src": "1023:138:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 379,
+                    "id": 376,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 375,
+                      "id": 372,
                       "name": "offerContract",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 364,
+                      "referencedDeclaration": 361,
                       "src": "1033:13:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_OfferContract_$341",
+                        "typeIdentifier": "t_contract$_OfferContract_$338",
                         "typeString": "contract OfferContract"
                       }
                     },
@@ -2616,11 +2616,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 377,
+                          "id": 374,
                           "name": "_offerContractAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 373,
+                          "referencedDeclaration": 370,
                           "src": "1063:21:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -2635,18 +2635,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 376,
+                        "id": 373,
                         "name": "OfferContract",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 341,
+                        "referencedDeclaration": 338,
                         "src": "1049:13:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_OfferContract_$341_$",
+                          "typeIdentifier": "t_type$_t_contract$_OfferContract_$338_$",
                           "typeString": "type(contract OfferContract)"
                         }
                       },
-                      "id": 378,
+                      "id": 375,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2656,17 +2656,17 @@
                       "nodeType": "FunctionCall",
                       "src": "1049:36:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_OfferContract_$341",
+                        "typeIdentifier": "t_contract$_OfferContract_$338",
                         "typeString": "contract OfferContract"
                       }
                     },
                     "src": "1033:52:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OfferContract_$341",
+                      "typeIdentifier": "t_contract$_OfferContract_$338",
                       "typeString": "contract OfferContract"
                     }
                   },
-                  "id": 380,
+                  "id": 377,
                   "nodeType": "ExpressionStatement",
                   "src": "1033:52:4"
                 },
@@ -2680,7 +2680,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 386,
+                        "id": 383,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2692,32 +2692,32 @@
                             "argumentTypes": [],
                             "expression": {
                               "argumentTypes": null,
-                              "id": 382,
+                              "id": 379,
                               "name": "offerContract",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 364,
+                              "referencedDeclaration": 361,
                               "src": "1103:13:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_OfferContract_$341",
+                                "typeIdentifier": "t_contract$_OfferContract_$338",
                                 "typeString": "contract OfferContract"
                               }
                             },
-                            "id": 383,
+                            "id": 380,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "memberName": "isOfferAccepted",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 312,
+                            "referencedDeclaration": 309,
                             "src": "1103:29:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_bool_$",
                               "typeString": "function () external returns (bool)"
                             }
                           },
-                          "id": 384,
+                          "id": 381,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2736,7 +2736,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 385,
+                          "id": 382,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2765,21 +2765,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 381,
+                      "id": 378,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        533,
-                        534
+                        530,
+                        531
                       ],
-                      "referencedDeclaration": 533,
+                      "referencedDeclaration": 530,
                       "src": "1095:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 387,
+                    "id": 384,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2793,31 +2793,31 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 388,
+                  "id": 385,
                   "nodeType": "ExpressionStatement",
                   "src": "1095:48:4"
                 },
                 {
-                  "id": 389,
+                  "id": 386,
                   "nodeType": "PlaceholderStatement",
                   "src": "1153:1:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 391,
+            "id": 388,
             "name": "isOfferContractValid",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 374,
+              "id": 371,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 373,
+                  "id": 370,
                   "name": "_offerContractAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 391,
+                  "scope": 388,
                   "src": "992:29:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2826,7 +2826,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 372,
+                    "id": 369,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "992:7:4",
@@ -2846,14 +2846,14 @@
           },
           {
             "body": {
-              "id": 412,
+              "id": 409,
               "nodeType": "Block",
               "src": "1666:159:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 398,
+                    "id": 395,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2862,25 +2862,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 394,
+                        "id": 391,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "1676:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 396,
+                      "id": 393,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "dateOfCondition",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 346,
+                      "referencedDeclaration": 343,
                       "src": "1676:35:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2892,7 +2892,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 397,
+                      "id": 394,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2913,14 +2913,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 399,
+                  "id": 396,
                   "nodeType": "ExpressionStatement",
                   "src": "1676:39:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 404,
+                    "id": 401,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2929,25 +2929,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 400,
+                        "id": 397,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "1725:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 402,
+                      "id": 399,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "conditionExpiryDate",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 348,
+                      "referencedDeclaration": 345,
                       "src": "1725:39:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2959,7 +2959,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 403,
+                      "id": 400,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2980,14 +2980,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 405,
+                  "id": 402,
                   "nodeType": "ExpressionStatement",
                   "src": "1725:43:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 410,
+                    "id": 407,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2996,25 +2996,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 406,
+                        "id": 403,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "1778:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 408,
+                      "id": 405,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "conditionMet",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 350,
+                      "referencedDeclaration": 347,
                       "src": "1778:32:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3026,7 +3026,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "66616c7365",
-                      "id": 409,
+                      "id": 406,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -3047,14 +3047,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 411,
+                  "id": 408,
                   "nodeType": "ExpressionStatement",
                   "src": "1778:40:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 413,
+            "id": 410,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -3062,19 +3062,19 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 392,
+              "id": 389,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1656:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 393,
+              "id": 390,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1666:0:4"
             },
-            "scope": 515,
+            "scope": 512,
             "src": "1645:180:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3082,7 +3082,7 @@
           },
           {
             "body": {
-              "id": 439,
+              "id": 436,
               "nodeType": "Block",
               "src": "1885:231:4",
               "statements": [
@@ -3093,7 +3093,7 @@
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 431,
+                    "id": 428,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3104,7 +3104,7 @@
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       },
-                      "id": 426,
+                      "id": 423,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3115,7 +3115,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 421,
+                        "id": 418,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3124,25 +3124,25 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 418,
+                            "id": 415,
                             "name": "conditionList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 368,
+                            "referencedDeclaration": 365,
                             "src": "1898:13:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                              "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                               "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                             }
                           },
-                          "id": 419,
+                          "id": 416,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "WallsPainted",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 353,
+                          "referencedDeclaration": 350,
                           "src": "1898:26:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -3154,7 +3154,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 420,
+                          "id": 417,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3183,7 +3183,7 @@
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 425,
+                        "id": 422,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3192,25 +3192,25 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 422,
+                            "id": 419,
                             "name": "conditionList",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 368,
+                            "referencedDeclaration": 365,
                             "src": "1936:13:4",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                              "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                               "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                             }
                           },
-                          "id": 423,
+                          "id": 420,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
                           "memberName": "CarpetCleaned",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 355,
+                          "referencedDeclaration": 352,
                           "src": "1936:27:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
@@ -3222,7 +3222,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 424,
+                          "id": 421,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3257,7 +3257,7 @@
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       },
-                      "id": 430,
+                      "id": 427,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3266,25 +3266,25 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 427,
+                          "id": 424,
                           "name": "conditionList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 368,
+                          "referencedDeclaration": 365,
                           "src": "1975:13:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                            "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                             "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                           }
                         },
-                        "id": 428,
+                        "id": 425,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "WindowsWashed",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 357,
+                        "referencedDeclaration": 354,
                         "src": "1975:27:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -3296,7 +3296,7 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "hexValue": "74727565",
-                        "id": 429,
+                        "id": 426,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -3324,7 +3324,7 @@
                     }
                   },
                   "falseBody": {
-                    "id": 437,
+                    "id": 434,
                     "nodeType": "Block",
                     "src": "2062:37:4",
                     "statements": [
@@ -3332,7 +3332,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
-                          "id": 435,
+                          "id": 432,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3347,18 +3347,18 @@
                           },
                           "value": "false"
                         },
-                        "functionReturnParameters": 417,
-                        "id": 436,
+                        "functionReturnParameters": 414,
+                        "id": 433,
                         "nodeType": "Return",
                         "src": "2076:12:4"
                       }
                     ]
                   },
-                  "id": 438,
+                  "id": 435,
                   "nodeType": "IfStatement",
                   "src": "1895:204:4",
                   "trueBody": {
-                    "id": 434,
+                    "id": 431,
                     "nodeType": "Block",
                     "src": "2012:36:4",
                     "statements": [
@@ -3366,7 +3366,7 @@
                         "expression": {
                           "argumentTypes": null,
                           "hexValue": "74727565",
-                          "id": 432,
+                          "id": 429,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3381,8 +3381,8 @@
                           },
                           "value": "true"
                         },
-                        "functionReturnParameters": 417,
-                        "id": 433,
+                        "functionReturnParameters": 414,
+                        "id": 430,
                         "nodeType": "Return",
                         "src": "2026:11:4"
                       }
@@ -3392,7 +3392,7 @@
               ]
             },
             "documentation": null,
-            "id": 440,
+            "id": 437,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -3400,22 +3400,22 @@
             "name": "isConditionMet",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 414,
+              "id": 411,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1854:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 417,
+              "id": 414,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 416,
+                  "id": 413,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 440,
+                  "scope": 437,
                   "src": "1872:11:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3424,7 +3424,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 415,
+                    "id": 412,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1872:4:4",
@@ -3439,7 +3439,7 @@
               ],
               "src": "1871:13:4"
             },
-            "scope": 515,
+            "scope": 512,
             "src": "1831:285:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3447,14 +3447,14 @@
           },
           {
             "body": {
-              "id": 467,
+              "id": 464,
               "nodeType": "Block",
               "src": "2382:201:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 453,
+                    "id": 450,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3463,25 +3463,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 449,
+                        "id": 446,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "2392:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 451,
+                      "id": 448,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "dateOfCondition",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 346,
+                      "referencedDeclaration": 343,
                       "src": "2392:35:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3492,11 +3492,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 452,
+                      "id": 449,
                       "name": "_dateOfCondition",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 442,
+                      "referencedDeclaration": 439,
                       "src": "2430:16:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3509,14 +3509,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 454,
+                  "id": 451,
                   "nodeType": "ExpressionStatement",
                   "src": "2392:54:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 459,
+                    "id": 456,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3525,25 +3525,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 455,
+                        "id": 452,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "2456:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 457,
+                      "id": 454,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "conditionExpiryDate",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 348,
+                      "referencedDeclaration": 345,
                       "src": "2456:39:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3554,11 +3554,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 458,
+                      "id": 455,
                       "name": "_conditionExpiryDate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 444,
+                      "referencedDeclaration": 441,
                       "src": "2498:20:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3571,14 +3571,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 460,
+                  "id": 457,
                   "nodeType": "ExpressionStatement",
                   "src": "2456:62:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 465,
+                    "id": 462,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3587,25 +3587,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 461,
+                        "id": 458,
                         "name": "conditionHeaderData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 366,
+                        "referencedDeclaration": 363,
                         "src": "2528:19:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Condition_$351_storage",
+                          "typeIdentifier": "t_struct$_Condition_$348_storage",
                           "typeString": "struct SaleConditionContract.Condition storage ref"
                         }
                       },
-                      "id": 463,
+                      "id": 460,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "conditionMet",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 350,
+                      "referencedDeclaration": 347,
                       "src": "2528:32:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3616,11 +3616,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 464,
+                      "id": 461,
                       "name": "_conditionMet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 446,
+                      "referencedDeclaration": 443,
                       "src": "2563:13:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3633,14 +3633,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 466,
+                  "id": 463,
                   "nodeType": "ExpressionStatement",
                   "src": "2528:48:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 468,
+            "id": 465,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -3648,15 +3648,15 @@
             "name": "setConditions",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 447,
+              "id": 444,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 442,
+                  "id": 439,
                   "name": "_dateOfCondition",
                   "nodeType": "VariableDeclaration",
-                  "scope": 468,
+                  "scope": 465,
                   "src": "2305:21:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3665,7 +3665,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 441,
+                    "id": 438,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2305:4:4",
@@ -3679,10 +3679,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 444,
+                  "id": 441,
                   "name": "_conditionExpiryDate",
                   "nodeType": "VariableDeclaration",
-                  "scope": 468,
+                  "scope": 465,
                   "src": "2328:25:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3691,7 +3691,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 443,
+                    "id": 440,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "2328:4:4",
@@ -3705,10 +3705,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 446,
+                  "id": 443,
                   "name": "_conditionMet",
                   "nodeType": "VariableDeclaration",
-                  "scope": 468,
+                  "scope": 465,
                   "src": "2355:18:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3717,7 +3717,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 445,
+                    "id": 442,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2355:4:4",
@@ -3734,12 +3734,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 448,
+              "id": 445,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2382:0:4"
             },
-            "scope": 515,
+            "scope": 512,
             "src": "2282:301:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3747,14 +3747,14 @@
           },
           {
             "body": {
-              "id": 495,
+              "id": 492,
               "nodeType": "Block",
               "src": "2683:167:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 481,
+                    "id": 478,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3763,25 +3763,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 477,
+                        "id": 474,
                         "name": "conditionList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 368,
+                        "referencedDeclaration": 365,
                         "src": "2693:13:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                          "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                           "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                         }
                       },
-                      "id": 479,
+                      "id": 476,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "WallsPainted",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 353,
+                      "referencedDeclaration": 350,
                       "src": "2693:26:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3792,11 +3792,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 480,
+                      "id": 477,
                       "name": "_WallsPainted",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 470,
+                      "referencedDeclaration": 467,
                       "src": "2722:13:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3809,14 +3809,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 482,
+                  "id": 479,
                   "nodeType": "ExpressionStatement",
                   "src": "2693:42:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 487,
+                    "id": 484,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3825,25 +3825,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 483,
+                        "id": 480,
                         "name": "conditionList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 368,
+                        "referencedDeclaration": 365,
                         "src": "2745:13:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                          "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                           "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                         }
                       },
-                      "id": 485,
+                      "id": 482,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "CarpetCleaned",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 355,
+                      "referencedDeclaration": 352,
                       "src": "2745:27:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3854,11 +3854,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 486,
+                      "id": 483,
                       "name": "_CarpetCleaned",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 472,
+                      "referencedDeclaration": 469,
                       "src": "2775:14:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3871,14 +3871,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 488,
+                  "id": 485,
                   "nodeType": "ExpressionStatement",
                   "src": "2745:44:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 493,
+                    "id": 490,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3887,25 +3887,25 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 489,
+                        "id": 486,
                         "name": "conditionList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 368,
+                        "referencedDeclaration": 365,
                         "src": "2799:13:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                          "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                           "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                         }
                       },
-                      "id": 491,
+                      "id": 488,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
                       "memberName": "WindowsWashed",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 357,
+                      "referencedDeclaration": 354,
                       "src": "2799:27:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3916,11 +3916,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 492,
+                      "id": 489,
                       "name": "_WindowsWashed",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 474,
+                      "referencedDeclaration": 471,
                       "src": "2829:14:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -3933,14 +3933,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 494,
+                  "id": 491,
                   "nodeType": "ExpressionStatement",
                   "src": "2799:44:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 496,
+            "id": 493,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -3948,15 +3948,15 @@
             "name": "setConditionList",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 475,
+              "id": 472,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 470,
+                  "id": 467,
                   "name": "_WallsPainted",
                   "nodeType": "VariableDeclaration",
-                  "scope": 496,
+                  "scope": 493,
                   "src": "2615:18:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3965,7 +3965,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 469,
+                    "id": 466,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2615:4:4",
@@ -3979,10 +3979,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 472,
+                  "id": 469,
                   "name": "_CarpetCleaned",
                   "nodeType": "VariableDeclaration",
-                  "scope": 496,
+                  "scope": 493,
                   "src": "2635:19:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3991,7 +3991,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 471,
+                    "id": 468,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2635:4:4",
@@ -4005,10 +4005,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 474,
+                  "id": 471,
                   "name": "_WindowsWashed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 496,
+                  "scope": 493,
                   "src": "2655:19:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4017,7 +4017,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 473,
+                    "id": 470,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2655:4:4",
@@ -4034,12 +4034,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 476,
+              "id": 473,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2683:0:4"
             },
-            "scope": 515,
+            "scope": 512,
             "src": "2589:261:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4047,7 +4047,7 @@
           },
           {
             "body": {
-              "id": 513,
+              "id": 510,
               "nodeType": "Block",
               "src": "2957:159:4",
               "statements": [
@@ -4059,25 +4059,25 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 505,
+                          "id": 502,
                           "name": "conditionList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 368,
+                          "referencedDeclaration": 365,
                           "src": "3024:13:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                            "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                             "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                           }
                         },
-                        "id": 506,
+                        "id": 503,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "WallsPainted",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 353,
+                        "referencedDeclaration": 350,
                         "src": "3024:26:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -4088,25 +4088,25 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 507,
+                          "id": 504,
                           "name": "conditionList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 368,
+                          "referencedDeclaration": 365,
                           "src": "3052:13:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                            "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                             "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                           }
                         },
-                        "id": 508,
+                        "id": 505,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "CarpetCleaned",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 355,
+                        "referencedDeclaration": 352,
                         "src": "3052:27:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -4117,25 +4117,25 @@
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 509,
+                          "id": 506,
                           "name": "conditionList",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 368,
+                          "referencedDeclaration": 365,
                           "src": "3081:13:4",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_ConditionsList_$358_storage",
+                            "typeIdentifier": "t_struct$_ConditionsList_$355_storage",
                             "typeString": "struct SaleConditionContract.ConditionsList storage ref"
                           }
                         },
-                        "id": 510,
+                        "id": 507,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
                         "memberName": "WindowsWashed",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 357,
+                        "referencedDeclaration": 354,
                         "src": "3081:27:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -4143,7 +4143,7 @@
                         }
                       }
                     ],
-                    "id": 511,
+                    "id": 508,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
@@ -4156,15 +4156,15 @@
                       "typeString": "tuple(bool,bool,bool)"
                     }
                   },
-                  "functionReturnParameters": 504,
-                  "id": 512,
+                  "functionReturnParameters": 501,
+                  "id": 509,
                   "nodeType": "Return",
                   "src": "3016:93:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 514,
+            "id": 511,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -4172,22 +4172,22 @@
             "name": "getConditions",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 497,
+              "id": 494,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2878:2:4"
             },
             "payable": false,
             "returnParameters": {
-              "id": 504,
+              "id": 501,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 499,
+                  "id": 496,
                   "name": "_WallsPainted",
                   "nodeType": "VariableDeclaration",
-                  "scope": 514,
+                  "scope": 511,
                   "src": "2896:18:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4196,7 +4196,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 498,
+                    "id": 495,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2896:4:4",
@@ -4210,10 +4210,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 501,
+                  "id": 498,
                   "name": "_CarpetCleaned",
                   "nodeType": "VariableDeclaration",
-                  "scope": 514,
+                  "scope": 511,
                   "src": "2916:19:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4222,7 +4222,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 500,
+                    "id": 497,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2916:4:4",
@@ -4236,10 +4236,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 503,
+                  "id": 500,
                   "name": "_WindowsWashed",
                   "nodeType": "VariableDeclaration",
-                  "scope": 514,
+                  "scope": 511,
                   "src": "2936:19:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4248,7 +4248,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 502,
+                    "id": 499,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "2936:4:4",
@@ -4263,14 +4263,14 @@
               ],
               "src": "2895:61:4"
             },
-            "scope": 515,
+            "scope": 512,
             "src": "2856:260:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 516,
+        "scope": 513,
         "src": "256:2863:4"
       }
     ],
@@ -4322,8 +4322,32 @@
       "links": {},
       "address": "0xd87c9e6623b23d6abde17742419442ed56639383",
       "transactionHash": "0xffd429620a4e853ac255746e23ee219101f3feb7724a3d605ab02f7f61a144a6"
+    },
+    "1545288323166": {
+      "events": {},
+      "links": {},
+      "address": "0xd7f13bdb6ecb00ec498f114b9fdfdfaa905e49bc",
+      "transactionHash": "0x020e74ff95ef59d9bfea7c98b0556d944a8a8fd3fa28aeb9fb72b927a2454e21"
+    },
+    "1545370709319": {
+      "events": {},
+      "links": {},
+      "address": "0x03485380bd0554e44521f71af13f58a613e0efa5",
+      "transactionHash": "0x020e74ff95ef59d9bfea7c98b0556d944a8a8fd3fa28aeb9fb72b927a2454e21"
+    },
+    "1545371510117": {
+      "events": {},
+      "links": {},
+      "address": "0xb136221ff1a96ff1255da54950f516a1c2724287",
+      "transactionHash": "0x1e448cff6f3476c723f9d2730570ba476feebfd2611fa418846eff6b5ec8f159"
+    },
+    "1545373934418": {
+      "events": {},
+      "links": {},
+      "address": "0x5351f04f744871574bfb8d1e3aab910aec769f0a",
+      "transactionHash": "0xb53e4836b4d74faf76229fbe1105ce3b4ce016cea1d54bfe964199eb1f9d4128"
     }
   },
   "schemaVersion": "2.0.3",
-  "updatedAt": "2018-12-20T00:28:16.624Z"
+  "updatedAt": "2018-12-21T06:33:12.197Z"
 }

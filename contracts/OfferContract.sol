@@ -18,6 +18,8 @@ contract OfferContract {
         bool accepted;
     }
 
+    address[] saleConditionContractsArray;
+
     OfferContract offerContractObject;
     uint numberDaysExpiration = 10;
     SaleConditionContract saleConditionContract;
@@ -66,8 +68,6 @@ contract OfferContract {
         * must be opened.
         */
         offerContractObject.accepted = _value;
-        /* Instantiate a new SaleConditionContract once offer is accepted */
-        saleConditionContract = new SaleConditionContract();
         return _value; //this will either return true or false
     }
 

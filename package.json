@@ -1,0 +1,29 @@
+{
+  "name": "comfreeproperty",
+  "version": "1.0.0",
+  "description": "Provides smart contracts for a real estate sale ad purchase transaction",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jaypersanchez@github.com/jaypersanchez/comfreeproperty.git"
+  },
+  "keywords": [
+    "comfree"
+  ],
+  "author": "J. Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaypersanchez/comfreeproperty/issues"
+  },
+  "homepage": "https://github.com/jaypersanchez/comfreeproperty#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}

@@ -14,3 +14,23 @@ $ git clone http://www.github.com/jaypersanchez/comfree.git
 ## Usecase Diagram
 
 <img src="./ConsensysBootcampFinalProject.png" width="500">
+
+## Usage from Truffle Console
+1. Open terminal widow and change directory into "comfree" project
+2. Open another terminal and start ganache-cli or ganache windows
+3. Open another terminal and go to truffle console
+4. Compile from truffle console
+5. Create OfferContract instance
+6. OfferContract.deployed().then(function(instance){offerInstance=instance;})
+7. Set seller address using one of the account from Ganache: offerInstance.setSellerAddress('walletaddress')
+8. Set buyer address using one of the account from Ganache: offerInstance.setBuyerAddress('walletAddress')
+9. Accept offer: offerInstance.accept(true)
+10. Verify offer is accepted: offerInstance.isOfferAccepted.call()
+11. Create SaleConditionContract instance.  Application business flow will create this contract
+once OfferContract.accept is true
+
+## Improvement List
+1. Set validation when setting buyer and seller address.  Make sure that buyer address is not set to seller address once seller address has been set
+2. Fix date stamp in OfferContract for expiration
+3. Change design/implementation so that SaleConditionContract will allow itself to be created
+when OffectContract is at accepted state

@@ -3,7 +3,6 @@ App = {
   contracts: {},
   account: 0x0,
   baseURL: "http://ec2-13-59-72-72.us-east-2.compute.amazonaws.com:4000/api/v1/",
-  shyftapiToken: "B1C46FAD",
   loading: false,
 
   init: function() {
@@ -40,7 +39,7 @@ App = {
   },
 
   initContract: function() {
-    $.getJSON('BioData.json', function(bioDataArtifact) {
+    /*$.getJSON('BioData.json', function(bioDataArtifact) {
       // get the contract artifact file and use it to instantiate a truffle contract abstraction
       App.contracts.BioData = TruffleContract(bioDataArtifact);
       // set the provider for our contracts
@@ -49,10 +48,13 @@ App = {
       //App.listenToEvents();
       // retrieve the article from the contract
       return App.reloadBioData();
-    });
+    });*/
   },
 
-  reloadBioData: function() {
+  createOffer: function() {
+  },
+
+  /*reloadBioData: function() {
     //avoid re-entry
     if(App.loading) {
       return;
@@ -81,9 +83,9 @@ App = {
       App.loading = false;
       console.error(err.message);
     });
-  },
+  },*/
 
-  displayBioData: function(_id, _contractOwner, _firstName, _middleName, _lastName) {
+  /*displayBioData: function(_id, _contractOwner, _firstName, _middleName, _lastName) {
     var articlesRow = $('#articlesRow');
     var articleTemplate = $("#articleTemplate");
     articleTemplate.find('.panel-title').text(_id);
@@ -93,9 +95,9 @@ App = {
     articleTemplate.find('.biodata-lastname').text(_lastName);
     //add this article
     $('#articlesRow').append(articleTemplate.html());
-  },
+  },*/
 
-  addBioData: function() {
+  /*addBioData: function() {
     // retrieve screen data
     var _first_name = $('#first_name').val();
     var _middle_name = $('#middle_name').val();
@@ -113,7 +115,7 @@ App = {
       alert(console.error("Application Error: " + err.message));
       //console.error(err);
     });
-  },
+  },*/
 
   bindEvents: function() {
     $(document).on('click', '.btn-adopt', App.handleAdopt);
@@ -135,105 +137,6 @@ App = {
      */
   },
 
-  setPrimaryAdministrator: function() {
-    url = App.baseURL + "trust_anchor_manager/set_primary_administrator";
-    alert(App.shyftapiToken);
-    $.ajax({
-      url: url,
-      type: "POST",
-      dataType: 'json',
-      data: {"trust_anchor_address":"0x43ec6d0942f7faef069f7f63d0384a27f529b062"},
-      headers: {
-        "X-User-Token": "B1C46FAD",
-        "Accept":"application/json",
-      },
-      success: function (msg) {
-        alert("Success: ");
-      },
-      error: function (jqXHR, textStatus, errorThrown) {
-        alert( console.log("jqXHR: " + jqXHR) ); //Acutal error
-        alert( console.log("textStatus: " + textStatus) );
-        alert( console.log("errorThrown: " + errorThrown) );
-      }
-    });
-  },
-
-  sendTransaction: function() {
-    
-    url = App.baseURL + "send_transaction";
-    alert(url);
-    $.ajax({
-      type: "POST",
-      url: url,
-      data: App.shyftapiToken,
-      contentType: 'application/json',
-      dataType: 'json',
-      headers: {
-        "x-user-token": "B1C46FAD",
-        "Accept":"application/json"
-      },
-      body: {
-        "gas_limit":21000000,
-        "gas_price":20,
-        "payload":"0x1123456789768546546168496846546546"
-      },
-      success: function (msg) {
-        alert("Success: ");
-      },
-      error: function (e) {
-        alert( console.log(e.responseText) ); //Acutal error
-      }
-    });
-  }
-  /*createRequest: function() {
-    alert("createRequest");
-    result = null;
-    if (window.XMLHttpRequest) {
-      alert("XMLHttpRequest");
-      // FireFox, Safari, etc.
-      result = new HttpRequest();
-      if (typeof xmlhttp.overrideMimeType != 'undefined') {
-        alert("overrideMimeType");
-        result.overrideMimeType('text/xml'); // Or anything else
-      }
-    }
-    else if (window.ActiveXObject) {
-      // MSIE
-      result = new ActiveXObject("Microsoft.XMLHTTP");
-      alert("activexobject");
-    } 
-    else {
-      // No known mechanism -- consider aborting the application
-      alert("no known mechanism");
-    }
-    alert("return createRequest");
-    return result;
-  },
-
-  sendTransaction: function() {
-    alert("sendTransaction");
-      url = App.baseURL + "send_transaction";
-      var req = App.createRequest(); //create XMLHttpRequest
-      alert(url);
-      req.onreadystatechange = function() {
-        if(req.readyState != 4) {
-          alert("Not there yet");
-          return; //not there yet
-        }
-        if(req.status != 200) {
-          //handle request failed
-          alert("Handle request failed");
-          return;
-        }
-        //request successful.  Read resposne
-        var resp = req.responseText;
-        //process incoming data
-        alert(resp);
-      }
-      req.open("GET", url, true);
-      req.setRequestHeader("X-User-Token",App.shyftapiToken);
-      req.send();
-  }*/
 };
 
 $(function() {

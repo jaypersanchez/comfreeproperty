@@ -1,6 +1,6 @@
 module.exports = {
   networks: {
-    development: {
+    ganache_cli: {
       host: "localhost",
       port: 8545,
       network_id: "*" // Match any network id

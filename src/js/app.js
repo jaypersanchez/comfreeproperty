@@ -19,8 +19,8 @@ App = {
       App.web3Provider = new Web3.providers.HttpProvider('http://127.0.0.1:8545');
     }
     web3 = new Web3(App.web3Provider);
-    App.displayAccountInfo();
-    return App.initContract();
+    //App.displayAccountInfo();
+    //return App.initContract();
   },
 
   displayAccountInfo: function() {
@@ -52,6 +52,16 @@ App = {
   },
 
   createOffer: function() {
+    $.getJSON('OfferContract.json', function(offerContractArtifact) {
+      // get the contract artifact file and use it to instantiate a truffle contract abstraction
+      App.contracts.OfferContract = TruffleContract(offerContractArtifact);
+      // set the provider for our contracts
+      App.contracts.OfferContract.setProvider(App.web3Provider);
+      // listen to events
+      //App.listenToEvents();
+      // retrieve the article from the contract
+      //return App.reloadBioData();
+    });
   },
 
   /*reloadBioData: function() {

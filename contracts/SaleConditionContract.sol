@@ -1,6 +1,7 @@
 pragma solidity ^0.4.24;
 
 import "./OfferContract.sol";
+import "./ComfreePropertyDataModel.sol";
 
 /*
 *   Once the OfferContract is accepted, this contract is next to be set the
@@ -8,7 +9,8 @@ import "./OfferContract.sol";
 * accepted OfferContract.
 */
 
-contract SaleConditionContract {
+contract SaleConditionContract is ComfreePropertyDataModel {
+    address owner;
 
     struct Condition {
         uint dateOfCondition;
@@ -34,25 +36,17 @@ contract SaleConditionContract {
     ConditionsList conditionList;
     bool private offerContractValid = false;
 
-    modifier isOfferContractValid(address _offerContractAddress) {
-        offerContract = OfferContract(_offerContractAddress);
-        require(offerContract.isOfferAccepted() == true);
-        _;
-    }
-
     /* This contract is instantiated and created from OfferContract 
     * The modifier is in place to prevent an outside source from creating an instance of this contract
     * without a valid OfferContract.
     */
-    /*constructor(address _offerContractAddress) public isOfferContractValid(_offerContractAddress) {
+    constructor () public {
+        //offerContract = OfferContract(_offerContractAddress);
+        //require( offerContract.isOfferAccepted() == true ); 
         conditionHeaderData.dateOfCondition = 0;
         conditionHeaderData.conditionExpiryDate = 0;
         conditionHeaderData.conditionMet = false;
-    }*/
-    constructor() public {
-        conditionHeaderData.dateOfCondition = 0;
-        conditionHeaderData.conditionExpiryDate = 0;
-        conditionHeaderData.conditionMet = false;
+        owner = msg.sender;
     }
 
     function isConditionMet() public returns(bool _value) {
@@ -65,9 +59,7 @@ contract SaleConditionContract {
     }
     
     /*
-    * This will set which condition in the ConditionsList
-    * must be met before the conditionExpireDate in Condition
-    * structs expires
+    * This will set the expiration for conditions to be met
     */
     function setConditions(uint _dateOfCondition, uint _conditionExpiryDate, bool _conditionMet) public {
         conditionHeaderData.dateOfCondition = _dateOfCondition;
@@ -75,6 +67,11 @@ contract SaleConditionContract {
         conditionHeaderData.conditionMet = _conditionMet;
     }
 
+    /*
+    * This will set which condition in the ConditionsList
+    * has been met that must be met before the conditionExpireDate in Condition
+    * structs expires
+    */
     function setConditionList(bool _WallsPainted, bool _CarpetCleaned,bool _WindowsWashed) public {
         conditionList.WallsPainted = _WallsPainted;
         conditionList.CarpetCleaned = _CarpetCleaned;

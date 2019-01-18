@@ -35,3 +35,4 @@ when OffectContract is at accepted state
 7. Application UI for user application example
 8. During development, ether is used as currency for the buy/sell transaction.  Implement MetaCoin as a utility 
 token as currency for buy/sell transaction
+9. There's only one offer from a buyer wallet.  Must change so that a buyer can have multiple offers

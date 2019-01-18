@@ -16,11 +16,98 @@ App = {
       App.web3Provider = web3.currentProvider;
     } else {
       //create a new provider and plug it directly into our local node
-      App.web3Provider = new Web3.providers.HttpProvider('http://127.0.0.1:8545');
+      App.web3Provider = new Web3.providers.HttpProvider('http://127.0.0.1:7545');
     }
     web3 = new Web3(App.web3Provider);
     //App.displayAccountInfo();
-    //return App.initContract();
+    return App.initContract();
+  },
+
+  initContract: function() {
+    $.getJSON('OfferContract.json', function(offerContractArtifact) {
+      // get the contract artifact file and use it to instantiate a truffle contract abstraction
+      App.contracts.OfferContract = TruffleContract(offerContractArtifact);
+      // set the provider for our contracts
+      App.contracts.OfferContract.setProvider(App.web3Provider);
+      // listen to events
+      //App.listenToEvents();
+      // retrieve the article from the contract
+      return App.reloadOfferContractList();
+    });
+  },
+
+  createOffer: function() {
+    $.getJSON('OfferContract.json', function(offerContractArtifact) {
+      // get the contract artifact file and use it to instantiate a truffle contract abstraction
+      App.contracts.OfferContract = TruffleContract(offerContractArtifact);
+      // set the provider for our contracts
+      App.contracts.OfferContract.setProvider(App.web3Provider);
+      // retrieve screen data
+      var _buyeraddress = $('#buyeraddress').val();
+      var _selleraddress = $('#selleraddress').val();
+      //convert value to ether
+      var _etheramount = web3.toWei(parseFloat($('#etheramount').val() || 0),"ether");
+      alert(_buyeraddress + "::" + _selleraddress + "::" + _etheramount);
+      App.contracts.OfferContract.deployed().then(function(instance) {
+        alert("send offer to blockchain");
+        return instance.createOfferContract(_buyeraddress, _selleraddress, 1,1,1,_etheramount,false, {
+          from: _buyeraddress,
+          gas: 500000
+        });
+      }).then(function(result) {
+        console.log(result);
+        //alert("result");
+        //forward to list of active offers
+        //window.location.href = "./activeoffers.html";
+        App.reloadOfferContractList();
+      }).catch(function(err) {
+        console.log(err.message);
+        alert(console.error("Application Error: " + err.message));
+      });
+    });
+  },
+
+  reloadOfferContractList: function() {
+    //avoid re-entry
+    if(App.loading) {
+      return;
+    }
+    App.loading = true;
+    // refresh account information because the balance might have changed
+    //App.displayAccountInfo();
+    $.getJSON('OfferContract.json', function(offerContractArtifact) {
+        App.contracts.OfferContract = TruffleContract(offerContractArtifact);
+    // set the provider for our contracts
+    App.contracts.OfferContract.setProvider(App.web3Provider);
+    var offerContractInstance;
+    App.contracts.OfferContract.deployed().then(function(instance) {
+      offerContractInstance = instance;
+      return offerContractInstance.getActiveOffers();
+    }).then(function(bioDataIds) {
+      // retrieve the article placeholder and clear it
+      $('#activeOffersRow').empty();
+      for(var i =0; i < bioDataIds.length; i++) {
+        var bioDataId = bioDataIds[i];
+        offerContractInstance._listOfOfferContracts(bioDataId.toNumber()).then(function(_bioData) {
+            /*
+            * uint id, address buyerAddress,address sellerAddress
+            * uint offerDate, uint expiredDate, uint currentDate
+            * uint offerAmount, bool accepted;
+            */
+            if(!_bioData[7] ) {
+              App.displayData(_bioData[0], _bioData[1], _bioData[2], _bioData[6], _bioData[7]);
+            }
+        });
+      }
+      App.loading = false;
+      // add this article
+      //$('#articlesRow').append(articleTemplate.html());
+    }).catch(function(err) {
+      App.loading = false;
+      console.error(err.message);
+    });
+    });
+    
   },
 
   displayAccountInfo: function() {
@@ -38,74 +125,19 @@ App = {
     });
   },
 
-  initContract: function() {
-    /*$.getJSON('BioData.json', function(bioDataArtifact) {
-      // get the contract artifact file and use it to instantiate a truffle contract abstraction
-      App.contracts.BioData = TruffleContract(bioDataArtifact);
-      // set the provider for our contracts
-      App.contracts.BioData.setProvider(App.web3Provider);
-      // listen to events
-      //App.listenToEvents();
-      // retrieve the article from the contract
-      return App.reloadBioData();
-    });*/
+  displayData: function(_id, _buyeraddress, _selleraddress, _offeramount, _offeraccepted) {
+    var activeOffersRow = $('#activeOffersRow');
+    var displayTemplate = $("#displayTemplate");
+    displayTemplate.find('.panel-title').text("Active Offers");
+    displayTemplate.find('.recordid').text(_id);
+    displayTemplate.find('.buyeraddress').text(_buyeraddress);
+    displayTemplate.find('.selleraddress').text(_selleraddress);
+    displayTemplate.find('.offeramount').text( web3.fromWei(_offeramount,"ether") );
+    displayTemplate.find('.offeraccepted').text(_offeraccepted);
+    //alert(_offeraccepted);
+    //add data
+    $('#activeOffersRow').append(displayTemplate.html());
   },
-
-  createOffer: function() {
-    $.getJSON('OfferContract.json', function(offerContractArtifact) {
-      // get the contract artifact file and use it to instantiate a truffle contract abstraction
-      App.contracts.OfferContract = TruffleContract(offerContractArtifact);
-      // set the provider for our contracts
-      App.contracts.OfferContract.setProvider(App.web3Provider);
-      // listen to events
-      //App.listenToEvents();
-      // retrieve the article from the contract
-      //return App.reloadBioData();
-    });
-  },
-
-  /*reloadBioData: function() {
-    //avoid re-entry
-    if(App.loading) {
-      return;
-    }
-    App.loading = true;
-    // refresh account information because the balance might have changed
-    App.displayAccountInfo();
-    var BioDataInstance;
-    
-    App.contracts.BioData.deployed().then(function(instance) {
-      BioDataInstance = instance;
-      return BioDataInstance.getBioData();
-    }).then(function(bioDataIds) {
-      // retrieve the article placeholder and clear it
-      $('#articlesRow').empty();
-      for(var i =0; i < bioDataIds.length; i++) {
-        var bioDataId = bioDataIds[i];
-        BioDataInstance.biodatalist(bioDataId.toNumber()).then(function(_bioData) {
-            App.displayBioData(_bioData[0], _bioData[1], _bioData[2], _bioData[3], _bioData[4]);
-        });
-      }
-      App.loading = false;
-      // add this article
-      //$('#articlesRow').append(articleTemplate.html());
-    }).catch(function(err) {
-      App.loading = false;
-      console.error(err.message);
-    });
-  },*/
-
-  /*displayBioData: function(_id, _contractOwner, _firstName, _middleName, _lastName) {
-    var articlesRow = $('#articlesRow');
-    var articleTemplate = $("#articleTemplate");
-    articleTemplate.find('.panel-title').text(_id);
-    articleTemplate.find('.panel-contractOwner').text(_contractOwner);
-    articleTemplate.find('.biodata-firstname').text(_firstName);
-    articleTemplate.find('.biodata-middlename').text(_middleName);
-    articleTemplate.find('.biodata-lastname').text(_lastName);
-    //add this article
-    $('#articlesRow').append(articleTemplate.html());
-  },*/
 
   /*addBioData: function() {
     // retrieve screen data

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Active Offers</title>
+    <title>Sale Condition</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,11 +21,25 @@
     <div class="container">
         <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-push-2">
-                    <h1 class="text-center">Active Offers</h1>
+                    <h1 class="text-center">Sale Condition</h1>
                     <hr/>
                     <br/>
                 </div>
         </div>
+
+        <div class="row">
+          <p>
+          Below are a list of conditions that must be met during escrow prior to closing the sale of the property
+          Please put a check mark below if conditions have been met
+          </p>
+
+          <form action="/action_page.php">
+            <input type="checkbox" name="wallspainted" value="wallspainted"> Paint Walls<br>
+            <input type="checkbox" name="carpetcleaned" value="carpetcleaned"> Shampoo Carpets<br>
+            <input type="checkbox" name="windowswashed" value="windowswashed"> Wash Windows<br>
+          </form>
+        </div>
+
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

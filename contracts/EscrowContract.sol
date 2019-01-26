@@ -6,7 +6,7 @@ import "./ComfreeToken.sol";
 contract EscrowContract {
     address owner;
 
-    constructor () payable {
+    constructor () {
         owner = msg.sender;
     }//constructor 
 
@@ -37,19 +37,28 @@ contract EscrowContract {
     
   }
 
+  function getMsgValue() public view returns(uint) {
+    return msg.value;
+  }
+
+  function getMsgSender() public view returns(address,address) {
+    return (msg.sender, owner);
+  }
+
     function sendFundsToSeller(uint _escrowAmount, address _escrowSellerAddress) public payable returns(uint) {
         /*
-        * transfer funds from escrowDepositor account into 
-        * escrowBeneficiary account.  For testing, escrowBeneficiary amount can use 
-        * ganache coinbase.  In production, this will be another wallet address
+        * By design, when not using ERC20 token, ether must first be transfered from buyer address to contract owner
         */
-        uint result = 0; //default to fail
         require(msg.value >= _escrowAmount);
-        uint balanceAmount = msg.value - _escrowAmount;
-        //need to transfer ether from account[0] to current contract address
-        address(_escrowSellerAddress).transfer(_escrowAmount);
-        result = 1; //if require does not revert and transfer is successful, change result to 1 for success
-        return result; //success
+        if(msg.sender == owner) {
+          uint balanceAmount = msg.value - _escrowAmount;
+          //need to transfer ether from account[0] to current contract address
+          address(_escrowSellerAddress).transfer(_escrowAmount);
+          return 1; //success
+        }
+        else {
+          return 0; //fail
+        }
     }//sendFundsToSeller
 
     function() payable {

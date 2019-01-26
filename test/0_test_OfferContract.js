@@ -7,94 +7,105 @@ contract('OfferContract', function(accounts) {
     * Accounts from Ganache
     */
     let initialBalance = 1;
-    let buyerAddress = accounts[0];
-    let sellerAddress = accounts[1];
-    var addressB = accounts[2];
-    var addressC = accounts[3];
+    let contractOwnerAddress = accounts[0]; 
+    let buyerAddressA = accounts[1];
+    let sellerAddressB = accounts[2];
+    let buyerAddressC = accounts[3];
+    let sellerAddressD = accounts[4];
+    let buyerAddressE = accounts[5];
+    let sellerAddressF = accounts[6];
+
 
     let offerContract;
     let saleConditionContract;
     let escrowContract;
-    let offerAmount = 50;
-    let accept = true;
 
-    //condition list
+    /*
+    * By setting the values of each variables below, we can test for different scenarios
+    */
+    //Make offer test scenario
+    let offerAmount = 50;
+    let acceptvalue = true;
+    let offercontractId = 1;
+
+    //set condition list scenario
     var WallsPainted = true;
     var CarpetCleaned = true;
     var WindowsWashed = true;
+
+    //escrow payment scenario
+    var escrowPaymentAmount = 50;
 
     /*
     *   Contract initiation starts from Buyer.  
     *   
     */
-
-    it("OfferContract Instance", async() => {
+    it("Create OfferContract Instance", async() => {
         offerContract = await OfferContract.deployed();
-        console.log("\t\t[ OfferContract address :: " + offerContract.address + " ]");
-        console.log("\t\t[ Coinbase Buyer account address:: " + buyerAddress + " ]");
-        console.log("\t\t[ Seller account address:: " + sellerAddress + " ]");
-        
+        console.log("\t\t[ Contract Owner address :: " + contractOwnerAddress + " ]");
         assert(offerContract !== undefined, 'has no OfferContract instance');
     }).timeout(100000);
 
+    it("Submit an offer", async() => {
+        //increment index
+        var offerDate = 1; //Date.now();
+        var expiryTime = 1; //Date.now() + (1000 * 60 * 60 * 10) + 1;// (in the future 10 days and a day)
+        var offerAmount = web3.toWei(10,'ether');
+        var accepted = false;
+        let result = await offerContract.createOfferContract.call(buyerAddressA,sellerAddressB,offerDate, offerDate, expiryTime, offerAmount, accepted);
+        let resultHash = await offerContract.createOfferContract(buyerAddressA,sellerAddressB,offerDate, offerDate, expiryTime, offerAmount, accepted);
+        console.log("\t\t[ Result Success :: " + result + " ]");
+        let isaccepted = await offerContract.isOfferAccepted.call(buyerAddressA);
+        console.log("\t\t[ Offer should not be accepted by default :: " + isaccepted + " ]");
+        assert.equal(isaccepted, false, "When an initial offer is created, the offer should not be accepted by default");
+    });
 
-    it("Set Seller Wallet Address :: " + sellerAddress, async () => {
-        await offerContract.setSellerAddress(sellerAddress);
-        let sellerAddy = await offerContract.getSellerAddress.call();
-        assert.equal(sellerAddy, sellerAddress, "Seller Address does not match with what was setup");
-    }).timeout(100000);
-
-    it("Set Buyer Wallet Address :: " + buyerAddress, async () => {
-        await offerContract.setBuyerAddress(buyerAddress);
-        let buyerAddy = await offerContract.getBuyerAddress.call();
-        assert.equal(buyerAddy, buyerAddress, "Buyer Address does not match with what was setup");
-    }).timeout(100000);
-
-    it("Set Buyer Offer", async() => {
-        await offerContract.setBuyerOffer(offerAmount);
-        let offeredAmount = await offerContract.getOfferAmount.call();
-        assert.equal(offerAmount, offeredAmount,"Amount offered does not equal with offer on record");
-    }).timeout(100000);
-
-    it("Buyer offer accepted", async() => {
-        let _accept = await offerContract.accept(accept);
-        let isaccepted = await offerContract.isOfferAccepted.call();
-        assert.equal(isaccepted, true, 'Offer not accepted.  Will not initiate Sale Condition contract');
-        if(isaccepted) {
-            console.log("\t\t[ Offer accepted ]");
-        }
-        else {
-            console.log("\t\t[ Error: Offer Not accepted ]");
-        }
-        //assert.equal(_accept, isaccepted,"Offer does not match what is on record");
+    it("Accept Offer by :: " + sellerAddressB, async () => {
+        let result = await offerContract.accept.call(offercontractId, acceptvalue);
+        let resultHash = await offerContract.accept(offercontractId, acceptvalue);
+        console.log("\t\t[ Seller Accepts Offer :: " + result + " ]");
+        let isaccepted = await offerContract.isOfferAccepted.call(offercontractId);
+        console.log("\t\t[ Offer should not be accepted by default :: " + isaccepted + " ]");
+        /*
+        * Testing assert is not applicable in this section.  Testing accept state of an offer must be allowed to toggle between
+        * true and false
+        */
+       if(isaccepted) {
+           console.log("\t\t[ Offer Contract State is accepted ]");
+       }
+       else {
+        console.log("\t\t[ Offer Contract State is accepted ]");
+       }
+        //assert.equal(isaccepted, true, "At this point, users at the application layer should have accepted the offer");
     }).timeout(100000);
 
     /*
-    *   Test upon creation of SaleConditionContract, OfferContract accept must
+    * Test upon creation of SaleConditionContract, OfferContract accept must
     * return true
     */
-
     it("SaleConditionContract Instance", async() => {
-        let isaccepted = offerContract.isOfferAccepted.call();
+        let isaccepted = await offerContract.isOfferAccepted.call(offercontractId);
         if ( isaccepted ) {
             saleConditionContract = await SaleConditionContract.deployed();
-            //saleConditionContract = new SaleConditionContract(offerContract.address);
             console.log("\t\t[ SaleConditionContract address :: " + saleConditionContract.address + " ]");
-            assert(saleConditionContract !== undefined, 'has no SaleConditionContract instance');
+            //assert(saleConditionContract !== undefined, 'has no SaleConditionContract instance');
+            assert.equal(isaccepted, true, "Offer has been accepted.  Should allow sale condition contract to move forward");
         }
         else {
             console.log("\t\t[ Unable to create saleConditionConract.  OfferContract has not been accepted]");    
+            assert.equal(isaccepted, false, "Cannot allow a sale condition contract to be created if offer contract ID is not at accepted state");
         }
         
     }).timeout(100000);
 
-    it("Are conditions met", async() => {
+    it("Set List of Conditions to be met before entering escrow", async() => {
         //set condition list
-        await saleConditionContract.setConditionList(WallsPainted,CarpetCleaned,WindowsWashed);
         let isSatisfied = await saleConditionContract.isConditionMet.call();
+        console.log("\t\t[ Have all conditions been met :: " + isSatisfied + " ]");
+        let result = await saleConditionContract.setConditionList.call(WallsPainted,CarpetCleaned,WindowsWashed);
+        let resultHash = await saleConditionContract.setConditionList(WallsPainted,CarpetCleaned,WindowsWashed);
+        isSatisfied = await saleConditionContract.isConditionMet.call();
         console.log( "\t\t[ isSatisfied ] " + isSatisfied );
-        //assert(saleConditionContract !== undefined, 'has no SaleConditionContract instance');
-        //assert.equal(isSatisfied, true, "List of conditions must all be satisfied");
         if(isSatisfied) {
             console.log("\t\t[ All sale conditions are met ]");
         }
@@ -108,13 +119,16 @@ contract('OfferContract', function(accounts) {
     * SaleConditionContract is met
     */
    it("Create EscrowContract", async() => {
+        let isSatisfied = await saleConditionContract.isConditionMet.call();
+        assert.equal(isSatisfied, true, "All sale conditions must be met before moving on to escrow");
         escrowContract = await EscrowContract.deployed();
-        console.log("\t\t[ EscrowContract address :: " + escrowContract.address + " ]");
-        assert(escrowContract !== undefined, 'has no EscrowContract instance');
-        let buyerAddressBalanceBeforeTransfer = await web3.eth.getBalance(buyerAddress);
-        let sellerAddressBalanceBeforeTransfer = await web3.eth.getBalance(sellerAddress);
-        let escrowContractBalanceBeforeTransfer = await web3.eth.getBalance(escrowContract.address);
-        console.log("\t\t[ Balances Before Transfers ] " + buyerAddressBalanceBeforeTransfer + "::" +
+        let msgSenderAddress = await escrowContract.getMsgSender.call();
+        console.log("\t\t[ EscrowContract address :: MsgSender " + escrowContract.address + "::" + msgSenderAddress + " ]");
+        //assert(escrowContract !== undefined, 'has no EscrowContract instance');
+        let buyerAddressBalanceBeforeTransfer = await web3.eth.getBalance(buyerAddressA);
+        let sellerAddressBalanceBeforeTransfer = await web3.eth.getBalance(sellerAddressB);
+        let escrowContractBalanceBeforeTransfer = await web3.eth.getBalance(contractOwnerAddress);
+        console.log("\t\t[ Balances Before Transfers ] " +  buyerAddressBalanceBeforeTransfer + "::" +
         sellerAddressBalanceBeforeTransfer + "::" + escrowContractBalanceBeforeTransfer);
         /*
         * Current design requires buyer account to send ether payment to contract instance.
@@ -124,20 +138,28 @@ contract('OfferContract', function(accounts) {
         * 2nd param seller wallet address to receive ether payments
         * 3rd is the amount of ether to be paid which is the escrow amount
         */
-        let result = await escrowContract.sendFundsToSeller(web3.toWei(10,'ether'), sellerAddress, {value: web3.toWei(20,'ether')});
-        if(result !== 1) {
-            //transfer failed
-            console.log("\t\t[ Transfer failed ]");
+        /*
+        * must send ether from buyerAddress to contractOwnerAddress
+        * escrow payments must be coming from an escrow bank so the escrow payment
+        * must be originating from the escrow contract address
+        */
+       let msgValueBeforeTransferResult = await escrowContract.getMsgValue.call();
+        let send = web3.eth.sendTransaction({from:buyerAddressA,to:escrowContract.address, value:web3.toWei(escrowPaymentAmount, "ether")});
+        let msgValueAfterTransferResult = await escrowContract.getMsgValue.call();
+        console.log("\t\t[ msgValueBeforeTransferResult :: escrowPaymentAmount ] " + msgValueBeforeTransferResult + "::" + escrowPaymentAmount );
+        //now sent money to sellerAddress
+        let result = await escrowContract.sendFundsToSeller.call(web3.toWei(escrowPaymentAmount,'ether'), sellerAddressB);
+        console.log("\t\t[ Escrow Transfer Result :: " + result + " ]");
+        if(result == 1) {
+            
+            console.log("\t\t[ Transfer Success ]");
         } 
         else {
-            //success transfer
-            var buyerAddressBalanceAfterTransfer = await web3.eth.getBalance(buyerAddress);
-            var sellerAddressBalanceAfterTransfer = await web3.eth.getBalance(sellerAddress);
-            var escrowContractBalanceAfterTransfer = await web3.eth.getBalance(escrowContract.address);
-            console.log("\t\t[ Transfer success, current balance ] " + buyerAddressBalanceAfterTransfer +
-                        "::" + sellerAddressBalanceAfterTransfer + "::" + escrowContractBalanceAfterTransfer);    
+            console.log("\t\t[ Transfer Failed ]");
+            //console.log("\t\t[ Transfer success, current balance ] " + buyerAddressBalanceAfterTransfer +
+              //          "::" + sellerAddressBalanceAfterTransfer + "::" + escrowContractBalanceAfterTransfer);    
         }
-        //console.log("Account Balance After " + buyerAddress + "::" + sellerAddress);
+        
    });
 
 });

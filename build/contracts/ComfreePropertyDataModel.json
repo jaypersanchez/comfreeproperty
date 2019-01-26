@@ -32,60 +32,38 @@
       "inputs": [
         {
           "indexed": false,
-          "name": "_sender",
+          "name": "_buyer",
           "type": "address"
         },
         {
           "indexed": false,
-          "name": "_receiver",
+          "name": "_seller",
           "type": "address"
         },
         {
           "indexed": false,
-          "name": "_numTokens",
+          "name": "offerAmount",
           "type": "uint256"
         }
       ],
-      "name": "Transfer",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "_sender",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "name": "_delegate",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "name": "_numTokens",
-          "type": "uint256"
-        }
-      ],
-      "name": "Approval",
+      "name": "OfferCreated",
       "type": "event"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506101b4806100206000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636b36266414610046575b600080fd5b34801561005257600080fd5b5061005b61010a565b604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200194505050505060405180910390f35b60018060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169080600301549050845600a165627a7a72305820c38fa26b0f20e57eebd48796d970d855a30d3a2a4de28e1252be00359a482ccc0029",
-  "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636b36266414610046575b600080fd5b34801561005257600080fd5b5061005b61010a565b604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200194505050505060405180910390f35b60018060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169080600301549050845600a165627a7a72305820c38fa26b0f20e57eebd48796d970d855a30d3a2a4de28e1252be00359a482ccc0029",
-  "sourceMap": "26:507:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:507:0;;;;;;;",
-  "deployedSourceMap": "26:507:0:-;;;;;;;;;;;;;;;;;;;;;;;;333:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;333:44:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.4.24;\n\ncontract ComfreePropertyDataModel {\n\n    address owner;\n\n    struct EscrowDataElements {\n        address escrowDepositorAddress; //buyer\n        address escrowAgentAddress; //bank\n        address escrowBeneficiaryAddress; //seller receiving the money to be deposited\n        uint256 escrowAmount;\n    }\n    EscrowDataElements public escrowDataElements;\n\n    event Transfer(address _sender, address _receiver, uint256 _numTokens);\n    event Approval(address _sender, address _delegate, uint256 _numTokens);\n}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101b4806100206000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636b36266414610046575b600080fd5b34801561005257600080fd5b5061005b61010a565b604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200194505050505060405180910390f35b60018060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169080600301549050845600a165627a7a723058207036f0cc8aa157567c63dcf2f545213b8addc7599a7d3051e527f678e050a7850029",
+  "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636b36266414610046575b600080fd5b34801561005257600080fd5b5061005b61010a565b604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200194505050505060405180910390f35b60018060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169080600301549050845600a165627a7a723058207036f0cc8aa157567c63dcf2f545213b8addc7599a7d3051e527f678e050a7850029",
+  "sourceMap": "26:589:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:589:0;;;;;;;",
+  "deployedSourceMap": "26:589:0:-;;;;;;;;;;;;;;;;;;;;;;;;333:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;333:44:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.24;\n\ncontract ComfreePropertyDataModel {\n\n    address owner;\n\n    struct EscrowDataElements {\n        address escrowDepositorAddress; //buyer\n        address escrowAgentAddress; //bank\n        address escrowBeneficiaryAddress; //seller receiving the money to be deposited\n        uint256 escrowAmount;\n    }\n    EscrowDataElements public escrowDataElements;\n\n    //event Transfer(address _sender, address _receiver, uint256 _numTokens);\n    //event Approval(address _sender, address _delegate, uint256 _numTokens);\n    event OfferCreated(address _buyer, address _seller, uint256 offerAmount);\n}",
   "sourcePath": "/Users/jaypersanchez/comfree/contracts/ComfreePropertyDataModel.sol",
   "ast": {
     "absolutePath": "/Users/jaypersanchez/comfree/contracts/ComfreePropertyDataModel.sol",
     "exportedSymbols": {
       "ComfreePropertyDataModel": [
-        31
+        23
       ]
     },
-    "id": 32,
+    "id": 24,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -105,9 +83,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 31,
+        "id": 23,
         "linearizedBaseContracts": [
-          31
+          23
         ],
         "name": "ComfreePropertyDataModel",
         "nodeType": "ContractDefinition",
@@ -117,7 +95,7 @@
             "id": 3,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 31,
+            "scope": 23,
             "src": "67:13:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -249,7 +227,7 @@
             ],
             "name": "EscrowDataElements",
             "nodeType": "StructDefinition",
-            "scope": 31,
+            "scope": 23,
             "src": "87:241:0",
             "visibility": "public"
           },
@@ -258,7 +236,7 @@
             "id": 14,
             "name": "escrowDataElements",
             "nodeType": "VariableDeclaration",
-            "scope": 31,
+            "scope": 23,
             "src": "333:44:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -285,7 +263,7 @@
             "anonymous": false,
             "documentation": null,
             "id": 22,
-            "name": "Transfer",
+            "name": "OfferCreated",
             "nodeType": "EventDefinition",
             "parameters": {
               "id": 21,
@@ -295,10 +273,10 @@
                   "constant": false,
                   "id": 16,
                   "indexed": false,
-                  "name": "_sender",
+                  "name": "_buyer",
                   "nodeType": "VariableDeclaration",
                   "scope": 22,
-                  "src": "399:15:0",
+                  "src": "559:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -309,7 +287,7 @@
                     "id": 15,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "399:7:0",
+                    "src": "559:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -322,10 +300,10 @@
                   "constant": false,
                   "id": 18,
                   "indexed": false,
-                  "name": "_receiver",
+                  "name": "_seller",
                   "nodeType": "VariableDeclaration",
                   "scope": 22,
-                  "src": "416:17:0",
+                  "src": "575:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -336,7 +314,7 @@
                     "id": 17,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "416:7:0",
+                    "src": "575:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -349,10 +327,10 @@
                   "constant": false,
                   "id": 20,
                   "indexed": false,
-                  "name": "_numTokens",
+                  "name": "offerAmount",
                   "nodeType": "VariableDeclaration",
                   "scope": 22,
-                  "src": "435:18:0",
+                  "src": "592:19:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -363,7 +341,7 @@
                     "id": 19,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "435:7:0",
+                    "src": "592:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -373,121 +351,25 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "398:56:0"
+              "src": "558:54:0"
             },
-            "src": "384:71:0"
-          },
-          {
-            "anonymous": false,
-            "documentation": null,
-            "id": 30,
-            "name": "Approval",
-            "nodeType": "EventDefinition",
-            "parameters": {
-              "id": 29,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 24,
-                  "indexed": false,
-                  "name": "_sender",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 30,
-                  "src": "475:15:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 23,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "475:7:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 26,
-                  "indexed": false,
-                  "name": "_delegate",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 30,
-                  "src": "492:17:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 25,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "492:7:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 28,
-                  "indexed": false,
-                  "name": "_numTokens",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 30,
-                  "src": "511:18:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 27,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "511:7:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "474:56:0"
-            },
-            "src": "460:71:0"
+            "src": "540:73:0"
           }
         ],
-        "scope": 32,
-        "src": "26:507:0"
+        "scope": 24,
+        "src": "26:589:0"
       }
     ],
-    "src": "0:533:0"
+    "src": "0:615:0"
   },
   "legacyAST": {
     "absolutePath": "/Users/jaypersanchez/comfree/contracts/ComfreePropertyDataModel.sol",
     "exportedSymbols": {
       "ComfreePropertyDataModel": [
-        31
+        23
       ]
     },
-    "id": 32,
+    "id": 24,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -507,9 +389,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 31,
+        "id": 23,
         "linearizedBaseContracts": [
-          31
+          23
         ],
         "name": "ComfreePropertyDataModel",
         "nodeType": "ContractDefinition",
@@ -519,7 +401,7 @@
             "id": 3,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 31,
+            "scope": 23,
             "src": "67:13:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -651,7 +533,7 @@
             ],
             "name": "EscrowDataElements",
             "nodeType": "StructDefinition",
-            "scope": 31,
+            "scope": 23,
             "src": "87:241:0",
             "visibility": "public"
           },
@@ -660,7 +542,7 @@
             "id": 14,
             "name": "escrowDataElements",
             "nodeType": "VariableDeclaration",
-            "scope": 31,
+            "scope": 23,
             "src": "333:44:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -687,7 +569,7 @@
             "anonymous": false,
             "documentation": null,
             "id": 22,
-            "name": "Transfer",
+            "name": "OfferCreated",
             "nodeType": "EventDefinition",
             "parameters": {
               "id": 21,
@@ -697,10 +579,10 @@
                   "constant": false,
                   "id": 16,
                   "indexed": false,
-                  "name": "_sender",
+                  "name": "_buyer",
                   "nodeType": "VariableDeclaration",
                   "scope": 22,
-                  "src": "399:15:0",
+                  "src": "559:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -711,7 +593,7 @@
                     "id": 15,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "399:7:0",
+                    "src": "559:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -724,10 +606,10 @@
                   "constant": false,
                   "id": 18,
                   "indexed": false,
-                  "name": "_receiver",
+                  "name": "_seller",
                   "nodeType": "VariableDeclaration",
                   "scope": 22,
-                  "src": "416:17:0",
+                  "src": "575:15:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -738,7 +620,7 @@
                     "id": 17,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "416:7:0",
+                    "src": "575:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -751,10 +633,10 @@
                   "constant": false,
                   "id": 20,
                   "indexed": false,
-                  "name": "_numTokens",
+                  "name": "offerAmount",
                   "nodeType": "VariableDeclaration",
                   "scope": 22,
-                  "src": "435:18:0",
+                  "src": "592:19:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -765,7 +647,7 @@
                     "id": 19,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "435:7:0",
+                    "src": "592:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -775,112 +657,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "398:56:0"
+              "src": "558:54:0"
             },
-            "src": "384:71:0"
-          },
-          {
-            "anonymous": false,
-            "documentation": null,
-            "id": 30,
-            "name": "Approval",
-            "nodeType": "EventDefinition",
-            "parameters": {
-              "id": 29,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 24,
-                  "indexed": false,
-                  "name": "_sender",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 30,
-                  "src": "475:15:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 23,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "475:7:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 26,
-                  "indexed": false,
-                  "name": "_delegate",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 30,
-                  "src": "492:17:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 25,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "492:7:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 28,
-                  "indexed": false,
-                  "name": "_numTokens",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 30,
-                  "src": "511:18:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 27,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "511:7:0",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "474:56:0"
-            },
-            "src": "460:71:0"
+            "src": "540:73:0"
           }
         ],
-        "scope": 32,
-        "src": "26:507:0"
+        "scope": 24,
+        "src": "26:589:0"
       }
     ],
-    "src": "0:533:0"
+    "src": "0:615:0"
   },
   "compiler": {
     "name": "solc",
@@ -890,10 +676,10 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xf6877c45930ab9ca4007280b5e068f431ff3a609",
-      "transactionHash": "0x841e2e1aa4a08887cac361781131cd33db7901c1e51684f5b6692738a4d13a96"
+      "address": "0x4d42080c238ec320d6788b5564855ad1d1f705e5",
+      "transactionHash": "0x4f590b6371c14f86501124f2d9333688a9e52f0f3003cde542afe6e5c4489d33"
     }
   },
   "schemaVersion": "2.0.3",
-  "updatedAt": "2019-01-18T00:18:12.824Z"
+  "updatedAt": "2019-01-26T16:49:57.401Z"
 }

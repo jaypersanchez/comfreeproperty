@@ -41,11 +41,6 @@ contract SaleConditionContract is ComfreePropertyDataModel {
     * without a valid OfferContract.
     */
     constructor () public {
-        //offerContract = OfferContract(_offerContractAddress);
-        //require( offerContract.isOfferAccepted() == true ); 
-        conditionHeaderData.dateOfCondition = 0;
-        conditionHeaderData.conditionExpiryDate = 0;
-        conditionHeaderData.conditionMet = false;
         owner = msg.sender;
     }
 

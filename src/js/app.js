@@ -58,7 +58,7 @@ App = {
         console.log(result);
         //alert("result");
         //forward to list of active offers
-        //window.location.href = "./activeoffers.html";
+        
         App.reloadOfferContractList();
       }).catch(function(err) {
         console.log(err.message);
@@ -67,6 +67,19 @@ App = {
     });
   },
 
+  acceptOffer: function() {
+    //alert("Offer Accepted!");
+    $.getJSON('SaleConditionContract.json', function(saleConditionContractArtifact) {
+      App.contracts.SaleConditionContract = TruffleContract(offerContractArtifact);
+      // set the provider for our contracts
+      App.contracts.SaleConditionContract.setProvider(App.web3Provider);
+      var saleConditionContractInstance;
+      //App.contracts.SaleConditionContract.deployed().then
+    });
+  },
+  /*
+  * Displays only active offers(offers yet to be accepted)
+  */
   reloadOfferContractList: function() {
     //avoid re-entry
     if(App.loading) {
@@ -76,7 +89,7 @@ App = {
     // refresh account information because the balance might have changed
     //App.displayAccountInfo();
     $.getJSON('OfferContract.json', function(offerContractArtifact) {
-        App.contracts.OfferContract = TruffleContract(offerContractArtifact);
+      App.contracts.OfferContract = TruffleContract(offerContractArtifact);
     // set the provider for our contracts
     App.contracts.OfferContract.setProvider(App.web3Provider);
     var offerContractInstance;

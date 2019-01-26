@@ -26,8 +26,6 @@ contract OfferContract is ComfreePropertyDataModel {
     SaleConditionContract saleConditionContract;
 
     address[] saleConditionContractsArray;
-    mapping (address => OfferContract) public listOfOfferContracts;
-    //mapping will hold differentr contract struct
     mapping (uint => OfferContract) public _listOfOfferContracts;
     uint offerContractCounter; //this is used as an index that holds each contracts
     
@@ -62,53 +60,49 @@ contract OfferContract is ComfreePropertyDataModel {
     /*
     * _address parameter can be either the seller or the buyer
     */
-    /*function getOfferContractData(address _address) public view returns(address _buyerAddress, address _sellerAddress, uint _offerDate, uint _currentDate, uint _expiredDate,uint _offerAmount,bool _accepted) {
-        return (listOfOfferContracts[_address].buyerAddress, listOfOfferContracts[_address].sellerAddress,
-                listOfOfferContracts[_address].offerDate, listOfOfferContracts[_address].expiredDate,
-                listOfOfferContracts[_address].currentDate, listOfOfferContracts[_address].offerAmount, 
-                listOfOfferContracts[_address].accepted);
-    }*/
-
-    function createOfferContract(address _buyerAddress, address _sellerAddress, 
-                                 uint _offerDate, uint _currentDate, uint _expiredDate,
-                                 uint _offerAmount,bool _accepted) public {
-        //increment index
-        offerContractCounter++;
-        //biodatalist[recordCounter] = BioDataObj(recordCounter,msg.sender,_firstName, _middleName, _lastName);
-        _listOfOfferContracts[offerContractCounter] = OfferContract(offerContractCounter, _buyerAddress, _sellerAddress, _offerDate, _currentDate, _expiredDate, _offerAmount, _accepted);
-        /*listOfOfferContracts[_buyerAddress].buyerAddress = _buyerAddress;
-        listOfOfferContracts[_buyerAddress].sellerAddress = _sellerAddress;
-        listOfOfferContracts[_buyerAddress].offerDate = _offerDate;
-        listOfOfferContracts[_buyerAddress].currentDate = _currentDate;
-        listOfOfferContracts[_buyerAddress].expiredDate = _expiredDate;
-        listOfOfferContracts[_buyerAddress].offerAmount = _offerAmount;
-        listOfOfferContracts[_buyerAddress].accepted = _accepted;*/
+    function getOfferContractDetailsById(uint _id) public view returns(address _buyerAddress, address _sellerAddress, uint _offerDate, uint _currentDate, uint _expiredDate,uint _offerAmount,bool _accepted) {
+        return (_listOfOfferContracts[_id].buyerAddress, _listOfOfferContracts[_id].sellerAddress,
+                _listOfOfferContracts[_id].offerDate, _listOfOfferContracts[_id].expiredDate,
+                _listOfOfferContracts[_id].currentDate, _listOfOfferContracts[_id].offerAmount, 
+                _listOfOfferContracts[_id].accepted);
     }
 
     /*
-    * Parameters
-    *  - buyerAddress is wallet address of buyer
+    * Contract deployer via DApp is the only one allowed to initiate this transaction
+    * 1 = Success
+    * 0 = Failed
     */
-	function setBuyerOffer(address _address, uint _offerAmount) public  {
-		listOfOfferContracts[_address].offerAmount = _offerAmount;
-	}
+    function createOfferContract(address _buyerAddress, address _sellerAddress, 
+                                 uint _offerDate, uint _currentDate, uint _expiredDate,
+                                 uint _offerAmount,bool _accepted) public returns(uint _result) {
+        if(msg.sender == owner) {
+            //increment index
+            offerContractCounter++;
+            _listOfOfferContracts[offerContractCounter] = OfferContract(offerContractCounter, _buyerAddress, _sellerAddress, _offerDate, _currentDate, _expiredDate, _offerAmount, _accepted);
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
 
-    function accept(address _address, bool _value) public returns(bool) {
+    
+    function accept(uint _id, bool _value) public returns(bool) {
         /*
         * Future update.  Must have mechanism to prevent changing accepted offer
         * back to non-acception.  Depending on law of the land, the current
         * instance of this contract may have to be nulled and a new contract
         * must be opened.
         */
-        listOfOfferContracts[_address].accepted = _value;
+        _listOfOfferContracts[_id].accepted = _value;
         return _value; //this will either return true or false
     }
 
-    function isOfferAccepted(address _address) public view returns(bool) {
-        return listOfOfferContracts[_address].accepted;
+    function isOfferAccepted(uint _id) public view returns(bool) {
+        return _listOfOfferContracts[_id].accepted;
     }
 
-    function isOfferExpired() public returns(bool _value) {
+    function isOfferExpired(uint _id) public returns(bool _value) {
         /*if( now == offerContractObjects.expiredDate || now > offerContractObjects.expiredDate ) {
             _value = true;
         }

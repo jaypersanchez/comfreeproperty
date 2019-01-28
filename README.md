@@ -25,7 +25,7 @@ $ git clone http://www.github.com/jaypersanchez/comfree.git
 8.  
 
 ## Future to-do Improvement List
-1. Set validation when setting buyer and seller address.  Make sure that buyer address is not set to seller address once seller address has been set
+1. Set validation when setting buyer and seller address.  Make sure that buyer address is not set to seller address once seller address has     been set
 2. Fix date stamp in OfferContract for expiration
 3. Change design/implementation so that SaleConditionContract will allow itself to be created
 when OffectContract is at accepted state

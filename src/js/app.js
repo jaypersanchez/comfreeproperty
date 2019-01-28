@@ -65,6 +65,8 @@ App = {
   },
 
   acceptOffer: function() {
+    //set Offer to accepted state
+    
     //alert("Offer Accepted!");
     $.getJSON('SaleConditionContract.json', function(saleConditionContractArtifact) {
       App.contracts.SaleConditionContract = TruffleContract(offerContractArtifact);

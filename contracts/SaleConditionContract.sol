@@ -71,6 +71,10 @@ contract SaleConditionContract is ComfreePropertyDataModel {
         conditionList.WallsPainted = _WallsPainted;
         conditionList.CarpetCleaned = _CarpetCleaned;
         conditionList.WindowsWashed = _WindowsWashed;
+        if( conditionList.WallsPainted && conditionList.CarpetCleaned && conditionList.WindowsWashed ) {
+            //all sales conditions met
+            emit isAllSaleConditionsMet(true, true, true);
+        }
     }
 
     function getConditions() public returns(bool _WallsPainted, bool _CarpetCleaned,bool _WindowsWashed) {

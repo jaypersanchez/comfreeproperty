@@ -2,6 +2,10 @@
 
 Comfree Property is a set of smart contracts protocol that is required for selling a property.  It is working within the laws of real state laws for each Canadian Province and U.S State.  All contracts contain all tradition elements of a real state transaction.  Each contract is initiated when a dependent contract meets a certain state of the contract.  For example, the offerContract is the initial start of a real state transaction.  The buyer will make an offer that is recorded in the OfferContract.  Once the offerContract is at a state of "offer accepted", the SaleCondition contract will be initiated.  The flow of this logic is controlled on the application layer.  Comfree protocol is a layer to transaction but logic and business flow will dictate when each contract is instantiated.  This design will allow any real estate company to use the "comfree property" platform in anyway while the owner of these contract, the developers, will get a share of each transaction which is why the payment between buyer and seller from escrow contract goes through the default coinbase.  But the architecture of the core contracts are/should be flexible enough to be used in both commercial and private property sales.
 
+## Project Evaluation Notes
+1. Please use 0_test_OfferContract to test the end to end flow of the contracts.  The web UI is not in full functioning mode.  It is currently only displaying offers waiting to be accepted.
+ 
+
 ## Install
 .....
 run localhost

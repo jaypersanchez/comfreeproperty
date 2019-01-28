@@ -48,22 +48,61 @@
       ],
       "name": "OfferCreated",
       "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "bool"
+        }
+      ],
+      "name": "OfferAccepted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_WallsPainted",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "name": "_CarpetCleaned",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "name": "_WindowsWashed",
+          "type": "bool"
+        }
+      ],
+      "name": "isAllSaleConditionsMet",
+      "type": "event"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506101b4806100206000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636b36266414610046575b600080fd5b34801561005257600080fd5b5061005b61010a565b604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200194505050505060405180910390f35b60018060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169080600301549050845600a165627a7a723058207036f0cc8aa157567c63dcf2f545213b8addc7599a7d3051e527f678e050a7850029",
-  "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636b36266414610046575b600080fd5b34801561005257600080fd5b5061005b61010a565b604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200194505050505060405180910390f35b60018060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169080600301549050845600a165627a7a723058207036f0cc8aa157567c63dcf2f545213b8addc7599a7d3051e527f678e050a7850029",
-  "sourceMap": "26:589:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:589:0;;;;;;;",
-  "deployedSourceMap": "26:589:0:-;;;;;;;;;;;;;;;;;;;;;;;;333:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;333:44:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.4.24;\n\ncontract ComfreePropertyDataModel {\n\n    address owner;\n\n    struct EscrowDataElements {\n        address escrowDepositorAddress; //buyer\n        address escrowAgentAddress; //bank\n        address escrowBeneficiaryAddress; //seller receiving the money to be deposited\n        uint256 escrowAmount;\n    }\n    EscrowDataElements public escrowDataElements;\n\n    //event Transfer(address _sender, address _receiver, uint256 _numTokens);\n    //event Approval(address _sender, address _delegate, uint256 _numTokens);\n    event OfferCreated(address _buyer, address _seller, uint256 offerAmount);\n}",
+  "bytecode": "0x608060405234801561001057600080fd5b506101b4806100206000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636b36266414610046575b600080fd5b34801561005257600080fd5b5061005b61010a565b604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200194505050505060405180910390f35b60018060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169080600301549050845600a165627a7a7230582034d52fcb6633a99e8dad29b2986db4221cdfc6159710417737288cb4deb9c0450029",
+  "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636b36266414610046575b600080fd5b34801561005257600080fd5b5061005b61010a565b604051808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200194505050505060405180910390f35b60018060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169080600301549050845600a165627a7a7230582034d52fcb6633a99e8dad29b2986db4221cdfc6159710417737288cb4deb9c0450029",
+  "sourceMap": "26:732:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:732:0;;;;;;;",
+  "deployedSourceMap": "26:732:0:-;;;;;;;;;;;;;;;;;;;;;;;;333:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;333:44:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.24;\n\ncontract ComfreePropertyDataModel {\n\n    address owner;\n\n    struct EscrowDataElements {\n        address escrowDepositorAddress; //buyer\n        address escrowAgentAddress; //bank\n        address escrowBeneficiaryAddress; //seller receiving the money to be deposited\n        uint256 escrowAmount;\n    }\n    EscrowDataElements public escrowDataElements;\n\n    //event Transfer(address _sender, address _receiver, uint256 _numTokens);\n    //event Approval(address _sender, address _delegate, uint256 _numTokens);\n    event OfferCreated(address _buyer, address _seller, uint256 offerAmount);\n    event OfferAccepted(uint _id, bool _value);\n    event isAllSaleConditionsMet(bool _WallsPainted, bool _CarpetCleaned,bool _WindowsWashed);\n}",
   "sourcePath": "/Users/jaypersanchez/comfree/contracts/ComfreePropertyDataModel.sol",
   "ast": {
     "absolutePath": "/Users/jaypersanchez/comfree/contracts/ComfreePropertyDataModel.sol",
     "exportedSymbols": {
       "ComfreePropertyDataModel": [
-        23
+        37
       ]
     },
-    "id": 24,
+    "id": 38,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -83,9 +122,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 23,
+        "id": 37,
         "linearizedBaseContracts": [
-          23
+          37
         ],
         "name": "ComfreePropertyDataModel",
         "nodeType": "ContractDefinition",
@@ -95,7 +134,7 @@
             "id": 3,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 23,
+            "scope": 37,
             "src": "67:13:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -227,7 +266,7 @@
             ],
             "name": "EscrowDataElements",
             "nodeType": "StructDefinition",
-            "scope": 23,
+            "scope": 37,
             "src": "87:241:0",
             "visibility": "public"
           },
@@ -236,7 +275,7 @@
             "id": 14,
             "name": "escrowDataElements",
             "nodeType": "VariableDeclaration",
-            "scope": 23,
+            "scope": 37,
             "src": "333:44:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -354,22 +393,187 @@
               "src": "558:54:0"
             },
             "src": "540:73:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 28,
+            "name": "OfferAccepted",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 27,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 24,
+                  "indexed": false,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28,
+                  "src": "638:8:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 23,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "638:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26,
+                  "indexed": false,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28,
+                  "src": "648:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 25,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "648:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "637:23:0"
+            },
+            "src": "618:43:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 36,
+            "name": "isAllSaleConditionsMet",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 35,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "indexed": false,
+                  "name": "_WallsPainted",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "695:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 29,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "695:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32,
+                  "indexed": false,
+                  "name": "_CarpetCleaned",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "715:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 31,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "715:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34,
+                  "indexed": false,
+                  "name": "_WindowsWashed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "735:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 33,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "735:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "694:61:0"
+            },
+            "src": "666:90:0"
           }
         ],
-        "scope": 24,
-        "src": "26:589:0"
+        "scope": 38,
+        "src": "26:732:0"
       }
     ],
-    "src": "0:615:0"
+    "src": "0:758:0"
   },
   "legacyAST": {
     "absolutePath": "/Users/jaypersanchez/comfree/contracts/ComfreePropertyDataModel.sol",
     "exportedSymbols": {
       "ComfreePropertyDataModel": [
-        23
+        37
       ]
     },
-    "id": 24,
+    "id": 38,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -389,9 +593,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 23,
+        "id": 37,
         "linearizedBaseContracts": [
-          23
+          37
         ],
         "name": "ComfreePropertyDataModel",
         "nodeType": "ContractDefinition",
@@ -401,7 +605,7 @@
             "id": 3,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 23,
+            "scope": 37,
             "src": "67:13:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -533,7 +737,7 @@
             ],
             "name": "EscrowDataElements",
             "nodeType": "StructDefinition",
-            "scope": 23,
+            "scope": 37,
             "src": "87:241:0",
             "visibility": "public"
           },
@@ -542,7 +746,7 @@
             "id": 14,
             "name": "escrowDataElements",
             "nodeType": "VariableDeclaration",
-            "scope": 23,
+            "scope": 37,
             "src": "333:44:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -660,13 +864,178 @@
               "src": "558:54:0"
             },
             "src": "540:73:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 28,
+            "name": "OfferAccepted",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 27,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 24,
+                  "indexed": false,
+                  "name": "_id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28,
+                  "src": "638:8:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 23,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "638:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 26,
+                  "indexed": false,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28,
+                  "src": "648:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 25,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "648:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "637:23:0"
+            },
+            "src": "618:43:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 36,
+            "name": "isAllSaleConditionsMet",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 35,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "indexed": false,
+                  "name": "_WallsPainted",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "695:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 29,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "695:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 32,
+                  "indexed": false,
+                  "name": "_CarpetCleaned",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "715:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 31,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "715:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34,
+                  "indexed": false,
+                  "name": "_WindowsWashed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36,
+                  "src": "735:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 33,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "735:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "694:61:0"
+            },
+            "src": "666:90:0"
           }
         ],
-        "scope": 24,
-        "src": "26:589:0"
+        "scope": 38,
+        "src": "26:732:0"
       }
     ],
-    "src": "0:615:0"
+    "src": "0:758:0"
   },
   "compiler": {
     "name": "solc",
@@ -682,10 +1051,16 @@
     "1548693255724": {
       "events": {},
       "links": {},
-      "address": "0xf715320c1ce81ba8e19beb09b1a6902c79142fb7",
-      "transactionHash": "0x0de9d514e8359b37c8de56659e0282b56efb056cf6ba315db2c10b00f2ec8bd3"
+      "address": "0x57912f9e8406b5fa6022e7f5ab4cac32326bfc2a",
+      "transactionHash": "0xf3247fe7618b4a77dd29c98801dc9b24ba8c3ae2013221dc863aa5347437017a"
+    },
+    "1548696612979": {
+      "events": {},
+      "links": {},
+      "address": "0xbeec6d0942203ec97d4151cccd26270d74271bd6",
+      "transactionHash": "0xec0ab1e747f1f94b6beee511df19f634e5b6700b72d91b08480ad020960ebe00"
     }
   },
   "schemaVersion": "2.0.3",
-  "updatedAt": "2019-01-28T16:37:44.448Z"
+  "updatedAt": "2019-01-28T17:30:26.496Z"
 }

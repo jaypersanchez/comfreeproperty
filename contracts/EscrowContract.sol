@@ -49,9 +49,9 @@ contract EscrowContract {
         /*
         * By design, when not using ERC20 token, ether must first be transfered from buyer address to contract owner
         */
-        require(msg.value >= _escrowAmount);
+        require(msg.sender.balance >= _escrowAmount);
         if(msg.sender == owner) {
-          uint balanceAmount = msg.value - _escrowAmount;
+          uint balanceAmount = msg.sender.balance - _escrowAmount;
           //need to transfer ether from account[0] to current contract address
           address(_escrowSellerAddress).transfer(_escrowAmount);
           return 1; //success

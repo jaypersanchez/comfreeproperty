@@ -149,7 +149,7 @@ contract('OfferContract', function(accounts) {
         console.log("\t\t[ msgValueBeforeTransferResult :: escrowPaymentAmount ] " + msgValueBeforeTransferResult + "::" + escrowPaymentAmount );
         //now sent money to sellerAddress
         let result = await escrowContract.sendFundsToSeller.call(web3.toWei(escrowPaymentAmount,'ether'), sellerAddressB);
-        console.log("\t\t[ Escrow Transfer Result :: " + result + " ]");
+        console.log("\t\t[ Escrow Transfer Result :: " + result + " to " + sellerAddressB + " ]");
         if(result == 1) {
             
             console.log("\t\t[ Transfer Success ]");

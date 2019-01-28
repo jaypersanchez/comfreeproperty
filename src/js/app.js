@@ -16,10 +16,10 @@ App = {
       App.web3Provider = web3.currentProvider;
     } else {
       //create a new provider and plug it directly into our local node
-      App.web3Provider = new Web3.providers.HttpProvider('http://127.0.0.1:7545');
+      App.web3Provider = new Web3.providers.HttpProvider('http://127.0.0.1:8545');
     }
     web3 = new Web3(App.web3Provider);
-    //App.displayAccountInfo();
+    App.displayAccountInfo();
     return App.initContract();
   },
 
@@ -50,10 +50,7 @@ App = {
       alert(_buyeraddress + "::" + _selleraddress + "::" + _etheramount);
       App.contracts.OfferContract.deployed().then(function(instance) {
         alert("send offer to blockchain");
-        return instance.createOfferContract(_buyeraddress, _selleraddress, 1,1,1,_etheramount,false, {
-          from: _buyeraddress,
-          gas: 500000
-        });
+        return instance.createOfferContract(_buyeraddress, _selleraddress, 1,1,1,_etheramount,false);
       }).then(function(result) {
         console.log(result);
         //alert("result");
@@ -87,7 +84,7 @@ App = {
     }
     App.loading = true;
     // refresh account information because the balance might have changed
-    //App.displayAccountInfo();
+    App.displayAccountInfo();
     $.getJSON('OfferContract.json', function(offerContractArtifact) {
       App.contracts.OfferContract = TruffleContract(offerContractArtifact);
     // set the provider for our contracts

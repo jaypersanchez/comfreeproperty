@@ -15,4 +15,5 @@ contract ComfreePropertyDataModel {
     //event Transfer(address _sender, address _receiver, uint256 _numTokens);
     //event Approval(address _sender, address _delegate, uint256 _numTokens);
     event OfferCreated(address _buyer, address _seller, uint256 offerAmount);
+    event OfferAccepted(uint _id, bool _value);
 }

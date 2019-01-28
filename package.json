@@ -25,5 +25,8 @@
   "homepage": "https://github.com/jaypersanchez/comfreeproperty#readme",
   "devDependencies": {
     "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "ethereum-ens": "^0.7.4"
   }
 }

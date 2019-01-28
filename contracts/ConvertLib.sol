@@ -5,4 +5,12 @@ library ConvertLib{
 	{
 		return amount * conversionRate;
 	}
+
+	function convertUSDToCAD(uint256 amount, uint256 conversionRate) public pure returns(uint256 convertedAmount) {
+		return (amount * conversionRate);
+	}
+
+	function convertCADToUSD(uint256 amount, uint256 conversionRate) public pure returns(uint256 convertedAmount) {
+		return ( amount/conversionRate );
+	}
 }

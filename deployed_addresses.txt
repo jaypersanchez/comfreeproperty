@@ -1,0 +1,9 @@
+
+Network: rinkeby (id: 4)
+  ComfreePropertyDataModel: 0xed6d5f6c14d9863150845404db81f8f9c13946ed
+  ConvertLib: 0x3b03f5e3d39f5d0a081281dd0231039334b3cd25
+  EscrowContract: 0x434f3d7a187f815a7232cd717d0b32b0e1eefff4
+  Migrations: 0xb0568dc70353d6ad64e13a19d50745b30a273704
+  OfferContract: 0x233eb5bf38d63f2e3c0bbc5d4469f7f98ed2994c
+  SaleConditionContract: 0x38165f5644e891ffe098601d1e2c3fa8e318162d
+

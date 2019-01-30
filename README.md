@@ -7,9 +7,10 @@ Comfree Property is a set of smart contracts protocol that is required for selli
  
 
 ## Install
-.....
-run localhost
-.....
+GitHub:
+* git clone https://github.com/jaypersanchez/comfreeproperty.git
+* change directory ./comfreeproperty
+
 
 ## Development 
 $ git clone https://github.com/jaypersanchez/comfreeproperty
@@ -19,7 +20,7 @@ $ git clone https://github.com/jaypersanchez/comfreeproperty
 <img src="./ConsensysBootcampFinalProject.png" width="500">
 
 
-## Usage from Truffle Console
+## Usage from Truffle Console 
 1. Create OfferContract instance - OfferContract.deployed().then(function(instance){offerInstance=instance;})
 2. Set seller address using one of the account from Ganache: offerInstance.setSellerAddress('walletaddress')
 3. Set buyer address using one of the account from Ganache: offerInstance.setBuyerAddress('walletAddress')

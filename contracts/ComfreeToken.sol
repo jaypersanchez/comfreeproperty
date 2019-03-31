@@ -1,86 +1,102 @@
 pragma solidity ^0.4.24;
 
-import "./ConvertLib.sol";
-//import "./ComfreePropertyDataModel.sol";
-
-// This is just a simple example of a coin-like contract.
-// It is not standards compatible and cannot be expected to talk to other
-// coin/token contracts. If you want to create a standards-compliant
-// token, see: https://github.com/ConsenSys/Tokens. Cheers!
 
 /*
-*	this is executed first time contract is deployed
-* NOT instantiated
-* msg = is a global variable declared and populated by Ethereum itself. It contains important data for performing the * contract.
+*	ComfreeToken is an ERC20 standard
+*/
+
+/*
+* Token economics
+* Token (stock) price of a company is calculated when a company goes public, an event
+* called and initial public offering (IPO). This is when a company pays an investment
+* bank to use very complex formulas and valuation techniques to derive a company's value * and to determine how many shares will be offered to the public and at what price. 
+* For example,* a company whose value is estimated at $100 million may want to issue 10
+* million shares at $10 per share or they may want to issue 20 million at $5 a share.
 */
 contract ComfreeToken {
 
+	//walletaddress = balance of wallet
 	mapping(address => uint256) balances;
+	//wallet address = anotherMapping(walletaddress = approvedwithdrawalsum)
 	mapping(address => mapping (address => uint256)) allowed;
-	uint256 public totalSupply;
-
-	event Transfer(address _sender, address _receiver, uint256 _numTokens);
-    event Approval(address _sender, address _delegate, uint256 _numTokens);
-
-	constructor(uint256 total) public {
-		totalSupply = total;
-		balances[msg.sender] = totalSupply;
-	}
-
+	uint256 totalSupply_;
+	address private owner;
 	
 
 	/*
-	* used to move numTokens amount of tokens from the owner’s balance to that of another user, or receiver
+	* Standard event declaration required by ERC20 framework
 	*/
-	function transfer(address receiver, uint256 numTokens) payable public returns (bool) {
+	event Approval(address indexed tokenOwner, address indexed spender,
+ uint tokens);
+	event Transfer(address indexed from, address indexed to,
+ uint tokens);
+	event InflateToken(address owner, uint256 amountInflated, uint256 newTokenSupply);
+
+	/*
+	* constructor is run once when it is deployed for the first time
+	* unlike the standard constructor practice in an OOP
+	* Only the deploying account can enter a contract’s constructor. When the contract is * started up, this function allocates available tokens to the ‘contract owner’ account.
+	*/
+	constructor ( uint256 total ) public {
+		totalSupply_ = total;
+		balances[msg.sender] = totalSupply_;
+		owner = msg.sender;
+	}
+
+	/*
+	* ERC20 required function declaration
+	*/
+	function totalSupply() public view returns (uint256) {
+		return totalSupply_;
+	}
+
+	function inflateTotalSupply(uint256 _amount) public returns (uint256) {
+		require(msg.sender == owner);
+		/*
+		* Implement a function in here to determine inflation rate of token when increased
+		* supply is manually called.
+		*/
+		balances[msg.sender] = balances[msg.sender]+_amount;
+		//owner address, amount to inflate token, new owner supply balance
+		emit InflateToken(msg.sender, _amount, balances[msg.sender]);
+		return totalSupply();
+	}
+
+	function balanceOf(address tokenOwner) public view returns (uint) {
+		return balances[tokenOwner]; 
+	}
+
+	function allowance(address owner, address delegate) public view returns (uint) {
+  		return allowed[owner][delegate];
+	}
+
+	function transfer(address receiver, uint numTokens) public returns (bool) {
   		require(numTokens <= balances[msg.sender]);
-		balances[msg.sender] = balances[msg.sender]-numTokens;
+  		balances[msg.sender] = balances[msg.sender]-numTokens;
   		balances[receiver] = balances[receiver] + numTokens;
   		emit Transfer(msg.sender, receiver, numTokens);
   		return true;
 	}
 
 	/*
-	*	allows a delegate approved for withdrawal to transfer owner funds to a third-party account.
+	* @Params:
+	* 	delegate = spender
+	*	numTokens = tokens to be transfered
 	*/
-	function transferFrom(address owner, address buyer, uint numTokens) public returns (bool) {
-  		/*require(numTokens <= balances[owner] && numTokens <= allowed[owner][msg.sender]);
-  		//require(numTokens <= allowed[owner][msg.sender]);
-  		balances[owner] = balances[owner]-numTokens;  
-  		allowed[owner][msg.sender] = allowed[from][msg.sender]-numTokens;
-  		balances[buyer] = balances[buyer] + numTokens;
-  		emit Transfer(owner, buyer, numTokens);*/
-  		return true;
-	}
-
-	/*
-	*	function is used for scenarios where owners are offering tokens on a marketplace. It allows the marketplace to *	finalize the transaction without waiting for prior approval.  Often used in a token marketplace scenario
-	*/
-	function approve(address delegate, uint numTokens) public returns (bool) {
-  		allowed[msg.sender][delegate] = numTokens;
+	function approve(address delegate, uint numTokens)  public returns (bool) {
+		allowed[msg.sender][delegate] = numTokens;
   		emit Approval(msg.sender, delegate, numTokens);
   		return true;
 	}
 
-	/*
-	* returns the current approved number of tokens by an owner to a specific delegate
-	*/
-	function allowance(address owner, address delegate) public view returns (uint) {
-  		return allowed[owner][delegate];
-	}
-
-	/*
-	*	return the number of all tokens allocated by this contract regardless of owner
-	*/
-	function totalSupply() public view returns (uint256) {
-  		return totalSupply;
-	}
-
-	/*
-	* return the current token balance of an account, identified by its owner’s address
-	*/
-	function balanceOf(address tokenOwner) public view returns (uint) {
-  		return balances[tokenOwner];
+	function transferFrom(address owner, address buyer, uint numTokens) public returns (bool) {
+  		require(numTokens <= balances[owner]);
+  		require(numTokens <= allowed[owner][msg.sender]);
+  		balances[owner] = balances[owner]-numTokens;
+  		allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
+  		balances[buyer] = balances[buyer]+numTokens;
+  		Transfer(owner, buyer, numTokens);
+  		return true;
 	}
 
 }

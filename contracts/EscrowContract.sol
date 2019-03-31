@@ -2,7 +2,7 @@ pragma solidity ^0.4.24;
 
 import "./ComfreePropertyDataModel.sol";
 import "./ComfreeToken.sol";
-import "./ConvertLib.sol";
+
 
 contract EscrowContract {
     address owner;

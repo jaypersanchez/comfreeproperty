@@ -21,7 +21,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-push-2">
-          <h1 class="text-center">Commfree Real Estate Chain</h1>
+          <h1 class="text-center">Comfree Real Estate Chain</h1>
           <hr/>
           <br/>
         </div>
@@ -180,7 +180,10 @@
                   <h4 class="modal-title">Make Offer</h4>
                 </div>
                 <div class="modal-body">
-        
+                    <script>
+                        var accountnumber = web3.eth.accounts[0];
+                        $("#buyeraddress").val(accountnumber);
+                      </script>
                   <div class="row">
                     <div class="col-lg-12">
                       <form>
@@ -192,6 +195,7 @@
                       </form>
                     </div>
                   </div>
+                  
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.createOffer(); return false;">Submit Offer</button>

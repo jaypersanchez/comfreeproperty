@@ -10,10 +10,33 @@ Comfree Property is a set of smart contracts protocol that is required for selli
 GitHub:
 * git clone https://github.com/jaypersanchez/comfreeproperty.git
 * change directory ./comfreeproperty
+* Run npm init - to generate package.json if needed
 
+NodeMon:
+* Nodemon is needed for NodeJS server side
+* npm install --save-dev nodemon
+
+Express:
+* npm install express --save
+
+Lite-Server
+* Install local HTTP server to test DApp
+* npm install lite-server --save
+
+MongoDB:
+* npm mongo
+* mongo --version
 
 ## Development 
 $ git clone https://github.com/jaypersanchez/comfreeproperty
+
+## Setup for NodeJS RESTful API
+* change directory into comfreeproperty
+* From current root of comfreeproperty create a Javascript file and call it "server.js"
+* See sample code in this project
+* Create directory "api"
+* Create the following sub-directories: api/conrollers, api/models, api/routes
+* This RESTful takes the MVC framework
 
 ## Usecase Diagram
 

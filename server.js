@@ -31,7 +31,7 @@ router.use(function(req, res, next) {
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
-    res.json({ message: 'SHYFT INTERNATIONAL NETWORK SERVER SIDE API' });   
+    res.json({ message: 'Comfree Properties SERVER SIDE API' });   
 });
 
 // more routes for our API will happen here
@@ -50,4 +50,4 @@ app.use(function(req,res) {
 // START THE SERVER
 // =============================================================================
 app.listen(port);
-console.log('Shyft Network up and running on port ' + port);
+console.log('Comfree up and running on port ' + port);

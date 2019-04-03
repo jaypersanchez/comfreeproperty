@@ -1,0 +1,462 @@
+{
+  "contractName": "OnboardTA",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b5060008054600160a060020a03191633179055603580602f6000396000f3006080604052600080fd00a165627a7a723058208446754a4cf58a5aa532ad28fbc1e66a6f89a2a25b4863f2bc9015f480e28c220029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058208446754a4cf58a5aa532ad28fbc1e66a6f89a2a25b4863f2bc9015f480e28c220029",
+  "sourceMap": "198:113:24:-;;;252:57;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;276:13:24;:26;;-1:-1:-1;;;;;;276:26:24;292:10;276:26;;;198:113;;;;;;",
+  "deployedSourceMap": "198:113:24:-;;;;;",
+  "source": "pragma solidity ^0.4.24;\n\nimport \"./TrustAnchorManager.sol\";\nimport \"./TrustAnchorStorage.sol\";\nimport \"./TrustChannelManager.sol\";\nimport \"./ShyftCacheGraph.sol\";\nimport \"./ShyftKycContract.sol\";\n\ncontract OnboardTA {\n\n    address contractOwner;\n\n    constructor() {\n        contractOwner = msg.sender;\n    }\n}",
+  "sourcePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/OnboardTA.sol",
+  "ast": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/OnboardTA.sol",
+    "exportedSymbols": {
+      "OnboardTA": [
+        4256
+      ]
+    },
+    "id": 4257,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4239,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:24"
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustAnchorManager.sol",
+        "file": "./TrustAnchorManager.sol",
+        "id": 4240,
+        "nodeType": "ImportDirective",
+        "scope": 4257,
+        "sourceUnit": 11511,
+        "src": "26:34:24",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustAnchorStorage.sol",
+        "file": "./TrustAnchorStorage.sol",
+        "id": 4241,
+        "nodeType": "ImportDirective",
+        "scope": 4257,
+        "sourceUnit": 13043,
+        "src": "61:34:24",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustChannelManager.sol",
+        "file": "./TrustChannelManager.sol",
+        "id": 4242,
+        "nodeType": "ImportDirective",
+        "scope": 4257,
+        "sourceUnit": 14541,
+        "src": "96:35:24",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/ShyftCacheGraph.sol",
+        "file": "./ShyftCacheGraph.sol",
+        "id": 4243,
+        "nodeType": "ImportDirective",
+        "scope": 4257,
+        "sourceUnit": 7385,
+        "src": "132:31:24",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/ShyftKycContract.sol",
+        "file": "./ShyftKycContract.sol",
+        "id": 4244,
+        "nodeType": "ImportDirective",
+        "scope": 4257,
+        "sourceUnit": 9364,
+        "src": "164:32:24",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4256,
+        "linearizedBaseContracts": [
+          4256
+        ],
+        "name": "OnboardTA",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4246,
+            "name": "contractOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 4256,
+            "src": "224:21:24",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 4245,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "224:7:24",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 4254,
+              "nodeType": "Block",
+              "src": "266:43:24",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4252,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 4249,
+                      "name": "contractOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4246,
+                      "src": "276:13:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4250,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14555,
+                        "src": "292:3:24",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 4251,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "292:10:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "276:26:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 4253,
+                  "nodeType": "ExpressionStatement",
+                  "src": "276:26:24"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4255,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4247,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "263:2:24"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4248,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "266:0:24"
+            },
+            "scope": 4256,
+            "src": "252:57:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 4257,
+        "src": "198:113:24"
+      }
+    ],
+    "src": "0:311:24"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/OnboardTA.sol",
+    "exportedSymbols": {
+      "OnboardTA": [
+        4256
+      ]
+    },
+    "id": 4257,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4239,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:24"
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustAnchorManager.sol",
+        "file": "./TrustAnchorManager.sol",
+        "id": 4240,
+        "nodeType": "ImportDirective",
+        "scope": 4257,
+        "sourceUnit": 11511,
+        "src": "26:34:24",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustAnchorStorage.sol",
+        "file": "./TrustAnchorStorage.sol",
+        "id": 4241,
+        "nodeType": "ImportDirective",
+        "scope": 4257,
+        "sourceUnit": 13043,
+        "src": "61:34:24",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustChannelManager.sol",
+        "file": "./TrustChannelManager.sol",
+        "id": 4242,
+        "nodeType": "ImportDirective",
+        "scope": 4257,
+        "sourceUnit": 14541,
+        "src": "96:35:24",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/ShyftCacheGraph.sol",
+        "file": "./ShyftCacheGraph.sol",
+        "id": 4243,
+        "nodeType": "ImportDirective",
+        "scope": 4257,
+        "sourceUnit": 7385,
+        "src": "132:31:24",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/ShyftKycContract.sol",
+        "file": "./ShyftKycContract.sol",
+        "id": 4244,
+        "nodeType": "ImportDirective",
+        "scope": 4257,
+        "sourceUnit": 9364,
+        "src": "164:32:24",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 4256,
+        "linearizedBaseContracts": [
+          4256
+        ],
+        "name": "OnboardTA",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4246,
+            "name": "contractOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 4256,
+            "src": "224:21:24",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 4245,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "224:7:24",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 4254,
+              "nodeType": "Block",
+              "src": "266:43:24",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 4252,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 4249,
+                      "name": "contractOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4246,
+                      "src": "276:13:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 4250,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14555,
+                        "src": "292:3:24",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 4251,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "292:10:24",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "276:26:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 4253,
+                  "nodeType": "ExpressionStatement",
+                  "src": "276:26:24"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 4255,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4247,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "263:2:24"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4248,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "266:0:24"
+            },
+            "scope": 4256,
+            "src": "252:57:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 4257,
+        "src": "198:113:24"
+      }
+    ],
+    "src": "0:311:24"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.28+commit.2fcccea1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.3",
+  "updatedAt": "2019-01-04T17:15:32.056Z"
+}

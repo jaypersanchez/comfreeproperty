@@ -1,0 +1,285 @@
+{
+  "contractName": "IShyftBridgeUtilsProver",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "proof",
+          "type": "bytes"
+        }
+      ],
+      "name": "prove",
+      "outputs": [
+        {
+          "name": "proven",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.19;\n\ncontract IShyftBridgeUtilsProver {\n    function prove(bytes proof) public returns (bool proven);\n}\n",
+  "sourcePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/Interfaces/IShyftBridgeUtilsProver.sol",
+  "ast": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/Interfaces/IShyftBridgeUtilsProver.sol",
+    "exportedSymbols": {
+      "IShyftBridgeUtilsProver": [
+        1506
+      ]
+    },
+    "id": 1507,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1498,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1506,
+        "linearizedBaseContracts": [
+          1506
+        ],
+        "name": "IShyftBridgeUtilsProver",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 1505,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "prove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1501,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1500,
+                  "name": "proof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1505,
+                  "src": "80:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1499,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "80:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "79:13:8"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1504,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1503,
+                  "name": "proven",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1505,
+                  "src": "109:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1502,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "109:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "108:13:8"
+            },
+            "scope": 1506,
+            "src": "65:57:8",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1507,
+        "src": "26:98:8"
+      }
+    ],
+    "src": "0:125:8"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/Interfaces/IShyftBridgeUtilsProver.sol",
+    "exportedSymbols": {
+      "IShyftBridgeUtilsProver": [
+        1506
+      ]
+    },
+    "id": 1507,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1498,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1506,
+        "linearizedBaseContracts": [
+          1506
+        ],
+        "name": "IShyftBridgeUtilsProver",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 1505,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "prove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1501,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1500,
+                  "name": "proof",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1505,
+                  "src": "80:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 1499,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "80:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "79:13:8"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1504,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1503,
+                  "name": "proven",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1505,
+                  "src": "109:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1502,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "109:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "108:13:8"
+            },
+            "scope": 1506,
+            "src": "65:57:8",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1507,
+        "src": "26:98:8"
+      }
+    ],
+    "src": "0:125:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.28+commit.2fcccea1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.3",
+  "updatedAt": "2019-03-26T16:26:53.558Z"
+}

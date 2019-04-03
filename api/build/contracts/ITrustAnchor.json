@@ -1,0 +1,345 @@
+{
+  "contractName": "ITrustAnchor",
+  "abi": [],
+  "bytecode": "0x60806040526000805462ff00001961ffff1990911661800017169055348015602657600080fd5b5060358060346000396000f3006080604052600080fd00a165627a7a72305820c3889652013a8bc4239ea02366a5791b27aad4659550d86371e283ef2d6ce6d30029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820c3889652013a8bc4239ea02366a5791b27aad4659550d86371e283ef2d6ce6d30029",
+  "sourceMap": "26:192:15:-;;;134:37;;;-1:-1:-1;;;;134:37:15;;;164:7;134:37;178;;;26:192;5:2:-1;;;;30:1;27;20:12;5:2;26:192:15;;;;;;;",
+  "deployedSourceMap": "26:192:15:-;;;;;",
+  "source": "pragma solidity ^0.4.19;\n\ncontract ITrustAnchor {\n    //constant to define the addressable space for extended mode jurisdictions.\n    uint16 extendedJurisdiction = 2 ** 15;\n\n    bool extendedModeJurisdiction = false;\n}\n",
+  "sourcePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/Interfaces/ITrustAnchor.sol",
+  "ast": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/Interfaces/ITrustAnchor.sol",
+    "exportedSymbols": {
+      "ITrustAnchor": [
+        1685
+      ]
+    },
+    "id": 1686,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1676,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:15"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1685,
+        "linearizedBaseContracts": [
+          1685
+        ],
+        "name": "ITrustAnchor",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1681,
+            "name": "extendedJurisdiction",
+            "nodeType": "VariableDeclaration",
+            "scope": 1685,
+            "src": "134:37:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint16",
+              "typeString": "uint16"
+            },
+            "typeName": {
+              "id": 1677,
+              "name": "uint16",
+              "nodeType": "ElementaryTypeName",
+              "src": "134:6:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint16",
+                "typeString": "uint16"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "commonType": {
+                "typeIdentifier": "t_rational_32768_by_1",
+                "typeString": "int_const 32768"
+              },
+              "id": 1680,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "argumentTypes": null,
+                "hexValue": "32",
+                "id": 1678,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "164:1:15",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_2_by_1",
+                  "typeString": "int_const 2"
+                },
+                "value": "2"
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "**",
+              "rightExpression": {
+                "argumentTypes": null,
+                "hexValue": "3135",
+                "id": 1679,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "169:2:15",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_15_by_1",
+                  "typeString": "int_const 15"
+                },
+                "value": "15"
+              },
+              "src": "164:7:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_32768_by_1",
+                "typeString": "int_const 32768"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1684,
+            "name": "extendedModeJurisdiction",
+            "nodeType": "VariableDeclaration",
+            "scope": 1685,
+            "src": "178:37:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 1682,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "178:4:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "66616c7365",
+              "id": 1683,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "210:5:15",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "false"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1686,
+        "src": "26:192:15"
+      }
+    ],
+    "src": "0:219:15"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/Interfaces/ITrustAnchor.sol",
+    "exportedSymbols": {
+      "ITrustAnchor": [
+        1685
+      ]
+    },
+    "id": 1686,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1676,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:15"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1685,
+        "linearizedBaseContracts": [
+          1685
+        ],
+        "name": "ITrustAnchor",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1681,
+            "name": "extendedJurisdiction",
+            "nodeType": "VariableDeclaration",
+            "scope": 1685,
+            "src": "134:37:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint16",
+              "typeString": "uint16"
+            },
+            "typeName": {
+              "id": 1677,
+              "name": "uint16",
+              "nodeType": "ElementaryTypeName",
+              "src": "134:6:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint16",
+                "typeString": "uint16"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "commonType": {
+                "typeIdentifier": "t_rational_32768_by_1",
+                "typeString": "int_const 32768"
+              },
+              "id": 1680,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "argumentTypes": null,
+                "hexValue": "32",
+                "id": 1678,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "164:1:15",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_2_by_1",
+                  "typeString": "int_const 2"
+                },
+                "value": "2"
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "**",
+              "rightExpression": {
+                "argumentTypes": null,
+                "hexValue": "3135",
+                "id": 1679,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "169:2:15",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_15_by_1",
+                  "typeString": "int_const 15"
+                },
+                "value": "15"
+              },
+              "src": "164:7:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_32768_by_1",
+                "typeString": "int_const 32768"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 1684,
+            "name": "extendedModeJurisdiction",
+            "nodeType": "VariableDeclaration",
+            "scope": 1685,
+            "src": "178:37:15",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 1682,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "178:4:15",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "66616c7365",
+              "id": 1683,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "210:5:15",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "false"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 1686,
+        "src": "26:192:15"
+      }
+    ],
+    "src": "0:219:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.28+commit.2fcccea1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.3",
+  "updatedAt": "2019-02-14T05:20:09.969Z"
+}

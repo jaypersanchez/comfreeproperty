@@ -1,0 +1,174 @@
+{
+  "contractName": "AttestationDataRetrievalPrototype",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582024800157983dc8af30ed0412c288437c55d1fa716d7ca452b71618706994269c0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582024800157983dc8af30ed0412c288437c55d1fa716d7ca452b71618706994269c0029",
+  "sourceMap": "26:80:1:-;;;75:29;8:9:-1;5:2;;;30:1;27;20:12;5:2;75:29:1;26:80;;;;;;",
+  "deployedSourceMap": "26:80:1:-;;;;;",
+  "source": "pragma solidity ^0.4.19;\n\ncontract AttestationDataRetrievalPrototype {\n    constructor() public {\n\n    }\n}\n",
+  "sourcePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/AttestationDataRetrievalPrototype.sol",
+  "ast": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/AttestationDataRetrievalPrototype.sol",
+    "exportedSymbols": {
+      "AttestationDataRetrievalPrototype": [
+        619
+      ]
+    },
+    "id": 620,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 614,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 619,
+        "linearizedBaseContracts": [
+          619
+        ],
+        "name": "AttestationDataRetrievalPrototype",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 617,
+              "nodeType": "Block",
+              "src": "96:8:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 618,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 615,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "86:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 616,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "96:0:1"
+            },
+            "scope": 619,
+            "src": "75:29:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 620,
+        "src": "26:80:1"
+      }
+    ],
+    "src": "0:107:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/AttestationDataRetrievalPrototype.sol",
+    "exportedSymbols": {
+      "AttestationDataRetrievalPrototype": [
+        619
+      ]
+    },
+    "id": 620,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 614,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 619,
+        "linearizedBaseContracts": [
+          619
+        ],
+        "name": "AttestationDataRetrievalPrototype",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 617,
+              "nodeType": "Block",
+              "src": "96:8:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 618,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 615,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "86:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 616,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "96:0:1"
+            },
+            "scope": 619,
+            "src": "75:29:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 620,
+        "src": "26:80:1"
+      }
+    ],
+    "src": "0:107:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.28+commit.2fcccea1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.3",
+  "updatedAt": "2019-02-14T05:20:09.948Z"
+}

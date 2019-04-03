@@ -1,0 +1,946 @@
+{
+  "contractName": "dappMain",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newAdministratorAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setPrimaryAdministrator",
+      "outputs": [
+        {
+          "name": "result",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_administratorAddress",
+          "type": "address"
+        }
+      ],
+      "name": "isAdministrator",
+      "outputs": [
+        {
+          "name": "result",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_revokeAdministratorAddress",
+          "type": "address"
+        }
+      ],
+      "name": "revokeAdministrator",
+      "outputs": [
+        {
+          "name": "result",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newAdministratorAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setAdministrator",
+      "outputs": [
+        {
+          "name": "result",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_addressToVerify",
+          "type": "address"
+        }
+      ],
+      "name": "onBoardTA",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405261000c61005b565b604051809103906000f080158015610028573d6000803e3d6000fd5b5060068054600160a060020a031916600160a060020a039290921691909117905534801561005557600080fd5b5061006b565b604051611071806108b983390190565b61083f8061007a6000396000f3006080604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663064ad7c2811461007c5780630a2eb301146100c05780634402bba3146101025780637358b6a5146101305780638da5cb5b14610160578063df8089ef1461019e575b600080fd5b34801561008857600080fd5b506100aa73ffffffffffffffffffffffffffffffffffffffff600435166101cc565b6040805160ff9092168252519081900360200190f35b3480156100cc57600080fd5b506100ee73ffffffffffffffffffffffffffffffffffffffff6004351661029b565b604080519115158252519081900360200190f35b34801561010e57600080fd5b506100aa73ffffffffffffffffffffffffffffffffffffffff600435166102e3565b34801561013c57600080fd5b5061015e73ffffffffffffffffffffffffffffffffffffffff60043516610533565b005b34801561016c57600080fd5b506101756105e1565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156101aa57600080fd5b506100aa73ffffffffffffffffffffffffffffffffffffffff600435166105fd565b6000805473ffffffffffffffffffffffffffffffffffffffff163314156102925760035460ff16151561028a5773ffffffffffffffffffffffffffffffffffffffff821660009081526002602052604090208054600191907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff001682805b0217905550506003805460ff808216600101167fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff009091161790556002610296565b506001610296565b5060005b919050565b6000600173ffffffffffffffffffffffffffffffffffffffff831660009081526002602081905260409091205460ff16908111156102d557fe5b141561029257506001610296565b60008060008060006102f43361029b565b1561052557600173ffffffffffffffffffffffffffffffffffffffff871660009081526002602081905260409091205460ff169081111561033157fe5b141561051c57604080517f61646d696e697374726174696f6e5265766f636174696f6e566f7465000000006020808301919091526c0100000000000000000000000073ffffffffffffffffffffffffffffffffffffffff8a1602603c83015282516030818403018152605090920192839052815191929182918401908083835b602083106103ee57805182527fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe090920191602091820191016103b1565b6001836020036101000a038019825116818451168082178552505050505050905001915050604051809103902093506104268461069e565b9250600261ffff84161061043d5760019150610459565b610446846106b6565b9050600261ffff82161061045957600191505b600182151514156105135773ffffffffffffffffffffffffffffffffffffffff8616600090815260026020819052604090912080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00166001830217905550600380547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00811660ff9182167fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff01909116178155945061052a565b6002945061052a565b6001945061052a565b600094505b50505050919050565b600654604080517ff3fc05f400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff84811660048301529151919092169163f3fc05f49160248083019260209291908290030181600087803b1580156105a857600080fd5b505af11580156105bc573d6000803e3d6000fd5b505050506040513d60208110156105d257600080fd5b5051156105de57600080fd5b50565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60006106083361029b565b1561029257600173ffffffffffffffffffffffffffffffffffffffff831660009081526002602081905260409091205460ff169081111561064557fe5b1461028a5773ffffffffffffffffffffffffffffffffffffffff821660009081526002602052604090208054600191907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00168280610249565b60009081526004602052604090206002015460ff1690565b60006106c13361029b565b1561029257600082815260046020526040902060020154600760ff9091161080156107425750600082815260046020908152604080832033845290915281205460ff16600381111561070f57fe5b148061074257506003600083815260046020908152604080832033845290915290205460ff16600381111561074057fe5b145b156107f85760008281526004602090815260408083206002810180547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00808216600160ff9384168101909316179092553380875283865284872080549093168217909255918201805480840182559086528486200180547fffffffffffffffffffffffff000000000000000000000000000000000000000016821790558452600583529083208054918201815583529120018290555b5060008181526004602052604090206002015460ff166102965600a165627a7a72305820b697f0c62e3b92867e414a8c6789c025db7f28703c1caf4cb58d8c5d4d38459200296080604052600b8054600160a060020a031916739db76b4bbaea76dfda4552b7b9d4e9d43abc55fd17905534801561003657600080fd5b5060008054600160a060020a03191633179055611019806100586000396000f3006080604052600436106100cf5763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663064ad7c281146100d45780630a2eb3011461011857806325b953b31461015a5780634402bba31461019f57806350a91018146101cd578063512f3d65146101fb57806368878cde146102295780636efc25c8146102455780637899320f1461028c57806389e81ee7146102ba5780638da5cb5b146102e85780639528d27014610326578063df8089ef14610354578063f3fc05f414610382575b600080fd5b3480156100e057600080fd5b5061010273ffffffffffffffffffffffffffffffffffffffff600435166103b0565b6040805160ff9092168252519081900360200190f35b34801561012457600080fd5b5061014673ffffffffffffffffffffffffffffffffffffffff6004351661047f565b604080519115158252519081900360200190f35b34801561016657600080fd5b5061018873ffffffffffffffffffffffffffffffffffffffff600435166104c7565b6040805161ffff9092168252519081900360200190f35b3480156101ab57600080fd5b5061010273ffffffffffffffffffffffffffffffffffffffff6004351661055b565b3480156101d957600080fd5b5061010273ffffffffffffffffffffffffffffffffffffffff600435166107ab565b34801561020757600080fd5b5061014673ffffffffffffffffffffffffffffffffffffffff60043516610941565b34801561023557600080fd5b5061010261ffff60043516610a04565b34801561025157600080fd5b5061027373ffffffffffffffffffffffffffffffffffffffff60043516610af0565b6040805163ffffffff9092168252519081900360200190f35b34801561029857600080fd5b5061010273ffffffffffffffffffffffffffffffffffffffff60043516610b1e565b3480156102c657600080fd5b5061010273ffffffffffffffffffffffffffffffffffffffff60043516610c3b565b3480156102f457600080fd5b506102fd610ce5565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561033257600080fd5b5061010273ffffffffffffffffffffffffffffffffffffffff60043516610d01565b34801561036057600080fd5b5061010273ffffffffffffffffffffffffffffffffffffffff60043516610d9f565b34801561038e57600080fd5b5061014673ffffffffffffffffffffffffffffffffffffffff60043516610e40565b6000805473ffffffffffffffffffffffffffffffffffffffff163314156104765760035460ff16151561046e5773ffffffffffffffffffffffffffffffffffffffff821660009081526002602052604090208054600191907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff001682805b0217905550506003805460ff808216600101167fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00909116179055600261047a565b50600161047a565b5060005b919050565b6000600173ffffffffffffffffffffffffffffffffffffffff831660009081526002602081905260409091205460ff16908111156104b957fe5b14156104765750600161047a565b73ffffffffffffffffffffffffffffffffffffffff8116600081815260096020908152604080832054815161ffff909116815291820193909352825191927f6f09dfd97060366f89eddd6c6d9673457fed4f97f4da23994acbb845bdb32d5392918290030190a15073ffffffffffffffffffffffffffffffffffffffff1660009081526009602052604090205461ffff1690565b600080600080600061056c3361047f565b1561079d57600173ffffffffffffffffffffffffffffffffffffffff871660009081526002602081905260409091205460ff16908111156105a957fe5b141561079457604080517f61646d696e697374726174696f6e5265766f636174696f6e566f7465000000006020808301919091526c0100000000000000000000000073ffffffffffffffffffffffffffffffffffffffff8a1602603c83015282516030818403018152605090920192839052815191929182918401908083835b6020831061066657805182527fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe09092019160209182019101610629565b6001836020036101000a0380198251168184511680821785525050505050509050019150506040518091039020935061069e84610e78565b9250600261ffff8416106106b557600191506106d1565b6106be84610e90565b9050600261ffff8216106106d157600191505b6001821515141561078b5773ffffffffffffffffffffffffffffffffffffffff8616600090815260026020819052604090912080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00166001830217905550600380547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00811660ff9182167fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0190911617815594506107a2565b600294506107a2565b600194506107a2565b600094505b50505050919050565b60006107b63361047f565b1561047657600173ffffffffffffffffffffffffffffffffffffffff831660009081526006602052604090205460ff1660038111156107f157fe5b14806108305750600373ffffffffffffffffffffffffffffffffffffffff831660009081526006602052604090205460ff16600381111561082e57fe5b145b1561046e5773ffffffffffffffffffffffffffffffffffffffff8216600090815260066020908152604080832080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0016600217905560098252808320805461ffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000909116179055600790915290205463ffffffff161515610939576008805473ffffffffffffffffffffffffffffffffffffffff8416600090815260076020526040902080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffff0000000090811663ffffffff93841617909155825480831660010190921691161790555b50600261047a565b600b54604080517f512f3d6500000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff848116600483015291516000939290921691829163512f3d6591602480830192602092919082900301818887803b1580156109ba57600080fd5b505af11580156109ce573d6000803e3d6000fd5b505050506040513d60208110156109e457600080fd5b50511515600114156109f957600191506109fe565b600091505b50919050565b6000610a0f33610e40565b151560011415610476573360009081526009602052604090205461ffff9081161415610a78575033600090815260096020526040902080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00001661ffff8316179055600261047a565b336000818152600a602090815260409182902080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00001661ffff8716179055815192835290517f84548859412b54336f26dc5c85182cd2a4328a6203d88a9d259944c80f90328e9281900390910190a150600161047a565b73ffffffffffffffffffffffffffffffffffffffff1660009081526007602052604090205463ffffffff1690565b6000610b293361047f565b156104765773ffffffffffffffffffffffffffffffffffffffff821660009081526009602052604090205461ffff161561046e5773ffffffffffffffffffffffffffffffffffffffff82166000908152600a602052604090205461ffff1615801590610bcd575073ffffffffffffffffffffffffffffffffffffffff8216600090815260096020908152604080832054600a9092529091205461ffff908116911614155b15610939575073ffffffffffffffffffffffffffffffffffffffff81166000908152600a6020908152604080832054600990925290912080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00001661ffff909216919091179055600361047a565b6000610c463361047f565b1561047657600273ffffffffffffffffffffffffffffffffffffffff831660009081526006602052604090205460ff166003811115610c8157fe5b1461046e5773ffffffffffffffffffffffffffffffffffffffff821660009081526006602052604090208054600391907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00166001835b02179055506002905061047a565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000610d0c3361047f565b156104765773ffffffffffffffffffffffffffffffffffffffff821660009081526006602052604081205460ff166003811115610d4557fe5b141561046e5773ffffffffffffffffffffffffffffffffffffffff821660009081526006602052604090208054600191907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00168280610cd7565b6000610daa3361047f565b1561047657600173ffffffffffffffffffffffffffffffffffffffff831660009081526002602081905260409091205460ff1690811115610de757fe5b1461046e5773ffffffffffffffffffffffffffffffffffffffff821660009081526002602052604090208054600191907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0016828061042d565b6000600273ffffffffffffffffffffffffffffffffffffffff831660009081526006602052604090205460ff1660038111156104b957fe5b60009081526004602052604090206002015460ff1690565b6000610e9b3361047f565b1561047657600082815260046020526040902060020154600760ff909116108015610f1c5750600082815260046020908152604080832033845290915281205460ff166003811115610ee957fe5b1480610f1c57506003600083815260046020908152604080832033845290915290205460ff166003811115610f1a57fe5b145b15610fd25760008281526004602090815260408083206002810180547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00808216600160ff9384168101909316179092553380875283865284872080549093168217909255918201805480840182559086528486200180547fffffffffffffffffffffffff000000000000000000000000000000000000000016821790558452600583529083208054918201815583529120018290555b5060008181526004602052604090206002015460ff1661047a5600a165627a7a72305820e9225a161f795c5c3f2196950ab12d1166407ac3f9c31f31fe222e661f53d12a0029",
+  "deployedBytecode": "0x6080604052600436106100775763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663064ad7c2811461007c5780630a2eb301146100c05780634402bba3146101025780637358b6a5146101305780638da5cb5b14610160578063df8089ef1461019e575b600080fd5b34801561008857600080fd5b506100aa73ffffffffffffffffffffffffffffffffffffffff600435166101cc565b6040805160ff9092168252519081900360200190f35b3480156100cc57600080fd5b506100ee73ffffffffffffffffffffffffffffffffffffffff6004351661029b565b604080519115158252519081900360200190f35b34801561010e57600080fd5b506100aa73ffffffffffffffffffffffffffffffffffffffff600435166102e3565b34801561013c57600080fd5b5061015e73ffffffffffffffffffffffffffffffffffffffff60043516610533565b005b34801561016c57600080fd5b506101756105e1565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b3480156101aa57600080fd5b506100aa73ffffffffffffffffffffffffffffffffffffffff600435166105fd565b6000805473ffffffffffffffffffffffffffffffffffffffff163314156102925760035460ff16151561028a5773ffffffffffffffffffffffffffffffffffffffff821660009081526002602052604090208054600191907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff001682805b0217905550506003805460ff808216600101167fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff009091161790556002610296565b506001610296565b5060005b919050565b6000600173ffffffffffffffffffffffffffffffffffffffff831660009081526002602081905260409091205460ff16908111156102d557fe5b141561029257506001610296565b60008060008060006102f43361029b565b1561052557600173ffffffffffffffffffffffffffffffffffffffff871660009081526002602081905260409091205460ff169081111561033157fe5b141561051c57604080517f61646d696e697374726174696f6e5265766f636174696f6e566f7465000000006020808301919091526c0100000000000000000000000073ffffffffffffffffffffffffffffffffffffffff8a1602603c83015282516030818403018152605090920192839052815191929182918401908083835b602083106103ee57805182527fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe090920191602091820191016103b1565b6001836020036101000a038019825116818451168082178552505050505050905001915050604051809103902093506104268461069e565b9250600261ffff84161061043d5760019150610459565b610446846106b6565b9050600261ffff82161061045957600191505b600182151514156105135773ffffffffffffffffffffffffffffffffffffffff8616600090815260026020819052604090912080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00166001830217905550600380547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00811660ff9182167fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff01909116178155945061052a565b6002945061052a565b6001945061052a565b600094505b50505050919050565b600654604080517ff3fc05f400000000000000000000000000000000000000000000000000000000815273ffffffffffffffffffffffffffffffffffffffff84811660048301529151919092169163f3fc05f49160248083019260209291908290030181600087803b1580156105a857600080fd5b505af11580156105bc573d6000803e3d6000fd5b505050506040513d60208110156105d257600080fd5b5051156105de57600080fd5b50565b60005473ffffffffffffffffffffffffffffffffffffffff1681565b60006106083361029b565b1561029257600173ffffffffffffffffffffffffffffffffffffffff831660009081526002602081905260409091205460ff169081111561064557fe5b1461028a5773ffffffffffffffffffffffffffffffffffffffff821660009081526002602052604090208054600191907fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00168280610249565b60009081526004602052604090206002015460ff1690565b60006106c13361029b565b1561029257600082815260046020526040902060020154600760ff9091161080156107425750600082815260046020908152604080832033845290915281205460ff16600381111561070f57fe5b148061074257506003600083815260046020908152604080832033845290915290205460ff16600381111561074057fe5b145b156107f85760008281526004602090815260408083206002810180547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00808216600160ff9384168101909316179092553380875283865284872080549093168217909255918201805480840182559086528486200180547fffffffffffffffffffffffff000000000000000000000000000000000000000016821790558452600583529083208054918201815583529120018290555b5060008181526004602052604090206002015460ff166102965600a165627a7a72305820b697f0c62e3b92867e414a8c6789c025db7f28703c1caf4cb58d8c5d4d3845920029",
+  "sourceMap": "136:718:3:-;;;226:24;;:::i;:::-;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;178:72:3;;;-1:-1:-1;;;;;;178:72:3;-1:-1:-1;;;;;178:72:3;;;;;;;;;;257:29;5:2:-1;;;;30:1;27;20:12;5:2;257:29:3;136:718;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "136:718:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1562:576:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1562:576:0;;;;;;;;;;;;;;;;;;;;;;;;;;11740:344;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;11740:344:0;;;;;;;;;;;;;;;;;;;;;;;;;3357:1465;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;3357:1465:0;;;;;;;475:375:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;475:375:3;;;;;;;;;1037:20:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1037:20:0;;;;;;;;;;;;;;;;;;;;;;;2258:611;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;2258:611:0;;;;;;;1562:576;1645:12;1687:5;;;;1673:10;:19;1669:463;;;1712:17;;;;:22;1708:350;;;1766:40;;;;;;;:14;:40;;;;;:71;;1809:28;;1766:40;:71;;1809:28;;1766:71;;;;;-1:-1:-1;;1855:17:0;:19;;;;;;;;;;;;;;;;1944:1;1937:8;;1708:350;-1:-1:-1;2042:1:0;2035:8;;1669:463;-1:-1:-1;2120:1:0;1669:463;1562:576;;;:::o;11740:344::-;11817:11;11885:28;11844:37;;;;;;;:14;:37;;;;;;;;;;;;:69;;;;;;;;11840:238;;;-1:-1:-1;11967:4:0;11960:11;;3357:1465;3439:12;3609:17;3736:21;3819:22;3989:30;3467:27;3483:10;3467:15;:27::i;:::-;3463:1353;;;3561:28;3514:43;;;;;;;:14;:43;;;;;;;;;;;;:75;;;;;;;;3510:1225;;;3639:77;;;;;;;;;;;;;;;;;;;;;;;22:32:-1;26:21;;;22:32;6:49;;3639:77:0;;;;;;;;3629:88;;3639:77;;;;;3629:88;;;;3639:77;3629:88;36:153:-1;66:2;58:11;;36:153;;176:10;;164:23;;139:12;;;;;98:2;89:12;;;;114;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;3629:88:0;;;;;;;;;;;;;;;;3609:108;;3760:40;3790:9;3760:29;:40::i;:::-;3736:64;-1:-1:-1;855:1:0;3864:30;;;;3860:374;;3938:4;3918:24;;3860:374;;;4022:53;4065:9;4022:42;:53::i;:::-;3989:86;-1:-1:-1;855:1:0;4102:39;;;;4098:118;;4189:4;4169:24;;4098:118;4277:4;4256:25;;;;4252:373;;;4305:43;;;;;;;4351:27;4305:43;;;;;;;;:73;;;;;4351:27;4305:73;;;;-1:-1:-1;4400:17:0;:19;;;;;;;;;;;;;;;;;:17;-1:-1:-1;4486:8:0;;4252:373;4605:1;4598:8;;;;3510:1225;4719:1;4712:8;;;;3463:1353;4804:1;4797:8;;3463:1353;3357:1465;;;;;;;:::o;475:375:3:-;607:26;;:66;;;;;;:26;:66;;;;;;;;;:26;;;;;:48;;:66;;;;;;;;;;;;;;:26;;:66;;;5:2:-1;;;;30:1;27;20:12;5:2;607:66:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;607:66:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;607:66:3;:75;598:85;;;;;;475:375;:::o;1037:20:0:-;;;;;;:::o;2258:611::-;2334:12;2362:27;2378:10;2362:15;:27::i;:::-;2358:505;;;2453:28;2409:40;;;;;;;:14;:40;;;;;;;;;;;;:72;;;;;;;;2405:377;;2501:40;;;;;;;:14;:40;;;;;:71;;2544:28;;2501:40;:71;;2544:28;;2501:71;;7227:243;7309:13;7397:50;;;:38;:50;;;;;:66;;;;;;7227:243::o;8442:1278::-;8532:13;8561:27;8577:10;8561:15;:27::i;:::-;8557:1157;;;8608:50;;;;:38;:50;;;;;:66;;;818:1;8608:86;:66;;;:86;:360;;;;-1:-1:-1;8805:27:0;8715:50;;;:38;:50;;;;;;;;8790:10;8715:86;;;;;;;;;;:117;;;;;;;;;:252;;;-1:-1:-1;8942:25:0;8852:50;;;;:38;:50;;;;;;;;8927:10;8852:86;;;;;;;;;;:115;;;;;;;;;8715:252;8604:869;;;9062:50;;;;:38;:50;;;;;;;;:66;;;:68;;;;;;;;;;;;;;;;;;;;9223:10;9148:86;;;;;;;;;:115;;;;;;;;;;9282:65;;;27:10:-1;;23:18;;;45:23;;9282:82:0;;;;;;;;;;;;;;;9382:59;;:47;:59;;;;;27:10:-1;;23:18;;;45:23;;9382:76:0;;;;;;;;8604:869;-1:-1:-1;9566:50:0;;;;:38;:50;;;;;:66;;;;;9559:73;",
+  "source": "pragma solidity ^0.4.19;\n\nimport \"../TrustAnchorManager.sol\";\nimport \"../TrustAnchorStorage.sol\";\nimport \"../TrustChannelManager.sol\";\n\ncontract dappMain is Administrable {\n\n    TrustAnchorManager trustAnchorManagerInstance = new TrustAnchorManager();\n\n    constructor () public {\n    }\n\n    /*\n    * The address of the TrustAnchorManager contract will come from console or from the DApp\n    * @_addressToVeriy - this is the wallet address that's to be on-boarded\n    */\n    function onBoardTA(address _addressToVerify) public {\n        //first verify if address is NOT already setup as TA\n        require( trustAnchorManagerInstance.isTrustAnchorVerified(_addressToVerify) == false);\n        //must have primary admin setup first\n\n        //must have at least one secondary admin setup first\n        //do actual on-board\n        //then verify\n\n    }\n\n\n}",
+  "sourcePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/DApp/dappMain.sol",
+  "ast": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/DApp/dappMain.sol",
+    "exportedSymbols": {
+      "dappMain": [
+        813
+      ]
+    },
+    "id": 814,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 783,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustAnchorManager.sol",
+        "file": "../TrustAnchorManager.sol",
+        "id": 784,
+        "nodeType": "ImportDirective",
+        "scope": 814,
+        "sourceUnit": 11192,
+        "src": "26:35:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustAnchorStorage.sol",
+        "file": "../TrustAnchorStorage.sol",
+        "id": 785,
+        "nodeType": "ImportDirective",
+        "scope": 814,
+        "sourceUnit": 12849,
+        "src": "62:35:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustChannelManager.sol",
+        "file": "../TrustChannelManager.sol",
+        "id": 786,
+        "nodeType": "ImportDirective",
+        "scope": 814,
+        "sourceUnit": 14870,
+        "src": "98:36:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 787,
+              "name": "Administrable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 612,
+              "src": "157:13:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Administrable_$612",
+                "typeString": "contract Administrable"
+              }
+            },
+            "id": 788,
+            "nodeType": "InheritanceSpecifier",
+            "src": "157:13:3"
+          }
+        ],
+        "contractDependencies": [
+          612,
+          11191
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 813,
+        "linearizedBaseContracts": [
+          813,
+          612
+        ],
+        "name": "dappMain",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 793,
+            "name": "trustAnchorManagerInstance",
+            "nodeType": "VariableDeclaration",
+            "scope": 813,
+            "src": "178:72:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_TrustAnchorManager_$11191",
+              "typeString": "contract TrustAnchorManager"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 789,
+              "name": "TrustAnchorManager",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 11191,
+              "src": "178:18:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TrustAnchorManager_$11191",
+                "typeString": "contract TrustAnchorManager"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [],
+              "expression": {
+                "argumentTypes": [],
+                "id": 791,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "nodeType": "NewExpression",
+                "src": "226:22:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_TrustAnchorManager_$11191_$",
+                  "typeString": "function () returns (contract TrustAnchorManager)"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 790,
+                  "name": "TrustAnchorManager",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 11191,
+                  "src": "230:18:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TrustAnchorManager_$11191",
+                    "typeString": "contract TrustAnchorManager"
+                  }
+                }
+              },
+              "id": 792,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "226:24:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TrustAnchorManager_$11191",
+                "typeString": "contract TrustAnchorManager"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 796,
+              "nodeType": "Block",
+              "src": "279:7:3",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 797,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 794,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "269:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 795,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "279:0:3"
+            },
+            "scope": 813,
+            "src": "257:29:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 811,
+              "nodeType": "Block",
+              "src": "527:323:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 808,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 805,
+                              "name": "_addressToVerify",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 799,
+                              "src": "656:16:3",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 803,
+                              "name": "trustAnchorManagerInstance",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 793,
+                              "src": "607:26:3",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_TrustAnchorManager_$11191",
+                                "typeString": "contract TrustAnchorManager"
+                              }
+                            },
+                            "id": 804,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "isTrustAnchorVerified",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 11026,
+                            "src": "607:48:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
+                              "typeString": "function (address) view external returns (bool)"
+                            }
+                          },
+                          "id": 806,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "607:66:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 807,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "677:5:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "src": "607:75:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 802,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        14887,
+                        14888
+                      ],
+                      "referencedDeclaration": 14887,
+                      "src": "598:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 809,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "598:85:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 810,
+                  "nodeType": "ExpressionStatement",
+                  "src": "598:85:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 812,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onBoardTA",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 800,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 799,
+                  "name": "_addressToVerify",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 812,
+                  "src": "494:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 798,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "494:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "493:26:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 801,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "527:0:3"
+            },
+            "scope": 813,
+            "src": "475:375:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 814,
+        "src": "136:718:3"
+      }
+    ],
+    "src": "0:854:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/DApp/dappMain.sol",
+    "exportedSymbols": {
+      "dappMain": [
+        813
+      ]
+    },
+    "id": 814,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 783,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustAnchorManager.sol",
+        "file": "../TrustAnchorManager.sol",
+        "id": 784,
+        "nodeType": "ImportDirective",
+        "scope": 814,
+        "sourceUnit": 11192,
+        "src": "26:35:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustAnchorStorage.sol",
+        "file": "../TrustAnchorStorage.sol",
+        "id": 785,
+        "nodeType": "ImportDirective",
+        "scope": 814,
+        "sourceUnit": 12849,
+        "src": "62:35:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/TrustChannelManager.sol",
+        "file": "../TrustChannelManager.sol",
+        "id": 786,
+        "nodeType": "ImportDirective",
+        "scope": 814,
+        "sourceUnit": 14870,
+        "src": "98:36:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 787,
+              "name": "Administrable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 612,
+              "src": "157:13:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Administrable_$612",
+                "typeString": "contract Administrable"
+              }
+            },
+            "id": 788,
+            "nodeType": "InheritanceSpecifier",
+            "src": "157:13:3"
+          }
+        ],
+        "contractDependencies": [
+          612,
+          11191
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 813,
+        "linearizedBaseContracts": [
+          813,
+          612
+        ],
+        "name": "dappMain",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 793,
+            "name": "trustAnchorManagerInstance",
+            "nodeType": "VariableDeclaration",
+            "scope": 813,
+            "src": "178:72:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_TrustAnchorManager_$11191",
+              "typeString": "contract TrustAnchorManager"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 789,
+              "name": "TrustAnchorManager",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 11191,
+              "src": "178:18:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TrustAnchorManager_$11191",
+                "typeString": "contract TrustAnchorManager"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [],
+              "expression": {
+                "argumentTypes": [],
+                "id": 791,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "lValueRequested": false,
+                "nodeType": "NewExpression",
+                "src": "226:22:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_TrustAnchorManager_$11191_$",
+                  "typeString": "function () returns (contract TrustAnchorManager)"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 790,
+                  "name": "TrustAnchorManager",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 11191,
+                  "src": "230:18:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TrustAnchorManager_$11191",
+                    "typeString": "contract TrustAnchorManager"
+                  }
+                }
+              },
+              "id": 792,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "226:24:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TrustAnchorManager_$11191",
+                "typeString": "contract TrustAnchorManager"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 796,
+              "nodeType": "Block",
+              "src": "279:7:3",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 797,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 794,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "269:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 795,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "279:0:3"
+            },
+            "scope": 813,
+            "src": "257:29:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 811,
+              "nodeType": "Block",
+              "src": "527:323:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 808,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 805,
+                              "name": "_addressToVerify",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 799,
+                              "src": "656:16:3",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 803,
+                              "name": "trustAnchorManagerInstance",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 793,
+                              "src": "607:26:3",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_TrustAnchorManager_$11191",
+                                "typeString": "contract TrustAnchorManager"
+                              }
+                            },
+                            "id": 804,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "isTrustAnchorVerified",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 11026,
+                            "src": "607:48:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
+                              "typeString": "function (address) view external returns (bool)"
+                            }
+                          },
+                          "id": 806,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "607:66:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 807,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "677:5:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "src": "607:75:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 802,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        14887,
+                        14888
+                      ],
+                      "referencedDeclaration": 14887,
+                      "src": "598:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 809,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "598:85:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 810,
+                  "nodeType": "ExpressionStatement",
+                  "src": "598:85:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 812,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onBoardTA",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 800,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 799,
+                  "name": "_addressToVerify",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 812,
+                  "src": "494:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 798,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "494:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "493:26:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 801,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "527:0:3"
+            },
+            "scope": 813,
+            "src": "475:375:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 814,
+        "src": "136:718:3"
+      }
+    ],
+    "src": "0:854:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.28+commit.2fcccea1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.3",
+  "updatedAt": "2019-02-14T05:20:09.949Z"
+}

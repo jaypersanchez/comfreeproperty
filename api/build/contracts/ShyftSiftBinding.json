@@ -1,0 +1,97 @@
+{
+  "contractName": "ShyftSiftBinding",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582026b1a5920bff1a8d38690794d804d6d55e94e70aba14318c31adbbc19d8de64d0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582026b1a5920bff1a8d38690794d804d6d55e94e70aba14318c31adbbc19d8de64d0029",
+  "sourceMap": "26:31:36:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:31:36;;;;;;;",
+  "deployedSourceMap": "26:31:36:-;;;;;",
+  "source": "pragma solidity ^0.4.19;\n\ncontract ShyftSiftBinding {\n\n\n}\n",
+  "sourcePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/ShyftSiftBinding.sol",
+  "ast": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/ShyftSiftBinding.sol",
+    "exportedSymbols": {
+      "ShyftSiftBinding": [
+        10801
+      ]
+    },
+    "id": 10802,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10800,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:36"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10801,
+        "linearizedBaseContracts": [
+          10801
+        ],
+        "name": "ShyftSiftBinding",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 10802,
+        "src": "26:31:36"
+      }
+    ],
+    "src": "0:58:36"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jaypersanchez/shyft_shyftcorecontracts/contracts/ShyftSiftBinding.sol",
+    "exportedSymbols": {
+      "ShyftSiftBinding": [
+        10801
+      ]
+    },
+    "id": 10802,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10800,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:36"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10801,
+        "linearizedBaseContracts": [
+          10801
+        ],
+        "name": "ShyftSiftBinding",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 10802,
+        "src": "26:31:36"
+      }
+    ],
+    "src": "0:58:36"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.28+commit.2fcccea1.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.3",
+  "updatedAt": "2019-02-14T05:20:10.035Z"
+}

@@ -64,3 +64,8 @@ when OffectContract is at accepted state
 8. During development, ether is used as currency for the buy/sell transaction.  Implement MetaCoin as a utility 
 token as currency for buy/sell transaction
 
+## Miscellaneous Cheat Notes
+
+##Should ganche UI does not start do the following
+* netstat -vanp tcp | grep <portnumber> OR ls-f -i:<portnumber>
+* kill -9 <PID#>

@@ -1,34 +1,36 @@
  var listOfActiveOffers = new Array();
 
 class Offers {
-    constructor(_id, _property_address, _listed_price, _offered_price) {
+    constructor(_id, _header_banner, _property_address, _property_feature, _listed_price, _offered_price) {
         this.id = _id; //from property ID
         this.id_offer = "activeoffer-" + Math.floor(Math.random()*1972); 
+        this.header_banner = _header_banner;
         this.property_address = _property_address;
-        this.listed_price = _listed_price;
+        this.property_feature = _property_feature;
+        this.listing_price = _listed_price;
         this.offered_price = _offered_price;
+        this.hasOffer = false;
     }
 }
 
 class ActiveOfferListingUI {
 
     addPropertyToActiveOfferList(offer) {
-        
         const list = document.getElementById('property-list');
         // Create tr element
         const row = document.createElement('tr');
         // Insert cols
         row.innerHTML = `
-            <td>${offer.id} + "-" + ${offer.id_offer}</td>
+            <td>${offer.id} - ${offer.id_offer}</td>
             <td>${offer.property_address}</td>
             <td>${offer.listed_price}</td>
             <td><a href="activeEscrows.html?id=${offer.id_offer}" id=${offer.id_offer}>${offer.offered_price}</a></td>
             <td><a href="#" class="delete">Decline<a></td>
             `;
-        alert("UInew offer: " + offer.id + ":" + offer.id_offer + ":" + offer.property_address + ":" + offer.listed_price + ":" + offer.offered_price );
+        //alert("UInew offer: " + offer.id + ":" + offer.id_offer + ":" + offer.property_address + ":" + offer.listed_price + ":" + offer.offered_price );
         list.appendChild(row);
-        listOfActiveOffers.push(offer);
-        localStorage.setItem(offer.id_offer, JSON.stringify(offer));
+        //listOfActiveOffers.push(offer);
+        //window.localStorage.setItem(offer.id_offer, JSON.stringify(offer));
     }
 
     showAlert(message, className) {
@@ -51,6 +53,21 @@ class ActiveOfferListingUI {
         }, 3000);
     }
 
+    removeFromList(target) {
+        if(target.className === 'delete') {
+            target.parentElement.parentElement.remove();
+        }
+    }
+
+    clearFields() {
+        document.getElementById('property_id').value = '';
+        document.getElementById('headerbanner').value = '';
+        document.getElementById('address').value = '';
+        document.getElementById('features').value = '';
+        document.getElementById('listing_price').value = '';
+        document.getElementById('offer_price').value = '';
+    }
+
 }
 
 class StoreProperties {
@@ -59,34 +76,32 @@ class StoreProperties {
         let activeoffers;
         if(window.localStorage.getItem('activeoffers') === null) {
             activeoffers = [];
+            
         }
         else {
             activeoffers = JSON.parse(window.localStorage.getItem('activeoffers'));
+            
         }
         //alert("lenght: " + activeoffers.length);
         return activeoffers;
     }
 
     static addPropertyToActiveOfferList(_offer) {
-        /*const activeoffers = StoreProperties.getActiveOffers();
+        const activeoffers = StoreProperties.getActiveOffers();
         activeoffers.push(_offer);
-        window.localStorage.setItem('activeoffers', JSON.stringify(activeoffers));*/
+        window.localStorage.setItem('activeoffers', JSON.stringify(activeoffers));
     }
 
     static displayActiveOffers() {
-        /*const activeoffers = StoreProperties.getActiveOffers();
-        if(typeof activeoffers === 'undefined') {
-            alert("No active offers on file");
-        }
-        else {
-            activeoffers.forEach(function(offer){
+        const activeoffers = StoreProperties.getActiveOffers();
+        activeoffers.forEach(function(offer){
                 // Instantiate UI
                 const activeOfferListingUI = new ActiveOfferListingUI();
 
                 // Add active offer
                 activeOfferListingUI.addPropertyToActiveOfferList(offer);
-            });
-        }*/
+        });
+        
     }
 
     static getActiveOffersById(_property_id) {
@@ -116,17 +131,17 @@ document.addEventListener('DOMContentLoaded', function(e) {
     * If POST header is passed an 'id' field, display property data on form in order for user to enter an offered price
     */
     if( urlParams.has("id") ) {
-        properties = JSON.parse(window.localStorage.getItem('properties'));
+        //properties = JSON.parse(window.localStorage.getItem('properties'));
         //alert(urlParams.get('id'));
-        properties.forEach(function(property) {
-            if(property.id_datestamp === urlParams.get('id')) {
-                document.getElementById('property_id').value = property.id_datestamp;
-                document.getElementById('headerbanner').value = property.header_banner;
-                document.getElementById('address').value = property.property_address;
-                document.getElementById('features').value = property.property_feature;
-                document.getElementById('listing_price').value = property.listing_price;
-            }
-        });
+        //properties.forEach(function(property) {
+            //if(property.id_datestamp === urlParams.get('id')) {
+                document.getElementById('property_id').value = urlParams.get('id');
+                document.getElementById('headerbanner').value = urlParams.get('banner');
+                document.getElementById('address').value = urlParams.get('address');
+                document.getElementById('features').value = urlParams.get('feature');
+                document.getElementById('listing_price').value = urlParams.get('price');
+            //}
+        //});
         
     }
     else {
@@ -144,25 +159,31 @@ document.addEventListener('DOMContentLoaded', function(e) {
             price = document.getElementById('listing_price').value
             offer_price = document.getElementById('offer_price').value
             
-        //if(offer_price != '' || offer_price > 0) {
-            properties = window.localStorage.getItem('properties');
-            properties.forEach(function(property) {
-                alert(property.id_datestamp);
-                if(property.id_datestamp === property_id) {
-                    alert("offer made");
-                    property.hasOffer = true;
-                    window.localStorage.setItem("properties", JSON.stringify(property));
-                }
-            })
             // Instantiate book
-            //const offer = new Offers(property_id, address, price, offer_price);
-            //const activeOfferListingUI = new ActiveOfferListingUI(offer);
-            //activeOfferListingUI.addPropertyToActiveOfferList(offer);
+            const activeOfferListingUI = new ActiveOfferListingUI();
+            // Validate
+            if(offer_price === '') {
+                // Error alert
+                activeOfferListingUI.showAlert('Please fill in all fields', 'error');
+            }
+            else {
+                offer = new Offers(property_id, headerbanner, address, features, price, offer_price);
+                window.localStorage.setItem('activeoffers', JSON.stringify(offer));
+                
+                activeOfferListingUI.addPropertyToActiveOfferList(offer);
+                
+                //add to storage
+                //StoreProperties.addPropertyToActiveOfferList(offer);
+                
+                // Show success
+                activeOfferListingUI.showAlert('Offer Added!', 'success');
+    
+                // Clear fields
+                activeOfferListingUI.clearFields();
+            }
             
-            //add to storage
-            //StoreProperties.addPropertyToActiveOfferList(offer);
-            //StoreProperties.displayActiveOffers();
-        //}
+            e.preventDefault();
+        
     });
 
     document.getElementById('property-list').addEventListener('click', function(e){

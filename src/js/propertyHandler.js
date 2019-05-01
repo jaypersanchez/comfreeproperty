@@ -22,7 +22,7 @@ class PropertyListingUI {
             <td>${property.header_banner}</td>
             <td>${property.property_address}</td>
             <td>${property.property_feature}</td>
-            <td><a href="activeOffers.html?id=${property.id_datestamp}" id=${property.id_datestamp}>${property.listing_price}</a></td>
+            <td><a href="activeOffers.html?id=${property.id_datestamp}&banner=${property.header_banner}&address=${property.property_address}&feature=${property.property_feature}&price=${property.listing_price}" id=${property.id_datestamp}>${property.listing_price}</a></td>
             <td><a href="#" class="delete">X<a></td>
             `;
   

@@ -52,6 +52,7 @@ contract ComfreeToken {
 
 	function inflateTotalSupply(uint256 _amount) public returns (uint256) {
 		require(msg.sender == owner);
+		totalSupply_ = _amount;
 		/*
 		* Implement a function in here to determine inflation rate of token when increased
 		* supply is manually called.
@@ -95,8 +96,8 @@ contract ComfreeToken {
   		balances[owner] = balances[owner]-numTokens;
   		allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
   		balances[buyer] = balances[buyer]+numTokens;
-  		Transfer(owner, buyer, numTokens);
-  		return true;
+  		emit Transfer(owner, buyer, numTokens);
+		return true;
 	}
 
 }

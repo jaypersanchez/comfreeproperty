@@ -1,4 +1,4 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 
 import "./SaleConditionContract.sol";
 import "./ComfreePropertyDataModel.sol";
@@ -34,10 +34,27 @@ contract OfferContract is ComfreePropertyDataModel {
         owner = msg.sender;
     }
 
+    function processData(uint number) public  {
+        if(!processData(1)) {
+            return true;
+        }
+    }
+
+    function processData(uint number) public returns(bool) {
+        uint _number = number;
+        processData(number + 1);
+        if(number == _number) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     /*
     * This function is to get all of active offers
     */
-    function getActiveOffers() public view returns(uint[]) {
+    function getActiveOffers() public view returns(uint[] memory) {
         //prepare output array
         uint[] memory indexCounter = new uint[](offerContractCounter);
         uint numberOfSavedOfferContracts = 0;

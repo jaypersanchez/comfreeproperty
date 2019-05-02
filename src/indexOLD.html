@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Comfree Properties</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Comfree Real Estate Chain</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+
+      <div class="col-md-12" id="article-list">
+        <div class="row">
+            <div class="col-lg-12">
+                <label for="Account Balance" class="welcome pull-left">Account Balance</label>
+                <label for="Account Number" class="welcome pull-right">Account Number</label>
+             </div>
+        </div>
+        <div class="row">
+          
+          <div class="col-lg-12">
+            <p id="account" class="welcome pull-right"></p>
+            <p id="accountBalance" class="welcome pull-left"></p>
+          </div>
+        </div>
+
+        <div class="row panel panel-default">
+          <div class="panel-heading clearfix">
+            <div class="panel-title">
+
+                    <div class="row" style="background-color:lightblue" id="item1">
+                            <h1 class="text-center">7364 Hawkes Bay Way Elk Grove, CA</h1>
+                            <p>
+                                    <img src="./images/house1.jpg" alt="Home Image" style="width:100px;height:100px;">
+                            </p>
+                            <p>
+                                A beautiful bungalow style home.  Close to both elementary and high school.  Nearby park and convenient to grocery stores and mall.
+                            </p>
+                            <ul>
+                                <li>3 Bedrooms</li>
+                                <li>2 full baths</li>
+                                <li>2 car garage</li>
+                                <li>Modern design kitchen with an island</li>
+                            </ul>
+                            <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#createOfferContract">Submit Offer</button>
+                    </div>
+                    <div class="row" style="background-color:lightgray" id="item2">
+                            <h1 class="text-center">883 Symington Way Sacramento, CA</h1>
+                            <p>
+                                    <img src="./images/house1.jpg" alt="Home Image" style="width:100px;height:100px;">
+                            </p>
+                            <p>
+                                A beautiful bungalow style home.  Close to both elementary and high school.  Nearby park and convenient to grocery stores and mall.
+                            </p>
+                            <ul>
+                                <li>3 Bedrooms</li>
+                                <li>2 full baths</li>
+                                <li>2 car garage</li>
+                                <li>Modern design kitchen with an island</li>
+                            </ul>
+                            <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#createOfferContract">Submit Offer</button>
+                      </div>
+                      <div class="row" style="background-color:lightblue" id="item3">
+                            <h1 class="text-center">14 E. Bishop Cres Regina, SK</h1>
+                            <p>
+                                    <img src="./images/house1.jpg" alt="Home Image" style="width:100px;height:100px;">
+                            </p>
+                            <p>
+                                A beautiful bungalow style home.  Close to both elementary and high school.  Nearby park and convenient to grocery stores and mall.
+                            </p>
+                            <ul>
+                                <li>3 Bedrooms</li>
+                                <li>2 full baths</li>
+                                <li>2 car garage</li>
+                                <li>Modern design kitchen with an island</li>
+                            </ul>
+                            <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#createOfferContract">Submit Offer</button>
+                      </div>
+                      <div class="row" style="background-color:lightgray" id="item4">
+                            <h1 class="text-center">88 Happy Valley Rd Victoria B.C</h1>
+                            <p>
+                                    <img src="./images/house1.jpg" alt="Home Image" style="width:100px;height:100px;">
+                            </p>
+                            <p>
+                                A beautiful bungalow style home.  Close to both elementary and high school.  Nearby park and convenient to grocery stores and mall.
+                            </p>
+                            <ul>
+                                <li>3 Bedrooms</li>
+                                <li>2 full baths</li>
+                                <li>2 car garage</li>
+                                <li>Modern design kitchen with an island</li>
+                            </ul>
+                            <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#createOfferContract">Submit Offer</button>
+                      </div>
+                      <div class="row" style="background-color:lightblue" id="item5">
+                            <h1 class="text-center">345 101 St. Surrey B.C</h1>
+                            <p>
+                                    <img src="./images/house1.jpg" alt="Home Image" style="width:100px;height:100px;">
+                            </p>
+                            <p>
+                                A beautiful bungalow style home.  Close to both elementary and high school.  Nearby park and convenient to grocery stores and mall.
+                            </p>
+                            <ul>
+                                <li>3 Bedrooms</li>
+                                <li>2 full baths</li>
+                                <li>2 car garage</li>
+                                <li>Modern design kitchen with an island</li>
+                            </ul>
+                            <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#createOfferContract">Submit Offer</button>
+                      </div>  
+
+              
+            </div>
+          </div>
+          <ul id="events" class="collapse list-group"></ul>
+        </div>
+
+        <div id="activeOffersRow" class="row">
+          <!-- ARTICLES LOAD HERE -->
+          
+        </div>
+      </div>
+    </div>
+  
+    <!--
+        uint id; 
+        address buyerAddress;
+        address sellerAddress;
+        uint offerDate;
+        uint expiredDate;
+        uint currentDate;
+        uint offerAmount;
+        bool accepted;
+    -->  
+    <div id="displayTemplate" style="display: none;">
+      <div class="row-lg-12">
+        <div class="panel panel-default panel-article">
+          <div class="panel-heading">
+            <h3 class="panel-contractOwner">Active Offers</h3> <!-- smart contract address-->
+          </div>
+          <div class="panel-body">
+              <strong>Record ID</strong>: <span class="recordid"></span><br/>
+            <strong>Buyer Address</strong>: <span class="buyeraddress"></span><br/> 
+            <strong>Seller Address</strong>: <span class="selleraddress"></span><br/> 
+            <strong>Offer Amount in Ether</strong>: <span class="offeramount"></span><br/>
+            <button type="button" class="btn btn-primary btn-success" onclick="window.location.href = './salecondition.html'">Accept Offer</button>
+            <!--strong>Offer Accepted</strong>: <span class="offeraccepted"></span><br/-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal form to submit offer -->
+    <div class="modal fade" id="createOfferContract" role="dialog">
+            <div class="modal-dialog">
+        
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                    
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Make Offer</h4>
+                </div>
+                <div class="modal-body">
+                    <script>
+                        var accountnumber = web3.eth.accounts[0];
+                        $("#buyeraddress").val(accountnumber);
+                      </script>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <form>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="buyeraddress" placeholder="Buyer Account Address">
+                          <input type="text" class="form-control" id="selleraddress" placeholder="Seller Account Address">
+                          <input type="text" class="form-control" id="etheramount" placeholder="Number of Ether">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn-success" data-dismiss="modal" onclick="App.createOffer(); return false;">Submit Offer</button>
+                  <button type="button" class="btn" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+
+   
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

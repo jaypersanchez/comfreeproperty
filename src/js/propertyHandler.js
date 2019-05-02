@@ -87,6 +87,7 @@ class StoreProperties {
             // Add book to UI
             propertyListingUI.addPropertyToList(property);
         });
+        
     }
 
     static addProperty(_property) {

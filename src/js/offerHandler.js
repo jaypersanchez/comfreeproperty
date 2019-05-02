@@ -23,14 +23,14 @@ class ActiveOfferListingUI {
         row.innerHTML = `
             <td>${offer.id} - ${offer.id_offer}</td>
             <td>${offer.property_address}</td>
-            <td>${offer.listed_price}</td>
-            <td><a href="activeEscrows.html?id=${offer.id_offer}" id=${offer.id_offer}>${offer.offered_price}</a></td>
+            <td>${offer.listing_price}</td>
+            <td><a href="activeEscrows.html?propertyid=${offer.id}&idoffer=${offer.id_offer}&address=${offer.property_address}&feature=${offer.property_feature}&price=${offer.listing_price}&offer=${offer.offered_price}">${offer.offered_price}</a></td>
             <td><a href="#" class="delete">Decline<a></td>
             `;
         //alert("UInew offer: " + offer.id + ":" + offer.id_offer + ":" + offer.property_address + ":" + offer.listed_price + ":" + offer.offered_price );
         list.appendChild(row);
-        //listOfActiveOffers.push(offer);
-        //window.localStorage.setItem(offer.id_offer, JSON.stringify(offer));
+        listOfActiveOffers.push(offer);
+        window.localStorage.setItem(offer.id_offer, JSON.stringify(listOfActiveOffers));
     }
 
     showAlert(message, className) {
@@ -131,18 +131,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
     * If POST header is passed an 'id' field, display property data on form in order for user to enter an offered price
     */
     if( urlParams.has("id") ) {
-        //properties = JSON.parse(window.localStorage.getItem('properties'));
-        //alert(urlParams.get('id'));
-        //properties.forEach(function(property) {
-            //if(property.id_datestamp === urlParams.get('id')) {
-                document.getElementById('property_id').value = urlParams.get('id');
-                document.getElementById('headerbanner').value = urlParams.get('banner');
-                document.getElementById('address').value = urlParams.get('address');
-                document.getElementById('features').value = urlParams.get('feature');
-                document.getElementById('listing_price').value = urlParams.get('price');
-            //}
-        //});
-        
+        //alert(urlParams.get('id')+":"+urlParams.get('banner')+":"+urlParams.get('address')+":"+urlParams.get('feature')+":"+urlParams.get('price'));
+        document.getElementById('property_id').value = urlParams.get('id');
+        document.getElementById('headerbanner').value = urlParams.get('banner');
+        document.getElementById('address').value = urlParams.get('address');
+        document.getElementById('features').value = urlParams.get('feature');
+        document.getElementById('listing_price').value = urlParams.get('price');
     }
     else {
         //StoreProperties.displayActiveOffers();
@@ -167,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
                 activeOfferListingUI.showAlert('Please fill in all fields', 'error');
             }
             else {
+                //alert(property_id+":"+headerbanner+":"+address+":"+features+":"+price+":"+offer_price);
                 offer = new Offers(property_id, headerbanner, address, features, price, offer_price);
                 window.localStorage.setItem('activeoffers', JSON.stringify(offer));
                 
@@ -189,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     document.getElementById('property-list').addEventListener('click', function(e){
         //capture source of click
         var source = e.srcElement || e.originalTarget;
-        alert("click source: " + source.id);
+        //alert("click source: " + source.id);
     });
 
 });

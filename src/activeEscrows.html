@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <style>
+    .success, .error {
+      color: white;
+      padding: 5px;
+      margin: 5px 0 15px 0;
+    }
+
+    .success {
+      background: green;
+    }
+
+    .error {
+      background: red;
+    }
+  </style>
+  <title>Active Escrows</title>
+  </head>
+  <body>
+ 
+    <div>
+        <table class="u-full-width">
+        <thead>
+            <tr>
+            <th>Property ID - Offer ID</th>
+            <th>Escrow ID</th>
+            <th>Address</th>
+            <th>Features</th>
+            <th>Listing Price</th>
+            <th>Offered Price</th>
+            <th></th>
+            </tr>
+        </thead>
+        <tbody id="escrow-list"></tbody>
+        </table>
+    </div>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script>
+        var listActiveEscrow = new Array();
+        class Escrow {
+                constructor(_id, _id_offer, _property_address, _property_feature, _listed_price, _offered_price) {
+                    this.id = _id; //from property ID
+                    this.id_offer = _id_offer;
+                    this.id_escrow = "escrow-" + Math.floor(Math.random()*1972);  
+                    this.property_address = _property_address;
+                    this.property_feature = _property_feature;
+                    this.listing_price = _listed_price;
+                    this.offered_price = _offered_price;
+                }
+        }
+
+        var addEscrowToList = function (escrow) {
+            alert("asfsdafsdfasd");
+            const list = document.getElementById('escrow-list');
+            // Create tr element
+            const row = document.createElement('tr');
+            // Insert cols
+            row.innerHTML = `
+                <td>${escrow.id} - ${escrow.id_offer}</td>
+                <td>${escrow.id_escrow}</td>
+                <td>${escrow.property_address}</td>
+                <td>${escrow.property_feature}</td>
+                <td>${escrow.listing_price}</td>
+                <td>${escrow.offered_price}</td>
+                <td><a href="#" class="delete">Decline<a></td>
+                `;
+            list.appendChild(row);
+            listActiveEscrow.push(escrow);
+            window.localStorage.setItem("escrow", JSON.stringify(listActiveEscrow));
+        }
+
+        document.addEventListener('DOMContentLoaded', function(e) {
+            var urlParams = new URLSearchParams(window.location.search);
+            /*
+            * If POST header is passed an 'id' field, display property data on form in order for user to enter an offered price
+            */
+            if( urlParams.has("propertyid") ) {
+                //alert(urlParams.get('propertyid')+":"+urlParams.get('idoffer')+":"+urlParams.get('address')+":"+urlParams.get('feature')+":"+urlParams.get('price')+":"+urlParams.get('offer'))
+                const escrow = new Escrow(urlParams.get('propertyid'),urlParams.get('idoffer'),urlParams.get('address'),urlParams.get('feature'),urlParams.get('price'),urlParams.get('offer'));
+                listActiveEscrow.push(escrow);
+                window.localStorage.setItem("escrow",JSON.stringify(listActiveEscrow));
+                addEscrowToList(escrow);
+                /*document.getElementById('property_id').value = escrow.id;
+                document.getElementById('id_offer').value = escrow.id_offer;
+                document.getElementById('id_escrow').value = escrow.id_escrow;
+                document.getElementById('address').value = escrow.property_address;
+                document.getElementById('features').value = escrow.property_feature;
+                document.getElementById('listing_price').value = escrow.listing_price;
+                document.getElementById('offer').value = escrow.offered_price;*/
+            }
+        });
+    </script>
+  
+  </body>
+</html>

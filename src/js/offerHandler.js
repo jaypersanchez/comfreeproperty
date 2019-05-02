@@ -163,6 +163,10 @@ document.addEventListener('DOMContentLoaded', function(e) {
             else {
                 //alert(property_id+":"+headerbanner+":"+address+":"+features+":"+price+":"+offer_price);
                 offer = new Offers(property_id, headerbanner, address, features, price, offer_price);
+                /*
+                * At this point, an OfferContract must be generate
+                */
+                //createOfferContract(offer);
                 window.localStorage.setItem('activeoffers', JSON.stringify(offer));
                 
                 activeOfferListingUI.addPropertyToActiveOfferList(offer);

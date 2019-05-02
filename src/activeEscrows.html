@@ -54,6 +54,7 @@
             //create a new provider and plug it directly into our local node
             web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:7545'));
         }
+        var walletAddresses = web3.eth.accounts;
         class Escrow {
                 constructor(_id, _id_offer, _property_address, _property_feature, _listed_price, _offered_price) {
                     this.id = _id; //from property ID
@@ -64,7 +65,7 @@
                     this.listing_price = _listed_price;
                     this.offered_price = _offered_price;
                 }
-        }
+        }//Escrow
 
         var addEscrowToList = function (escrow) {
             const list = document.getElementById('escrow-list');
@@ -83,9 +84,80 @@
             list.appendChild(row);
             listActiveEscrow.push(escrow);
             window.localStorage.setItem("escrow", JSON.stringify(listActiveEscrow));
-        }
+        }//addEscrowToList
+
+        var getWalletAccount = function(index) {
+            console.log(web3.eth.accounts[index]);
+        }//getWalletAccount
+
+        var getWalletAccountBalance = function(index) {
+            console.log( web3.fromWei(web3.eth.getBalance(web3.eth.accounts[index])) );
+        }//getWalletAccountBalance
+
+        var createEscrowContract = function(escrow) {
+            var reader = new FileReader();
+            var textContent
+            reader.onload = function(e) {
+                //var content = reader.result;
+                //console.log(content);
+            }
+            var escrowContractABI = web3.eth.contract([
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "getMsgValue",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getMsgSender",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]);
+
+            var escrowContractInstance = escrowContractABI.at('0xbbf289d846208c16edc8474705c748aff07732db');
+            console.log(escrowContractInstance.address);
+            console.log( escrowContractInstance.getMsgSender() );
+            
+        }//createEscrowContract
 
         document.addEventListener('DOMContentLoaded', function(e) {
+            /*
+            * Offer ID has been accepted at this point. Create an escrow smart contract.
+            */
+
             var urlParams = new URLSearchParams(window.location.search);
             /*
             * If POST header is passed an 'id' field, display property data on form in order for user to enter an offered price
@@ -96,13 +168,9 @@
                 listActiveEscrow.push(escrow);
                 window.localStorage.setItem("escrow",JSON.stringify(listActiveEscrow));
                 addEscrowToList(escrow);
-                /*document.getElementById('property_id').value = escrow.id;
-                document.getElementById('id_offer').value = escrow.id_offer;
-                document.getElementById('id_escrow').value = escrow.id_escrow;
-                document.getElementById('address').value = escrow.property_address;
-                document.getElementById('features').value = escrow.property_feature;
-                document.getElementById('listing_price').value = escrow.listing_price;
-                document.getElementById('offer').value = escrow.offered_price;*/
+                getWalletAccount(0);
+                getWalletAccountBalance(0);
+                createEscrowContract(escrow);
             }
         });
     </script>

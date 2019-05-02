@@ -34,12 +34,6 @@ contract OfferContract is ComfreePropertyDataModel {
         owner = msg.sender;
     }
 
-    function processData(uint number) public  {
-        if(!processData(1)) {
-            return true;
-        }
-    }
-
     function processData(uint number) public returns(bool) {
         uint _number = number;
         processData(number + 1);
@@ -96,7 +90,7 @@ contract OfferContract is ComfreePropertyDataModel {
             //increment index
             offerContractCounter++;
             _listOfOfferContracts[offerContractCounter] = OfferContract(offerContractCounter, _buyerAddress, _sellerAddress, _offerDate, _currentDate, _expiredDate, _offerAmount, _accepted);
-            emit OfferCreated(_buyerAddress, _sellerAddress, _offerAmount);
+            //emit OfferCreated(_buyerAddress, _sellerAddress, _offerAmount);
             return 1;
         }
         else {
@@ -113,7 +107,7 @@ contract OfferContract is ComfreePropertyDataModel {
         * must be opened.
         */
         _listOfOfferContracts[_id].accepted = _value;
-        emit OfferAccepted(_id, _value);
+        //emit OfferAccepted(_id, _value);
         return _value; //this will either return true or false
     }
 

@@ -46,6 +46,14 @@
     <script src="js/truffle-contract.js"></script>
     <script>
         var listActiveEscrow = new Array();
+        // initialize web3
+        if(typeof web3 !== 'undefined') {
+            //reuse the provider of the Web3 object injected by Metamask
+            web3 = new Web3(web3.currentProvider);
+        } else {
+            //create a new provider and plug it directly into our local node
+            web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:7545'));
+        }
         class Escrow {
                 constructor(_id, _id_offer, _property_address, _property_feature, _listed_price, _offered_price) {
                     this.id = _id; //from property ID
@@ -59,7 +67,6 @@
         }
 
         var addEscrowToList = function (escrow) {
-            alert("asfsdafsdfasd");
             const list = document.getElementById('escrow-list');
             // Create tr element
             const row = document.createElement('tr');

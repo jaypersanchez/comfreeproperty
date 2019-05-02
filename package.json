@@ -29,11 +29,14 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "ethereum-ens": "^0.7.4",
     "express": "^4.16.4",
     "light-server": "^2.6.2",
+    "require.js": "^1.0.0",
+    "requirejs": "^2.3.6",
     "truffle-hdwallet-provider": "^1.0.2",
-    "web3": "^1.0.0-beta.53",
+    "web3": "github:ethereum/web3.js",
     "yarn": "^1.15.2"
   }
 }

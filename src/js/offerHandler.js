@@ -1,4 +1,10 @@
- var listOfActiveOffers = new Array();
+web3Provider =  null,
+  contracts= {},
+  account= 0x0,
+  baseURL= "http://ec2-13-59-72-72.us-east-2.compute.amazonaws.com:4000/api/v1/",
+  loading= false
+
+var listOfActiveOffers = new Array();
 
 class Offers {
     constructor(_id, _header_banner, _property_address, _property_feature, _listed_price, _offered_price) {
@@ -119,6 +125,261 @@ class StoreProperties {
     }
 }//StoreProperties
 
+var getWalletAccount = function(index) {
+            return web3.eth.accounts[index];
+}//getWalletAccount
+
+var createOfferContract = function(offer) {
+    //console.log("create offer contract instance");
+    var file = "../abi_src/offerContract.abi";
+    
+            var offerContractABI = web3.eth.contract([
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "uint256"
+			},
+			{
+				"name": "_value",
+				"type": "bool"
+			}
+		],
+		"name": "accept",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_buyerAddress",
+				"type": "address"
+			},
+			{
+				"name": "_sellerAddress",
+				"type": "address"
+			},
+			{
+				"name": "_offerDate",
+				"type": "uint256"
+			},
+			{
+				"name": "_currentDate",
+				"type": "uint256"
+			},
+			{
+				"name": "_expiredDate",
+				"type": "uint256"
+			},
+			{
+				"name": "_offerAmount",
+				"type": "uint256"
+			},
+			{
+				"name": "_accepted",
+				"type": "bool"
+			}
+		],
+		"name": "createOfferContract",
+		"outputs": [
+			{
+				"name": "_result",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "isOfferExpired",
+		"outputs": [
+			{
+				"name": "_value",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "number",
+				"type": "uint256"
+			}
+		],
+		"name": "processData",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "_listOfOfferContracts",
+		"outputs": [
+			{
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"name": "buyerAddress",
+				"type": "address"
+			},
+			{
+				"name": "sellerAddress",
+				"type": "address"
+			},
+			{
+				"name": "offerDate",
+				"type": "uint256"
+			},
+			{
+				"name": "expiredDate",
+				"type": "uint256"
+			},
+			{
+				"name": "currentDate",
+				"type": "uint256"
+			},
+			{
+				"name": "offerAmount",
+				"type": "uint256"
+			},
+			{
+				"name": "accepted",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getActiveOffers",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getOfferContractDetailsById",
+		"outputs": [
+			{
+				"name": "_buyerAddress",
+				"type": "address"
+			},
+			{
+				"name": "_sellerAddress",
+				"type": "address"
+			},
+			{
+				"name": "_offerDate",
+				"type": "uint256"
+			},
+			{
+				"name": "_currentDate",
+				"type": "uint256"
+			},
+			{
+				"name": "_expiredDate",
+				"type": "uint256"
+			},
+			{
+				"name": "_offerAmount",
+				"type": "uint256"
+			},
+			{
+				"name": "_accepted",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "isOfferAccepted",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]);
+            //Must set default account
+            web3.eth.defaultAccount = getWalletAccount(0);
+            var offerContractInstance = offerContractABI.at('0x8c1ed7e19abaa9f23c476da86dc1577f1ef401f5');
+                //console.log(offerContractInstance.address);
+                //console.log("Waletts: " + getWalletAccount(1) + "::" + getWalletAccount(0));
+                var result =  offerContractInstance.createOfferContract("0x79bc53CBcB9A525f34F4eB652DF8F92a34fC4184", "0x7Ca6F215DAe1877f29AE89A48A0B11ec9017dc79","", "", "",offer.offered_price,true);
+                console.log("Result: " + result);
+           
+            
+
+}//createOfferContract
+
 /*
 *   Event listeners
 */
@@ -166,7 +427,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
                 /*
                 * At this point, an OfferContract must be generate
                 */
-                //createOfferContract(offer);
+                createOfferContract(offer);
                 window.localStorage.setItem('activeoffers', JSON.stringify(offer));
                 
                 activeOfferListingUI.addPropertyToActiveOfferList(offer);
@@ -191,4 +452,16 @@ document.addEventListener('DOMContentLoaded', function(e) {
         //alert("click source: " + source.id);
     });
 
+    /*
+    * Setup Web3 components
+    */
+    // initialize web3
+    if(typeof web3 !== 'undefined') {
+      //reuse the provider of the Web3 object injected by Metamask
+      web3Provider = web3.currentProvider;
+    } else {
+      //create a new provider and plug it directly into our local node
+      web3Provider = new Web3.providers.HttpProvider('http://127.0.0.1:7545');
+    }
+    web3 = new Web3(web3Provider);
 });

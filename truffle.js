@@ -17,17 +17,5 @@ module.exports = {
       port: 7545,
       network_id: "*"
     },
-    buyer1:{
-      host: "localhost",
-      port: 7545,
-      network_id: "*",
-      from: "0xB3E68458CF37ee946eABF8EbFFd8fb78811A202e"
-    },
-    rinkeby: {
-      provider: new HDWalletProvider(mnemonic,"https://rinkeby.infura.io/v3/051f0a087fcb48ce8371eab1491f7e93"),
-      network_id: 4,
-      gas: 6995427  
-      
-    }
   }
 };

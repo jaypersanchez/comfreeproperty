@@ -1,42 +1,36 @@
 {
   "name": "comfreeproperty",
   "version": "1.0.0",
-  "description": "Provides smart contracts for a real estate sale ad purchase transaction",
-  "main": "truffle.js",
+  "description": "Comfree Property is a set of smart contracts protocol that is required for selling a property.  It is working within the laws of real state laws for each Canadian Province and U.S State.  All contracts contain all tradition elements of a real state transaction.  Each contract is initiated when a dependent contract meets a certain state of the contract.  For example, the offerContract is the initial start of a real state transaction.  The buyer will make an offer that is recorded in the OfferContract.  Once the offerContract is at a state of \"offer accepted\", the SaleCondition contract will be initiated.  The flow of this logic is controlled on the application layer.  Comfree protocol is a layer to transaction but logic and business flow will dictate when each contract is instantiated.  This design will allow any real estate company to use the \"comfree property\" platform in anyway while the owner of these contract, the developers, will get a share of each transaction which is why the payment between buyer and seller from escrow contract goes through the default coinbase.  But the architecture of the core contracts are/should be flexible enough to be used in both commercial and private property sales.",
+  "main": "server.js",
   "directories": {
     "test": "test"
   },
+  "dependencies": {
+    "mongoose": "^5.9.25",
+    "solc": "^0.6.11"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "promise": "^8.1.0",
+    "querystring": "^0.2.0",
+    "url": "^0.11.0",
+    "web3": "^1.2.11"
+  },
   "scripts": {
-    "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://jaypersanchez@github.com/jaypersanchez/comfreeproperty.git"
+    "url": "git+https://github.com/jaypersanchez/comfreeproperty.git"
   },
-  "keywords": [
-    "comfree"
-  ],
-  "author": "J. Sanchez",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jaypersanchez/comfreeproperty/issues"
   },
-  "homepage": "https://github.com/jaypersanchez/comfreeproperty#readme",
-  "devDependencies": {
-    "lite-server": "^2.3.0",
-    "nodemon": "^1.18.10"
-  },
-  "dependencies": {
-    "babel": "^6.23.0",
-    "ethereum-ens": "^0.7.4",
-    "express": "^4.16.4",
-    "light-server": "^2.6.2",
-    "require.js": "^1.0.0",
-    "requirejs": "^2.3.6",
-    "truffle-hdwallet-provider": "^1.0.2",
-    "web3": "github:ethereum/web3.js",
-    "yarn": "^1.15.2"
-  }
+  "homepage": "https://github.com/jaypersanchez/comfreeproperty#readme"
 }

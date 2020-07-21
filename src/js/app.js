@@ -16,7 +16,7 @@ App = {
       App.web3Provider = web3.currentProvider;
     } else {
       //create a new provider and plug it directly into our local node
-      App.web3Provider = new Web3.providers.HttpProvider('http://127.0.0.1:8545');
+      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
     }
     web3 = new Web3(App.web3Provider);
     App.displayAccountInfo();
@@ -24,7 +24,8 @@ App = {
   },
 
   initContract: function() {
-    $.getJSON('OfferContract.json', function(offerContractArtifact) {
+    console.log("init contract");
+    $.getJSON('abi_src/OfferContract.json', function(offerContractArtifact) {
       // get the contract artifact file and use it to instantiate a truffle contract abstraction
       App.contracts.OfferContract = TruffleContract(offerContractArtifact);
       // set the provider for our contracts
@@ -37,7 +38,9 @@ App = {
   },
 
   createOffer: function() {
-    $.getJSON('OfferContract.json', function(offerContractArtifact) {
+    alert("create offer invoke");
+    console.log("create offer invoke");
+    $.getJSON('../abi_src/OfferContract.json', function(offerContractArtifact) {
       // get the contract artifact file and use it to instantiate a truffle contract abstraction
       App.contracts.OfferContract = TruffleContract(offerContractArtifact);
       // set the provider for our contracts
@@ -150,26 +153,6 @@ App = {
     //add data
     $('#activeOffersRow').append(displayTemplate.html());
   },
-
-  /*addBioData: function() {
-    // retrieve screen data
-    var _first_name = $('#first_name').val();
-    var _middle_name = $('#middle_name').val();
-    var _last_name = $('#last_name').val();
-    //alert(_first_name + " " + _middle_name + " " + _last_name + " " + App.account );
-    App.contracts.BioData.deployed().then(function(instance) {
-      return instance.setBioData(_first_name, _middle_name, _last_name, {
-        from: App.account,
-        gas: 500000
-      });
-    }).then(function(result) {
-      //alert("invoke reload");
-      App.reloadBioData();
-    }).catch(function(err) {
-      alert(console.error("Application Error: " + err.message));
-      //console.error(err);
-    });
-  },*/
 
   bindEvents: function() {
     $(document).on('click', '.btn-adopt', App.handleAdopt);

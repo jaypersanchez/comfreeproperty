@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0 < 0.6.11;
 
 import "./SaleConditionContract.sol";
 import "./ComfreePropertyDataModel.sol";
@@ -10,7 +10,7 @@ import "./ComfreePropertyDataModel.sol";
 contract OfferContract is ComfreePropertyDataModel {
 	address owner;
 
-    struct OfferContract {
+    struct offerContract {
         uint id; 
         address buyerAddress;
         address sellerAddress;
@@ -21,7 +21,7 @@ contract OfferContract is ComfreePropertyDataModel {
         bool accepted;
     }
 
-    OfferContract offerContractObjects;
+    offerContract offerContractObjects;
     uint numberDaysExpiration = 10;
     SaleConditionContract saleConditionContract;
 

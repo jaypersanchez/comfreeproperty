@@ -1,8 +1,8 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0 < 0.6.11;
 
 contract ComfreePropertyDataModel {
 
-    address owner;
+    function owner(address _owner) external view returns(address);
 
     struct EscrowDataElements {
         address escrowDepositorAddress; //buyer

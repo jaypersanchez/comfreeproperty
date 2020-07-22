@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0 < 0.6.11;
 
 
 /*
@@ -67,7 +67,7 @@ contract ComfreeToken {
 		return balances[tokenOwner]; 
 	}
 
-	function allowance(address owner, address delegate) public view returns (uint) {
+	function allowance(address _owner, address delegate) public view returns (uint) {
   		return allowed[owner][delegate];
 	}
 
@@ -90,7 +90,7 @@ contract ComfreeToken {
   		return true;
 	}
 
-	function transferFrom(address owner, address buyer, uint numTokens) public returns (bool) {
+	function transferFrom(address _owner, address buyer, uint numTokens) public returns (bool) {
   		require(numTokens <= balances[owner]);
   		require(numTokens <= allowed[owner][msg.sender]);
   		balances[owner] = balances[owner]-numTokens;

@@ -1,5 +1,6 @@
 App = {
   web3Provider: null,
+  web3: null,
   contracts: {},
   account: 0x0,
   baseURL: "http://ec2-13-59-72-72.us-east-2.compute.amazonaws.com:4000/api/v1/",
@@ -10,15 +11,20 @@ App = {
   },
 
   initWeb3: function() {
-    // initialize web3
-    if(typeof web3 !== 'undefined') {
-      //reuse the provider of the Web3 object injected by Metamask
-      App.web3Provider = web3.currentProvider;
+
+
+    if (typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
+      // We are in the browser and metamask is running.
+    //Note: change to window.web3.currentProvider.enable()
+      web3 = new Web3(window.web3.currentProvider.enable());
     } else {
-      //create a new provider and plug it directly into our local node
-      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+      // We are on the server *OR* the user is not running metamask
+      const provider = new Web3.providers.HttpProvider('http://localhost:8545');
+      web3 = new Web3(provider);
+      //window.web3.currentProvider.enable();
+    
+    
     }
-    web3 = new Web3(App.web3Provider);
     App.displayAccountInfo();
     return App.initContract();
   },

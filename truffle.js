@@ -17,5 +17,13 @@ module.exports = {
       port: 7545,
       network_id: "*"
     },
+  },
+  mocha: {
+    useColors: true
+  },
+  compilers: {
+      solc: {
+        version: "0.6.0",
+      }
   }
 };

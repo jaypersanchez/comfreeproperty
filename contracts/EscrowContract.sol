@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0 < 0.6.11;
 
 import "./ComfreePropertyDataModel.sol";
 import "./ComfreeToken.sol";
@@ -47,9 +47,12 @@ contract EscrowContract {
     return (msg.sender, owner);
   }
 
-    
+  receive() external payable {
+            // React to receiving ether
+  }
 
-    function() external payable {
 
-    }
+  fallback() external payable {
+
+  }
 }

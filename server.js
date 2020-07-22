@@ -13,7 +13,7 @@ const express_port = process.env.EXPRESS_PORT;
 server.use(express.static('js'));
 server.use(express.static('css'));
 server.use(express.static('src'));
-server.use(express.static('abi_src'));
+server.use(express.static('contracts'));
 
 
 /*

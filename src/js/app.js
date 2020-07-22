@@ -15,23 +15,21 @@ App = {
 
     if (typeof window !== 'undefined' && typeof window.web3 !== 'undefined') {
       // We are in the browser and metamask is running.
-    //Note: change to window.web3.currentProvider.enable()
+      //Note: change to window.web3.currentProvider.enable()
       web3 = new Web3(window.web3.currentProvider.enable());
     } else {
       // We are on the server *OR* the user is not running metamask
-      const provider = new Web3.providers.HttpProvider('http://localhost:8545');
-      web3 = new Web3(provider);
-      //window.web3.currentProvider.enable();
-    
-    
+      web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+      web3 = new Web3(web3Provider);
+      App.web3Provider=web3.currentProvider;
     }
     App.displayAccountInfo();
     return App.initContract();
   },
 
-  initContract: function() {
+  /*initContract: function() {
     console.log("init contract");
-    $.getJSON('abi_src/OfferContract.json', function(offerContractArtifact) {
+    $.getJSON('contracts/OfferContract.json', function(offerContractArtifact) {
       // get the contract artifact file and use it to instantiate a truffle contract abstraction
       App.contracts.OfferContract = TruffleContract(offerContractArtifact);
       // set the provider for our contracts
@@ -41,12 +39,10 @@ App = {
       // retrieve the article from the contract
       return App.reloadOfferContractList();
     });
-  },
+  },*/
 
   createOffer: function() {
-    alert("create offer invoke");
-    console.log("create offer invoke");
-    $.getJSON('../abi_src/OfferContract.json', function(offerContractArtifact) {
+    $.getJSON('contracts/OfferContract.json', function(offerContractArtifact) {
       // get the contract artifact file and use it to instantiate a truffle contract abstraction
       App.contracts.OfferContract = TruffleContract(offerContractArtifact);
       // set the provider for our contracts
@@ -55,20 +51,20 @@ App = {
       var _buyeraddress = $('#buyeraddress').val();
       var _selleraddress = $('#selleraddress').val();
       //convert value to ether
-      var _etheramount = web3.toWei(parseFloat($('#etheramount').val() || 0),"ether");
+      var _etheramount = web3.fromWei(parseFloat($('#etheramount').val() || 0),"ether");
       alert(_buyeraddress + "::" + _selleraddress + "::" + _etheramount);
       App.contracts.OfferContract.deployed().then(function(instance) {
         alert("send offer to blockchain");
         return instance.createOfferContract(_buyeraddress, _selleraddress, 1,1,1,_etheramount,false);
       }).then(function(result) {
-        console.log(result);
+        console.log(`Offer Created Result ${result}`);
         //alert("result");
         //forward to list of active offers
         
         App.reloadOfferContractList();
       }).catch(function(err) {
-        console.log(err.message);
-        alert(console.error("Application Error: " + err.message));
+        console.log(`Failed to send offer to contract ${err.message}`);
+        alert(console.error(`Failed to send offer to contract ${err.message}`));
       });
     });
   },
@@ -96,7 +92,7 @@ App = {
     App.loading = true;
     // refresh account information because the balance might have changed
     App.displayAccountInfo();
-    $.getJSON('OfferContract.json', function(offerContractArtifact) {
+    $.getJSON('contracts/OfferContract.json', function(offerContractArtifact) {
       App.contracts.OfferContract = TruffleContract(offerContractArtifact);
     // set the provider for our contracts
     App.contracts.OfferContract.setProvider(App.web3Provider);

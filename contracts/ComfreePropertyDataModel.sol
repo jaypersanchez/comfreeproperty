@@ -2,14 +2,14 @@ pragma solidity ^0.6.0 < 0.6.11;
 
 contract ComfreePropertyDataModel {
 
-    function owner(address _owner) external view returns(address);
-
     struct EscrowDataElements {
         address escrowDepositorAddress; //buyer
         address escrowAgentAddress; //bank
         address escrowBeneficiaryAddress; //seller receiving the money to be deposited
         uint256 escrowAmount;
     }
+
+
     EscrowDataElements public escrowDataElements;
 
     //event Transfer(address _sender, address _receiver, uint256 _numTokens);

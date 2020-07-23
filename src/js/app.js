@@ -27,7 +27,7 @@ App = {
     return App.initContract();
   },
 
-  /*initContract: function() {
+  initContract: function() {
     console.log("init contract");
     $.getJSON('contracts/OfferContract.json', function(offerContractArtifact) {
       // get the contract artifact file and use it to instantiate a truffle contract abstraction
@@ -39,7 +39,7 @@ App = {
       // retrieve the article from the contract
       return App.reloadOfferContractList();
     });
-  },*/
+  },
 
   createOffer: function() {
     $.getJSON('contracts/OfferContract.json', function(offerContractArtifact) {
@@ -52,15 +52,10 @@ App = {
       var _selleraddress = $('#selleraddress').val();
       //convert value to ether
       var _etheramount = web3.fromWei(parseFloat($('#etheramount').val() || 0),"ether");
-      alert(_buyeraddress + "::" + _selleraddress + "::" + _etheramount);
       App.contracts.OfferContract.deployed().then(function(instance) {
-        alert("send offer to blockchain");
         return instance.createOfferContract(_buyeraddress, _selleraddress, 1,1,1,_etheramount,false);
       }).then(function(result) {
         console.log(`Offer Created Result ${result}`);
-        //alert("result");
-        //forward to list of active offers
-        
         App.reloadOfferContractList();
       }).catch(function(err) {
         console.log(`Failed to send offer to contract ${err.message}`);

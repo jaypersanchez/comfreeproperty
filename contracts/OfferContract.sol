@@ -8,6 +8,7 @@ import "./ComfreePropertyDataModel.sol";
 */
 
 contract OfferContract is ComfreePropertyDataModel {
+
 	address owner;
 
     struct offerContract {
@@ -26,7 +27,7 @@ contract OfferContract is ComfreePropertyDataModel {
     SaleConditionContract saleConditionContract;
 
     address[] saleConditionContractsArray;
-    mapping (uint => OfferContract) public _listOfOfferContracts;
+    mapping (uint => offerContract) _listOfOfferContracts;
     uint offerContractCounter; //this is used as an index that holds each contracts
     
 
@@ -34,7 +35,8 @@ contract OfferContract is ComfreePropertyDataModel {
         owner = msg.sender;
     }
 
-    function processData(uint number) public returns(bool) {
+    // I don't know what this function is doing
+    /*function processData(uint number) external returns(bool) {
         uint _number = number;
         processData(number + 1);
         if(number == _number) {
@@ -43,7 +45,7 @@ contract OfferContract is ComfreePropertyDataModel {
         else {
             return false;
         }
-    }
+    }*/
 
     /*
     * This function is to get all of active offers
@@ -54,11 +56,12 @@ contract OfferContract is ComfreePropertyDataModel {
         uint numberOfSavedOfferContracts = 0;
         //itirate over biodatalist
         for(uint i = 1; i <= offerContractCounter; i++) {
-            //show bio data item
+            //show contract data item
             indexCounter[numberOfSavedOfferContracts] = _listOfOfferContracts[i].id;
             numberOfSavedOfferContracts++;
         }
-        //copy bioDataIds array just get ids pertaining to contractOwner
+
+        //copy contract offers array just get ids pertaining to contractOwner
         uint[] memory owneddata = new uint[](numberOfSavedOfferContracts);
         for(uint j = 0; j < numberOfSavedOfferContracts; j++) {
             owneddata[j] = indexCounter[j];
@@ -89,7 +92,14 @@ contract OfferContract is ComfreePropertyDataModel {
         if(msg.sender == owner) {
             //increment index
             offerContractCounter++;
-            _listOfOfferContracts[offerContractCounter] = OfferContract(offerContractCounter, _buyerAddress, _sellerAddress, _offerDate, _currentDate, _expiredDate, _offerAmount, _accepted);
+            _listOfOfferContracts[offerContractCounter].id = offerContractCounter;
+            _listOfOfferContracts[offerContractCounter].buyerAddress = _buyerAddress;
+            _listOfOfferContracts[offerContractCounter].sellerAddress = _sellerAddress;
+            _listOfOfferContracts[offerContractCounter].offerDate = _offerDate;
+            _listOfOfferContracts[offerContractCounter].expiredDate = _expiredDate;
+            _listOfOfferContracts[offerContractCounter].currentDate = _currentDate;
+            _listOfOfferContracts[offerContractCounter].offerAmount = _offerAmount;
+            _listOfOfferContracts[offerContractCounter].accepted = _accepted;
             //emit OfferCreated(_buyerAddress, _sellerAddress, _offerAmount);
             return 1;
         }
